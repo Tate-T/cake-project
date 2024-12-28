@@ -1,0 +1,48 @@
+{
+  "typesOfCakes": [
+    {
+      "type": "На день народження",
+      "id": "kvnrkvn939865"
+    },
+    {
+      "type": "З фруктами",
+      "id": "bjfbvjjv736r4"
+    },
+    {
+      "type": "Патріотичні",
+      "id": "hjgjgjgjgjgjg"
+    },
+    {
+      "type": "Для чоловіків",
+      "id": "638vbnmsncl"
+    },
+    {
+      "type": "Для весілля",
+      "id": "mcksopw0ttx"
+    },
+    {
+      "type": "Без глютену",
+      "id": "nbvbdbieob62790"
+    },
+    {
+      "type": "Веганські",
+      "id": "63889mzpwkjbv"
+    },
+    {
+      "type": "Без цукру",
+      "id": "73vbvnzkauxv"
+    },
+    {
+      "type": "Для дівчат",
+      "id": "bcjei64moakg"
+    },
+    {
+      "type": "З квітами",
+      "id": "6124bvks09v"
+    },
+    {
+      "type": "Класичні рецепти",
+      "id": "nxksoof8cs"
+    }
+  ]
+}

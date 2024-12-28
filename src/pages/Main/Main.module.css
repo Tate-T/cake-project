@@ -1,0 +1,100 @@
+.heroTitle {
+  font-family: "Yeseva One";
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 15px;
+  max-width: 463px;
+  color: #011936;
+}
+
+.heroDescription {
+  font-family: "Verdana";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #43607c;
+  max-width: 463px;
+}
+
+.heroSearchInputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.heroSearchInput {
+  display: block;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #dfdfdf;
+  width: 720px;
+  height: 48px;
+  padding: 0 20px 0 20px;
+}
+
+.heroSearchBtn {
+  display: block;
+  padding: 14px 30px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid #fdad6d;
+  background-color: #fdad6d;
+  color: #8e4a4e;
+  font-family: "Verdana";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  height: 50px;
+}
+
+.heroBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroPopularSearchList {
+  max-width: 800px;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.heroPopularSearchItem {
+  border-radius: 40px;
+  background-color: #fff2f2;
+  padding: 5px 20px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroPopularSearchText {
+  color: #8e4a4e;
+  font-family: "Verdana";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.heroOtherVariantsItem {
+  padding: 5px 20px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  p {
+    color: #8e4a4e;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-right: 5px;
+  }
+}
