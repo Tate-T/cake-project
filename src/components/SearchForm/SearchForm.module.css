@@ -1,0 +1,31 @@
+.searchform__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchform__input {
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid#DFDFDF;
+  padding: 14px 20px;
+  width: 100%;
+  font-family: Verdana;
+  &::placeholder {
+    color: #c2c2c2;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+.searchform__btn {
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid #fdad6d;
+  background: #fdad6d;
+  padding: 12px 30px;
+  color: #8e4a4e;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
