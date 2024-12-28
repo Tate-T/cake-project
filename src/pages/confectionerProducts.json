@@ -1,0 +1,142 @@
+[
+    {
+        "photo": "https://i.ibb.co/8KG40K3/image.png",
+        "price": 520,
+        "name": "Весільний триярусний торт з фруктами та квітами",
+        "variants": 4,
+        "id": 0
+    },
+    {
+        "photo": "https://i.ibb.co/3v1syz7/1.png",
+        "price": 520,
+        "name": "Бісквітний торт з ягодами",
+        "variants": 4,
+        "id": 1
+    },
+    {
+        "photo": "https://i.ibb.co/m9XK7qr/2.png",
+        "price": 520,
+        "name": "Ванільно-карамельний торт з печивом Орео",
+        "variants": 4,
+        "id": 2
+    },
+    {
+        "photo": "https://i.ibb.co/99dCm6K/3.png",
+        "price": 520,
+        "name": "Торт рожевий з макарунами",
+        "variants": 4,
+        "id": 3
+    },
+    {
+        "photo": "https://i.ibb.co/RzqxB97/4.png",
+        "price": 520,
+        "name": "Торт “Літнє бажання” з шоколадом та макарунами",
+        "variants": 4,
+        "id": 4
+    },
+    {
+        "photo": "https://i.ibb.co/3T9rYjY/5.png",
+        "price": 520,
+        "name": "Чорні капкейки з шоколадом та печивом",
+        "variants": 4,
+        "id": 5
+    },
+    {
+        "photo": "https://i.ibb.co/9sjMVVZ/6.png",
+        "price": 520,
+        "name": "Капкейки з карамеллю 3 шт",
+        "variants": 4,
+        "id": 6
+    },
+    {
+        "photo": "https://i.ibb.co/0Gm1LHT/7.png",
+        "price": 520,
+        "name": "Капкейки з ніжним кремом",
+        "variants": 4,
+        "id": 7
+    },
+    {
+        "photo": "https://i.ibb.co/99dCm6K/3.png",
+        "price": 520,
+        "name": "Торт рожевий з макарунами",
+        "variants": 4,
+        "id": 8
+    },
+    {
+        "photo": "https://i.ibb.co/P4yK0Vg/8.png",
+        "price": 520,
+        "name": "Весільний триярусний торт з фруктами та квітами",
+        "variants": 4,
+        "id": 9
+    },
+    {
+        "photo": "https://i.ibb.co/TqJh1cB/9.png",
+        "price": 520,
+        "name": "Оригінальні капкейки з кремом та печивом",
+        "variants": 4,
+        "id": 10
+    },
+    {
+        "photo": "https://i.ibb.co/Kw2ksZC/10.png",
+        "price": 520,
+        "name": "Пасхальні капкейки шоколадні та ванільні ",
+        "variants": 4,
+        "id": 11
+    },
+    {
+        "photo": "https://i.ibb.co/RzqxB97/4.png",
+        "price": 520,
+        "name": "Торт “Літнє бажання” з шоколадом та макарунами",
+        "variants": 4,
+        "id": 12
+    },
+    {
+        "photo": "https://i.ibb.co/0Gm1LHT/7.png",
+        "price": 520,
+        "name": "Капкейки з ніжним кремом",
+        "variants": 4,
+        "id": 13
+    },
+    {
+        "photo": "https://i.ibb.co/3T9rYjY/5.png",
+        "price": 520,
+        "name": "Чорні капкейки з шоколадом та печивом",
+        "variants": 4,
+        "id": 14
+    },
+    {
+        "photo": "https://i.ibb.co/9sjMVVZ/6.png",
+        "price": 520,
+        "name": "Капкейки з карамеллю 3 шт",
+        "variants": 4,
+        "id": 15
+    },
+    {
+        "photo": "https://i.ibb.co/3v1syz7/1.png",
+        "price": 520,
+        "name": "Бісквітний торт з ягодами",
+        "variants": 4,
+        "id": 16
+    },
+    {
+        "photo": "https://i.ibb.co/m9XK7qr/2.png",
+        "price": 520,
+        "name": "Ванільно-карамельний торт з печивом Орео",
+        "variants": 4,
+        "id": 17
+    },
+    {
+        "photo": "https://i.ibb.co/P4yK0Vg/8.png",
+        "price": 520,
+        "name": "Весільний триярусний торт з фруктами та квітами",
+        "variants": 4,
+        "id": 18
+    },
+    {
+        "photo": "https://i.ibb.co/99dCm6K/3.png",
+        "price": 520,
+        "name": "Торт рожевий з макарунами",
+        "variants": 4,
+        "id": 19
+    }
+]

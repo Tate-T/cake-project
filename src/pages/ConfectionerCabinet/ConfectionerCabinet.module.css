@@ -1,0 +1,250 @@
+.container {
+    max-width: 1502px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.navCont {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* .navigation{} */
+
+.confectionerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.confectionerList__button {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 50px;
+    width: 280px;
+    height: 40px;
+    border: 1px solid rgb(200, 230, 255);
+    background-color: #FFF;
+    color: #43607C;
+    font-size: 18px;
+}
+
+.confectionerList__button--active {
+    background: rgb(67, 96, 124);
+    border: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navTitle {
+    font-size: 20px;
+    color: #011936;
+    font-weight: 700;
+    font-family: Verdana;
+    margin-bottom: 15px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.categories__button {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 50px;
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color: #FFF2F2;
+    color: #8E4A4E;
+    font-size: 18px;
+}
+
+.categories__button--add {
+    font-size: 16px;
+    background: #FFF;
+    border: 1px solid #A63A50;
+    color: #8E4A4E;
+}
+
+.addIcon {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainComps {
+    width: 100%;
+}
+
+.titleSec {
+    font-size: 24px;
+    color: #011936;
+    font-weight: 400;
+    font-family: "Yeseva One";
+    display: flex;
+}
+
+.label {
+    color: #011936;
+    font-family: Verdana;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.editIcon {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: #FFF2F2;
+    width: 40px;
+    height: 30px;
+}
+
+.dataArea {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 50px;
+    background: #F9F9F9;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.dataArea--last {
+    margin-bottom: 60px;
+}
+
+.dataArea--moreInfo {
+    border-radius: 10px;
+    margin-bottom: 60px;
+    padding: 10px 20px;
+    height: auto;
+}
+
+.dataArea ul {
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+.description {
+    color: #84A6C2;
+    font-family: Verdana;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.photoCont {
+    margin: 20px 0 60px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.photoCont__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.butsCont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photoBut {
+    width: 191px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #DCEBF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.photoBut:hover {
+    border-color: #A63A50;
+    color: #A63A50;
+}
+
+.photoBut:hover svg g path {
+    fill: #A63A50;
+}
+
+.profFillCont {
+    padding: 50px 40px;
+    margin-top: 60px;
+    border-radius: 20px;
+    background: #DCEBF8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profFillCont__title {
+    color: #011936;
+    font-family: Verdana;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.barCont {
+    position: relative;
+    margin-top: 40px;
+    width: 697px;
+    height: 10px;
+}
+
+.fillBar,
+.fieldBar {
+    position: absolute;
+}
+
+.descrFill {
+    margin-top: 40px;
+    color: #43607C;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 14px;
+    line-height: 20px;
+    width: 437px;
+}
+
+.fillBut {
+    margin-top: 20px;
+    display: flex;
+    height: 40px;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #43607C;
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+}
