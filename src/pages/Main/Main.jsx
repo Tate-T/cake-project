@@ -829,91 +829,108 @@ import Header from "../../components/Header/Header";
 import styles from "./Main.module.css";
 import Container from "../../components/Container/Container";
 import { useEffect, useState } from "react";
+import heroAdditionalImg1 from "../../imgs/hero-additional/hero-additional-1.png";
+import heroAdditionalImg2 from "../../imgs/hero-additional/hero-additional-2.png";
+import heroAdditionalImg3 from "../../imgs/hero-additional/hero-additional-3.png";
 
-//   *:hover {
-//     cursor: pointer;
-//   }
+// const CakesTitle = styled.h2`
+//   color: ${(props) => props.theme.colors.titleColor};
+//   font-family: "Yeseva One";
+//   font-size: ${(props) => props.theme.fontSizes.title};
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 120%; /* 42px */
 // `;
 
-
-//   *:hover {
-//     cursor: pointer;
-//   }
+// const CakesBox = styled.div`
+//   display: flex;
+//   align-items: center;
 // `;
 
-// const HeroArrowsBox = styled.div`
+// const CakesBtnsBox = styled.div`
+//   margin-left: auto;
 //   display: flex;
 //   align-items: center;
 //   justify-content: center;
-//   margin-top: 60px;
-//   margin-left: 795px;
 // `;
 
-// const HeroProductsList = styled.ul`
+// const CakesBtnSeeAll = styled.button`
+//   padding: 5px 20px;
+//   border-radius: 30px;
+//   background-color: #dcebf8;
+//   color: ${(props) => props.theme.colors.textColor};
+//   font-family: Verdana;
+//   font-size: ${(props) => props.theme.spacings(3.5)};
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 24px; /* 171.429% */
+// `;
+
+// const CakesArrowBtn = styled.button`
+//   background-color: transparent;
+//   border: none;
+// `;
+
+// const CakesList = styled.ul`
 //   display: flex;
 //   align-items: center;
-//   gap: 20px;
-//   margin-top: 15px;
+//   justify-content: center;
+//   gap: 18px;
+//   margin-top: 20px;
 
 //   li {
-//     display: flex;
-//     align-content: center;
-//     justify-content: center;
-//     flex-direction: column;
-
-//     img {
-//       max-width: 153px;
-//     }
-
-//     h2 {
-//       color: ${(props) => props.theme.colors.textColor};
-//       font-family: Verdana;
-//       font-size: ${(props) => props.theme.spacings(4.5)};
-//       font-weight: 700;
-//       line-height: 24px; /* 133.333% */
-//       text-align: center;
-//       margin-top: 10px;
-//     }
-
-//     h2:hover {
-//       cursor: pointer;
-//       text-decoration: underline;
-//     }
+//     max-width: 280px;
 //   }
 // `;
 
-// const HeroFlexBox = styled.div`
+// const CakeCardTitle = styled.h2`
+//   color: ${(props) => props.theme.colors.accentColor};
+//   font-family: Verdana;
+//   font-size: ${(props) => props.theme.spacings(4.5)};
+//   font-weight: 700;
+//   line-height: 120%;
+//   /* margin-top: 15px; */
+// `;
+
+// const CakeCardSubtitle = styled.p`
+//   color: ${(props) => props.theme.colors.titleColor};
+//   font-family: Verdana;
+//   font-size: ${(props) => props.theme.spacings(4)};
+//   font-weight: 400;
+//   line-height: 20px;
+//   /* margin-top: 10px; */
+//   max-width: 250px;
+// `;
+
+// const CakeCardDescription = styled.p`
+//   color: #84a6c2;
+//   font-family: Verdana;
+//   font-size: ${(props) => props.theme.spacings(3.5)};
+//   font-weight: 400;
+//   line-height: 120%;
+//   /* margin-top: 5px; */
+// `;
+
+// const CakesCardBox = styled.div`
+//   padding: 15px 15px 15px 15px;
+//   box-shadow: ${(props) => props.theme.shadows.cupcakesCard};
+//   border-radius: 5px;
+//   height: 114px;
 //   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
-// const HeroImgsBox = styled.div`
-//   display: flex;
-//   gap: 20px;
-//   flex-wrap: nowrap;
-//   margin-left: auto;
-
-//   div {
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     gap: 20px;
-//   }
-// `;
-
-// const HeroAdditionalSmallImg = styled.img`
-//   width: 175px;
-//   height: 333px;
-// `;
-
-// const HeroAdditionalBigImg = styled.img`
-//   width: 355px;
-//   height: 684px;
+//   /* align-items: center; */
+//   justify-content: space-between;
+//   flex-direction: column;
 // `;
 
 const Main = () => {
   const [typeOfCakes, setTypeOfCakes] = useState([]);
+  const [varietyOfProductsIsLoading, setVarietyOfProductsIsLoading] =
+    useState(false);
+  const [varietyOfProducts, setVarietyOfProducts] = useState([]);
+  const [cakes, setCakes] = useState([]);
+  const [cakesIsLoading, setCakesIsLoading] = useState(false);
+  const [cupcakes, setCupcakes] = useState([]);
+  const [cupcakesIsLoading, setCupcakesIsLoading] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:3000/typesOfCakes`)
@@ -922,6 +939,49 @@ const Main = () => {
         setTypeOfCakes(data);
       });
   }, []);
+
+  useEffect(() => {
+    setVarietyOfProductsIsLoading(true);
+    fetch("http://localhost:3000/varietyOfProducts")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+        setVarietyOfProducts(data);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setVarietyOfProductsIsLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    setCakesIsLoading(true);
+    fetch("http://localhost:3000/cakes")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data)
+        setCakes(data);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setCakesIsLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    setCupcakesIsLoading(true);
+    fetch("http://localhost:3000/cupcakes")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data)
+        setCupcakes(data);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setCupcakesIsLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <Header />
@@ -974,8 +1034,8 @@ const Main = () => {
                   </svg>
                 </li>
               </ul>
-              <HeroArrowsBox>
-                <CakesArrowBtn type="button">
+              <div className={styles.heroArrowsBox}>
+                <button type="button" className={styles.cakesArrowBtn}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1000,8 +1060,8 @@ const Main = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                </CakesArrowBtn>
-                <CakesArrowBtn type="button">
+                </button>
+                <button type="button" className={styles.cakesArrowBtn}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1021,9 +1081,9 @@ const Main = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                </CakesArrowBtn>
-              </HeroArrowsBox>
-              <HeroProductsList>
+                </button>
+              </div>
+              <ul className={styles.heroProductsList}>
                 {varietyOfProductsIsLoading === true
                   ? null
                   : varietyOfProducts.map((product) => (
@@ -1032,37 +1092,197 @@ const Main = () => {
                         <h2>{product.name}</h2>
                       </li>
                     ))}
-                {/* <li>
-                  <img src={heroProductImg1} alt="cake" />
-                  <h2>Торти</h2>
-                </li>
-                <li>
-                  <img src={heroProductImg2} alt="cake" />
-                  <h2>Цукерки</h2>
-                </li>
-                <li>
-                  <img src={heroProductImg3} alt="cake" />
-                  <h2>Капкейки</h2>
-                </li>
-                <li>
-                  <img src={heroProductImg4} alt="cake" />
-                  <h2>Макаруни</h2>
-                </li>
-                <li>
-                  <img src={heroProductImg5} alt="cake" />
-                  <h2>Печиво</h2>
-                </li> */}
-              </HeroProductsList>
+              </ul>
             </div>
-            <HeroImgsBox>
+            <div className={styles.heroImgsBox}>
               <div>
-                <HeroAdditionalSmallImg src={heroAdditionalImg1} />
-                <HeroAdditionalSmallImg src={heroAdditionalImg2} />
+                <img
+                  src={heroAdditionalImg1}
+                  className={styles.heroAdditionalSmallImg}
+                  alt="heroAdditional1"
+                />
+                <img
+                  src={heroAdditionalImg2}
+                  className={styles.heroAdditionalSmallImg}
+                  alt="heroAdditional2"
+                />
               </div>
-              <HeroAdditionalBigImg src={heroAdditionalImg3} />
-            </HeroImgsBox>
+              <img
+                src={heroAdditionalImg3}
+                className={styles.heroAdditionalBigImg}
+                alt="heroAdditional3"
+              />
+            </div>
           </div>
           {/* <Btn text="Переглянути всі"></Btn> */}
+        </Container>
+      </section>
+      <section className={styles.cakes}>
+        <Container>
+          <div className={styles.cakesBox}>
+            <h2 className={styles.cakesTitle}>Торти</h2>
+            <div className={styles.cakesBtnsBox}>
+              <button type="button" className={styles.cakesBtnSeeAll}>
+                Переглянути всі
+              </button>
+              <button type="button" className={styles.cakesArrowBtn}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_5811_9696)">
+                    <path
+                      d="M15.4102 16.59L10.8302 12L15.4102 7.41L14.0002 6L8.00016 12L14.0002 18L15.4102 16.59Z"
+                      fill="#43607C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5811_9696">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="matrix(-1 0 0 1 24 0)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button type="button" className={styles.cakesArrowBtn}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_5811_8201)">
+                    <path
+                      d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z"
+                      fill="#43607C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5811_8201">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <ul className={styles.cakesList}>
+            {cakesIsLoading === true
+              ? null
+              : cakes.map((cake) => (
+                  <li>
+                    <img src={cake.src} alt={cake.name} />
+                    <div className={styles.cakesCardBox}>
+                      <h3 className={styles.cakesCardTitle}>
+                        {cake.price} грн
+                      </h3>
+                      <p className={styles.cakesCardSubtitle}>{cake.name}</p>
+                      <p className={styles.cakesCardDescription}>
+                        {cake.quantityOfFillings} варіанти начинок
+                      </p>
+                    </div>
+                  </li>
+                ))}
+          </ul>
+        </Container>
+      </section>
+      <section className={styles.cakes}>
+        <Container>
+          <div className={styles.cakesBox}>
+            <h2 className={styles.cakesTitle}>Капкейки</h2>
+            <div className={styles.cakesBtnsBox}>
+              <button type="button" className={styles.cakesBtnSeeAll}>
+                Переглянути всі
+              </button>
+              <button type="button" className={styles.cakesArrowBtn}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_5811_9696)">
+                    <path
+                      d="M15.4102 16.59L10.8302 12L15.4102 7.41L14.0002 6L8.00016 12L14.0002 18L15.4102 16.59Z"
+                      fill="#43607C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5811_9696">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="matrix(-1 0 0 1 24 0)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button type="button" className={styles.cakesArrowBtn}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_5811_8201)">
+                    <path
+                      d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z"
+                      fill="#43607C"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5811_8201">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <ul className={styles.cakesList}>
+            {cupcakesIsLoading === true
+              ? null
+              : cupcakes.map((cupcake) => (
+                  <li>
+                    <img src={cupcake.src} alt={cupcake.name} />
+                    <div className={styles.cakesCardBox}>
+                      <h3 className={styles.cakesCardTitle}>
+                        {cupcake.price} грн
+                      </h3>
+                      <p className={styles.cakesCardSubtitle}>{cupcake.name}</p>
+                      <p className={styles.cakesCardDescription}>
+                        {cupcake.quantityOfFillings} варіанти начинок
+                      </p>
+                    </div>
+                  </li>
+                ))}
+          </ul>
+        </Container>
+      </section>
+      <section className={styles.moreClients}>
+        <Container>
+          <h2 className={styles.moreClientsTitle}>
+            Обожнюєш свою роботу і хочеш більше клієнтів?
+          </h2>
+          <h3 className={styles.moreClientsDescription}>
+            Реєструйся як кондитер, викладай фото своїх смаколиків та отримуй
+            замовлення через MyCake
+          </h3>
+          <button type="button" className={styles.moreClientsBtn}>
+            Зареєструватися як кондитер
+          </button>
         </Container>
       </section>
     </>
