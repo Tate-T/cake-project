@@ -1,10 +1,11 @@
 import SearchForm from "../../components/SearchForm/SearchForm"
 import css from "./DessertInfo.module.css";
 
+
 const DessertInfo = () => {
     return (
         <>
-            <HeaderComp></HeaderComp>
+            {/* <HeaderComp></HeaderComp> */}
 
             <Container>
                 <SearchForm placeholder="Шоколадний торт з квітами" />

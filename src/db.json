@@ -1,0 +1,149 @@
+{
+  "typesOfCakes": [
+    {
+      "type": "На день народження",
+      "id": "kvnrkvn939865"
+    },
+    {
+      "type": "З фруктами",
+      "id": "bjfbvjjv736r4"
+    },
+    {
+      "type": "Патріотичні",
+      "id": "hjgjgjgjgjgjg"
+    },
+    {
+      "type": "Для чоловіків",
+      "id": "638vbnmsncl"
+    },
+    {
+      "type": "Для весілля",
+      "id": "mcksopw0ttx"
+    },
+    {
+      "type": "Без глютену",
+      "id": "nbvbdbieob62790"
+    },
+    {
+      "type": "Веганські",
+      "id": "63889mzpwkjbv"
+    },
+    {
+      "type": "Без цукру",
+      "id": "73vbvnzkauxv"
+    },
+    {
+      "type": "Для дівчат",
+      "id": "bcjei64moakg"
+    },
+    {
+      "type": "З квітами",
+      "id": "6124bvks09v"
+    },
+    {
+      "type": "Класичні рецепти",
+      "id": "nxksoof8cs"
+    }
+  ],
+  "varietyOfProducts": [
+    {
+      "name": "Торти",
+      "src": "https://cdn.abo.media/upload/article/res/770-430/ej9sf3jqjbew2roocbj7.jpg",
+      "id": "tryubwmlz038"
+    },
+    {
+      "name": "Цукерки",
+      "src": "https://koloro.ua/files/images/blog/ed15b392f028999312121f8bc14c5fc0.jpg",
+      "id": "hhdbcbnnd4321"
+    },
+    {
+      "name": "Капкейки",
+      "src": "https://img1.russianfood.com/dycontent/images_upl/583/big_582971.jpg",
+      "id": "iuybmcnbyu7591"
+    },
+    {
+      "name": "Макаруни",
+      "src": "https://pastrynom.com.ua/images/macarons2.jpg",
+      "id": "bcbi3i6nlax"
+    },
+    {
+      "name": "Печиво",
+      "src": "https://nashkraj.ua/bitrix/uploads/2021/01/myriam-zilles-ew3sTx9Y3IA-unsplash.jpg",
+      "id": "jjdejjer4fvc5"
+    }
+  ],
+  "cakes": [
+    {
+      "name": "Торт “Літнє бажання” з шоколадом та макарунами",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://art-prezent.com.ua/images/tovar/5953661D-423C-4DC3-A538-326BB6E75E5A.jpeg",
+      "id": "nsnnsdkv7472"
+    },
+    {
+      "name": "Весільний триярусний торт з фруктами та квітами",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://art-prezent.com.ua/images/tovar/IMG_2638.jpeg",
+      "id": "yercnar4691"
+    },
+    {
+      "name": "Бісквітний торт з ягодами",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://art-prezent.com.ua/images/tovar/D87F8874-B0DC-4361-A3C1-00E08BEC3531.jpeg",
+      "id": "ytqwertyuio264"
+    },
+    {
+      "name": "Ванільно-карамельний торт з печивом Орео",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://art-prezent.com.ua/images/tovar/IMG_3478.jpeg",
+      "id": "asdfghj8273645"
+    },
+    {
+      "name": "Торт рожевий з макарунами",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://art-prezent.com.ua/images/tovar/83D9875C-BC97-4547-885B-7C5D6E98C7C3.jpeg",
+      "id": "mznxbcvsl6574839012"
+    }
+  ],
+  "cupcakes": [
+    {
+      "name": "Пасхальні капкейки шоколадні та ванільні ",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://i.ibb.co/X5D2txb/Rectangle-43.jpg",
+      "id": "asdfghj8273645"
+    },
+    {
+      "name": "Оригінальні капкейки з кремом та печивом",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://i.ibb.co/CBpzwn9/Rectangle-42.jpg",
+      "id": "asdfghj8273645"
+    },
+    {
+      "name": "Капкейки з карамеллю 3 шт",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://i.ibb.co/c60QLCs/lalalala.jpg",
+      "id": "asdfghj8273645"
+    },
+    {
+      "name": "Капкейки з ніжним кремом",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://i.ibb.co/cCxMm9j/rororr.jpg",
+      "id": "asdfghj8273645"
+    },
+    {
+      "name": "Чорні капкейки з шоколадом та печивом",
+      "price": 520,
+      "quantityOfFillings": 4,
+      "src": "https://i.ibb.co/yPgNz97/jkrkle.jpg",
+      "id": "asdfghj8273645"
+    }
+  ]
+}
