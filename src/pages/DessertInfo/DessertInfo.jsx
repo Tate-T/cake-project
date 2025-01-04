@@ -73,20 +73,6 @@ const DessertInfo = () => {
                                 Начинка: червоний оксамит
                                 <span></span>
                                 Прикраси з мастики
-                            </p>
-
-                            <p className={css.text__cake}> Цей торт особливо актуальний до Дня святого Валентина. Ви тільки подивіться, який він пристрасний!) І смачний звичайно. І з приготуванням впорається будь-хто! Загалом все, як ми любимо! Тому цей
-                                «Червоний оксамит» до приготування обов'язковий. Щоб отримати такий
-                                насичений червоний колір, використовуйте або сухі індійські барвники
-                                (Roha), або гелевий Americolor Red Red.</p>
-
-
-                            <ul className={css.button__listCake}>
-                                <li>
-                                    <button className={css.button__cake} type="button" background="rgb(166, 58, 80)">Обрати параметри</button>
-                                </li>
-                                <li>
-                                    <button className={css.button__cake} type="button">Переглянути контакти</button>
                                 </li>
                                 <li>
                                     <button type="button" className={css.loading__btn}>
