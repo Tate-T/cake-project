@@ -1,6 +1,6 @@
 import css from "./SearchForm.module.css";
 
-const SearchForm = ({ placeholder, type }) => {
+const SearchForm = ({ placeholder}) => {
   return (
     <form className={css.searchform__form}>
       <input placeholder={placeholder} className={css.searchform__input} />
