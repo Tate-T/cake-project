@@ -1,10 +1,20 @@
 import { Routes, Route } from "react-router-dom";
+
 import DessertInfo from "./pages/DessertInfo/DessertInfo";
+
+// import DessertInfo from "./pages/DessertInfo/DessertInfo";
+import Main from "./pages/Main/Main";
+
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
+
       <Route path="/desserts" element={<Desserts />} />
+
+      {/* <Route path="/desserts" element={<Desserts />} />
+
       <Route path="/desserts/:id" element={<DessertInfo />} />
       <Route path="/confecionres" element={<Confecioners />} />
       <Route path="/articles" element={<Articles />} />
@@ -13,7 +23,7 @@ function App() {
       <Route path="/confectioner">
         <Route path="products" element={<ConfectionerProducts />} />
         <Route path="about" element={<AboutConfectioner />} />
-      </Route>
+      </Route> */}
     </Routes>
   );
 }

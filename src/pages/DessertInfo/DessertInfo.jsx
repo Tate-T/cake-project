@@ -1,12 +1,14 @@
 import SearchForm from "../../components/SearchForm/SearchForm"
 import css from "./DessertInfo.module.css";
+
 import data from "../confectionerProducts.json";
 import { useParams } from "react-router-dom";
+
 const DessertInfo = () => {
     const { id } = useParams();
     return (
         <>
-            <HeaderComp></HeaderComp>
+            {/* <HeaderComp></HeaderComp> */}
 
             <Container>
                 <SearchForm placeholder="Шоколадний торт з квітами" />
