@@ -4,7 +4,7 @@ import loadmore from "../../imgs/svg/loadmore.svg";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import leftArrow from "../../imgs/svg/leftArrow.svg";
 import rightArrow from "../../imgs/svg/rihtAroow.svg";
-// import Header from "../../components/Header/Header";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
 import BidData from "../../components/BidData/BidData.jsx";
@@ -329,7 +329,7 @@ export default () => {
     const [showModal, setShowModal] = useState(false);
     return (<>
             {showModal && <BidData productName="Торт “Червоний оксамит”" time="21.12.2020 13:42" nameAndSurname="Анна Василенко" mobilePhone="+56 085 345 76 34" Weight="2" filling="Шоколадний бісквіт з крем-чізом, горіховим праліне і велюровим покриттям" additionalServices={["Прикраси з мастики", "Живі квіти"]} additionalWish="Хочу торт на 3 яруси з фігурками котиків, що цілуються зверху. Торт має бути трохи солодкий, трохи кислий, дуже смачний і великий" isCall={true} closeModal={() => setShowModal(false)} />}
-            {/* <Header />   */}
+            <Header />  
             <section>
                 <div className={css.container}>
                     <Searchbar placeholder="Шоколадний торт з квітами" />
@@ -344,7 +344,7 @@ export default () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/confectioner/products">
+                                    <Link to="/confectioner/desserts">
                                         <button confectionerActive="1">
                                             Товари
                                         </button>

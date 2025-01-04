@@ -1,13 +1,13 @@
 import { Link, NavLink } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
-// import Header from "../../components/Header/Header";
+import Header from "../../components/Header/Header";
 import React from "react";
 import css from "./ConfectionerCabinet.module.css";
 
 export default ({}) => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <section>
             <div className={css.container}>
                 <div className={css.navCont}>

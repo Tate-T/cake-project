@@ -5,6 +5,7 @@ import Container from "../../components/Container/Container";
 import heroAdditionalImg1 from "../../imgs/hero-additional/hero-additional-1.png";
 import heroAdditionalImg2 from "../../imgs/hero-additional/hero-additional-2.png";
 import heroAdditionalImg3 from "../../imgs/hero-additional/hero-additional-3.png";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Main = () => {
   const [typeOfCakes, setTypeOfCakes] = useState([]);
@@ -87,7 +88,7 @@ const Main = () => {
               <ul className={styles.heroPopularSearchList}>
                 {typeOfCakes.map((type) => (
                   <li className={styles.heroPopularSearchItem} key={type.id}>
-                    <p className={styles.heroPopularSearchText}>{type.type}</p>
+                    <NavLink to={type.href} className={styles.heroPopularSearchText}>{type.type}</NavLink>
                   </li>
                 ))}
                 <li className={styles.heroOtherVariantsItem}>
@@ -118,6 +119,7 @@ const Main = () => {
                   </svg>
                 </li>
               </ul>
+              <Outlet />
               <div className={styles.heroArrowsBox}>
                 <button type="button" className={styles.cakesArrowBtn}>
                   <svg
