@@ -3,12 +3,13 @@ import css from "./DessertInfo.module.css";
 
 import data from "../confectionerProducts.json";
 import { useParams } from "react-router-dom";
-
+import Container from "../../components/Container/Container";
+import Header from "../../components/Header/Header";
 const DessertInfo = () => {
     const { id } = useParams();
     return (
         <>
-            {/* <HeaderComp></HeaderComp> */}
+            <Header></Header>
 
             <Container>
                 <SearchForm placeholder="Шоколадний торт з квітами" />
@@ -91,13 +92,13 @@ const DessertInfo = () => {
                 </div>
 
 
-                <div>
-                    <div>
-                        <div>
-                            <img src="https://st2.depositphotos.com/1000861/7741/i/450/depositphotos_77412900-stock-photo-happy-woman.jpg" />
+                <div className={css.box__infoPerson}>
+                    <div className={css.box__person}>
+                        <div className={css.box__appearancePerson}>
+                            <img className={css.img__person} src="https://st2.depositphotos.com/1000861/7741/i/450/depositphotos_77412900-stock-photo-happy-woman.jpg" />
                             <div>
-                                <h2>Інна Пономаренко <span>Київ</span></h2>
-                                <button type="button">Перейти на сторінку</button>
+                                <h2 className={css.person__name}>Інна Пономаренко <span className={css.person__locate}>Київ</span></h2>
+                                <button type="button" className={css.person__btn}>Перейти на сторінку</button>
                             </div>
                         </div>
 
@@ -124,10 +125,10 @@ const DessertInfo = () => {
                     </div>
 
                     <div>
-                        <div>
-                            <h2>Відгуки</h2>
-                            <button type="button" >
-                                <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                        <div className={css.box__reviews}>
+                            <h2 className={css.box__reviewsText}>Відгуки</h2>
+                            <button type="button" className={css.box__reviewsBtn}>
+                                <svg className={css.box__reviewsSvg} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
                                     </desc>
@@ -145,28 +146,23 @@ const DessertInfo = () => {
                                 </svg>
                                 Додати відгук
                             </button>
-                            <button type="button" >
+                            <button type="button" className={css.comments__btn}>
                                 Переглянути всі
                             </button>
 
-                            <button type="button" >
-                                <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                            <button type="button" className={css.comments__svg}>
+                                <svg width="7.410034" height="12.000000" viewBox="0 0 7.41003 12" fill="none" xmlns="http://www.w3.org/2000/svg"  xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
                                     </desc>
-                                    <defs>
-                                        <clipPath id="clip4_8223">
-                                            <rect id="keyboard_arrow_right" rx="0.000000" width="23.000000" height="23.000000" transform="matrix(-1 0 0 1 24.5 0.5)" fill="white" fill-opacity="0" />
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#clip4_8223)">
-                                        <path id="Vector" d="M15.41 16.58L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.58Z" fill="#43607C" fill-opacity="1.000000" fill-rule="nonzero" />
-                                    </g>
+                                    <defs />
+                                    <path id="Vector" d="M7.41 10.58L2.83 6L7.41 1.41L6 0L0 6L6 12L7.41 10.58Z" fill="#43607C" fill-opacity="1.000000" fill-rule="nonzero" />
                                 </svg>
 
+
                             </button>
-                            <button type="button" >
-                                <svg width="7.410034" height="12.000000" viewBox="0 0 7.41003 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink">
+                            <button type="button" className={css.comments__svg}>
+                                <svg width="7.410034" height="12.000000" viewBox="0 0 7.41003 12" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                     <desc>
                                         Created with Pixso.
                                     </desc>
@@ -177,22 +173,22 @@ const DessertInfo = () => {
                             </button>
                         </div>
                         <ul>
-                            <li>
-                                <h2>Анна Щедріна<span>15.11.2020</span></h2>
-                                <p>Замовляли на мій День народження мусовий торт із маракуєю та залишилися дуже задоволені. Тортик вийшов дуже смачний,
-                                     з приємною кислинкою за рахунок маракуї та неймовірно ніжною та легкою текстурою. Начинка,
-                                     на мій смак, просто шикарна: желе маракуйї, бісквіт, хрусткий шар та мус із манго та маракуйї.</p>
+                            <li className={css.comments__item}>
+                                <h2 className={css.person__name}>Анна Щедріна<span className={css.person__locate}>15.11.2020</span></h2>
+                                <p className={css.text__cake}>Замовляли на мій День народження мусовий торт із маракуєю та залишилися дуже задоволені. Тортик вийшов дуже смачний,
+                                    з приємною кислинкою за рахунок маракуї та неймовірно ніжною та легкою текстурою. Начинка,
+                                    на мій смак, просто шикарна: желе маракуйї, бісквіт, хрусткий шар та мус із манго та маракуйї.</p>
 
                             </li>
-                            <li>
-                                <h2>Олександр Ольцев<span>15.11.2020</span></h2>
-                                <p>Супер десерти для дому та хореки. Чарівні круасани. Торти, кейки та мусові десерти - це кохання</p>
+                            <li className={css.comments__item}>
+                                <h2 className={css.person__name}>Олександр Ольцев<span className={css.person__locate}>15.11.2020</span></h2>
+                                <p className={css.text__cake}>Супер десерти для дому та хореки. Чарівні круасани. Торти, кейки та мусові десерти - це кохання</p>
 
                             </li>
-                            <li>
-                                <h2>Тарас Коломієць<span>15.11.2020</span></h2>
-                                <p>Найсмачніші торти та тістечка, казкові еклери. У захваті від десертів. Кондитера - чарівниці, доставка завжди на найвищому рівні!!!!!
-                                     Всій сім'єю обожнюємо Вашу кондитерську , дякую за вашу працю і смакоти!! 3</p>
+                            <li className={css.comments__item}>
+                                <h2 className={css.person__name}>Тарас Коломієць<span className={css.person__locate}>15.11.2020</span></h2>
+                                <p className={css.text__cake}>Найсмачніші торти та тістечка, казкові еклери. У захваті від десертів. Кондитера - чарівниці, доставка завжди на найвищому рівні!!!!!
+                                    Всій сім'єю обожнюємо Вашу кондитерську , дякую за вашу працю і смакоти!! 3</p>
 
                             </li>
                         </ul>
