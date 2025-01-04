@@ -8,11 +8,12 @@ import ConfectionerCabinet from "./pages/ConfectionerCabinet/ConfectionerCabinet
 import ConfecionerInfo from "./pages/ConfecionerInfo/ConfecionerInfo";
 import ConfectionerDeserts from "./pages/ConfectionerDeserts/ConfectionerDeserts";
 
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />y
-      {/* <Route path="/desserts" element={<Desserts />} /> */}
+      <Route path="/" element={<Main />} />
+      <Route path="/desserts" element={<Desserts />} />
       <Route path="/desserts/:id" element={<DessertInfo />} />
       <Route path="/confecioners" element={<Confectioners />} />
       <Route path="/articles" element={<Articles />} />
