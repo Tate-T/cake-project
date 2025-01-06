@@ -8,7 +8,6 @@ import ConfectionerCabinet from "./pages/ConfectionerCabinet/ConfectionerCabinet
 import ConfecionerInfo from "./pages/ConfecionerInfo/ConfecionerInfo";
 import ConfectionerDeserts from "./pages/ConfectionerDeserts/ConfectionerDeserts";
 
-
 function App() {
   return (
     <Routes>
