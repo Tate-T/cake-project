@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../../components/Header/Header";
+// import Header from "../../components/Header/Header";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import Footer from "../../components/Footer/Footer";
 import aboutConfectionerImg from "../../imgs/aboutConfectionerImg.jpg";
@@ -24,7 +24,7 @@ function createUniqueId() {
 export default () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div className={css.container}>
                 <div className={css.searchbar}>
                     <Searchbar placeholder="Шоколадний торт з квітами" />
@@ -39,7 +39,7 @@ export default () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/confectioner/desserts">
+                            <Link to="/confectioner/products">
                                 <button className={css.menuBtn}>Товари</button>
                             </Link>
                         </li>
