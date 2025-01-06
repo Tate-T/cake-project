@@ -2,47 +2,58 @@
   "typesOfCakes": [
     {
       "type": "На день народження",
-      "id": "kvnrkvn939865"
+      "id": "kvnrkvn939865",
+      "href": "birthday"
     },
     {
       "type": "З фруктами",
-      "id": "bjfbvjjv736r4"
+      "id": "bjfbvjjv736r4",
+      "href": "fruits"
     },
     {
       "type": "Патріотичні",
-      "id": "hjgjgjgjgjgjg"
+      "id": "hjgjgjgjgjgjg",
+      "href": "patriot"
     },
     {
       "type": "Для чоловіків",
-      "id": "638vbnmsncl"
+      "id": "638vbnmsncl",
+      "href": "man"
     },
     {
       "type": "Для весілля",
-      "id": "mcksopw0ttx"
+      "id": "mcksopw0ttx",
+      "href": "wedding"
     },
     {
       "type": "Без глютену",
-      "id": "nbvbdbieob62790"
+      "id": "nbvbdbieob62790",
+      "href": "glutenFree"
     },
     {
       "type": "Веганські",
-      "id": "63889mzpwkjbv"
+      "id": "63889mzpwkjbv",
+      "href": "vegan"
     },
     {
       "type": "Без цукру",
-      "id": "73vbvnzkauxv"
+      "id": "73vbvnzkauxv",
+      "href": "sugarFree"
     },
     {
       "type": "Для дівчат",
-      "id": "bcjei64moakg"
+      "id": "bcjei64moakg",
+      "href": "girls"
     },
     {
       "type": "З квітами",
-      "id": "6124bvks09v"
+      "id": "6124bvks09v",
+      "href": "flowers"
     },
     {
       "type": "Класичні рецепти",
-      "id": "nxksoof8cs"
+      "id": "nxksoof8cs",
+      "href": "classic"
     }
   ],
   "varietyOfProducts": [
