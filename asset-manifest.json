@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/cake-project/static/css/main.243ad603.css",
+    "main.js": "/cake-project/static/js/main.25c7403c.js",
+    "static/media/hero-additional-3.png": "/cake-project/static/media/hero-additional-3.3903c3ab3d838afaf1a6.png",
+    "static/media/article-banner.jpeg": "/cake-project/static/media/article-banner.0986432e53c49186bb4e.jpeg",
+    "static/media/cake-1.jpg": "/cake-project/static/media/cake-1.e6da3885bb8f4b467f4c.jpg",
+    "static/media/hero-additional-1.png": "/cake-project/static/media/hero-additional-1.0ebdaed9409e46a86fc9.png",
+    "static/media/cake-4.jpg": "/cake-project/static/media/cake-4.35d7a95adb2dcc7b5a8c.jpg",
+    "static/media/cake-2.jpg": "/cake-project/static/media/cake-2.522510619d79aba14a85.jpg",
+    "static/media/hero-additional-2.png": "/cake-project/static/media/hero-additional-2.fb23c248bb3650a33e08.png",
+    "static/media/articlePreview2.png": "/cake-project/static/media/articlePreview2.e040b1f2e91f7ce671fa.png",
+    "static/media/articlePreview1.png": "/cake-project/static/media/articlePreview1.91dfdf0de56a4e398c59.png",
+    "static/media/cake-5.jpg": "/cake-project/static/media/cake-5.5be0d0bcfac25192da5d.jpg",
+    "static/media/cake-3.jpg": "/cake-project/static/media/cake-3.873b9c711504ac4901cc.jpg",
+    "static/media/aboutConfectionerImg.jpg": "/cake-project/static/media/aboutConfectionerImg.1c438110d30af8e7ba84.jpg",
+    "static/media/Instagram.svg": "/cake-project/static/media/Instagram.8bf513654c968e81fb8d243efdef13c0.svg",
+    "static/media/cookie.svg": "/cake-project/static/media/cookie.16aab63a8f8d5919ae2c7e104a91e930.svg",
+    "static/media/cupcake.svg": "/cake-project/static/media/cupcake.ab246eb01397e30b980e0a36dd1d337d.svg",
+    "index.html": "/cake-project/index.html",
+    "static/media/loadmore.svg": "/cake-project/static/media/loadmore.d8984a57202220feecca543c093026ed.svg",
+    "static/media/backup.svg": "/cake-project/static/media/backup.8387dbc9d660338b7abd6946b617ff25.svg",
+    "static/media/Youtube_black.svg": "/cake-project/static/media/Youtube_black.8f2fc78820f9c1e1f4e2230bfa63c111.svg",
+    "static/media/location_pin.svg": "/cake-project/static/media/location_pin.d2071be9482c0313372e5a3e7c15fa9d.svg",
+    "static/media/sm-arrow-left.svg": "/cake-project/static/media/sm-arrow-left.4b1d08b7246238d99969a04c0c11a4a7.svg",
+    "static/media/sm-arrow-right.svg": "/cake-project/static/media/sm-arrow-right.5ab1d97e49162ef719d64521917dab9e.svg",
+    "static/media/close.svg": "/cake-project/static/media/close.9b3051baa9921dc8844c53d9daf5c8d3.svg",
+    "static/media/leftArrow.svg": "/cake-project/static/media/leftArrow.99d5922679cdc49c6bed07ea35492fc9.svg",
+    "static/media/rihtAroow.svg": "/cake-project/static/media/rihtAroow.8a7f18980b8d8d5dafe37ac4e71f2bf5.svg",
+    "main.243ad603.css.map": "/cake-project/static/css/main.243ad603.css.map",
+    "main.25c7403c.js.map": "/cake-project/static/js/main.25c7403c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.243ad603.css",
+    "static/js/main.25c7403c.js"
+  ]
+}
