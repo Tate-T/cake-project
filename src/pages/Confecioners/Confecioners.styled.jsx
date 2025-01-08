@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { List } from '../../components/general-components/List/List.styled';
+// import { List } from '../../components/general-components/List/List.styled';
 
 export const HeroSearchInputBox = styled.div`
   display: flex;
@@ -30,12 +30,12 @@ export const HeroSearchBtn = styled.button`
   height: 50px;
 `;
 
-export const HeroPopularSearchList = styled(List)`
-  max-width: 800px;
-  gap: 10px;
-  margin: 30px auto 40px;
-  justify-content: left;
-`;
+// export const HeroPopularSearchList = styled(List)`
+//   max-width: 800px;
+//   gap: 10px;
+//   margin: 30px auto 40px;
+//   justify-content: left;
+// `;
 
 export const HeroPopularSearchItem = styled.li`
   border-radius: 40px;
