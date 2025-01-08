@@ -32,7 +32,7 @@ const Auth = ({ setIsOpen }) => {
             </Link>
           </li>
           <li className={css.auth__item}>
-            <Link to="/confectioner/cabinet">
+            <Link to="/confectioner/login">
               <img
                 className={css.auth__img}
                 src={CupcakeIcon}

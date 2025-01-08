@@ -10,6 +10,7 @@ import ConfectionerDeserts from "./pages/ConfectionerDeserts/ConfectionerDeserts
 import Birthday from "./pages/Main/SubPages/Birthday/Birthday";
 import Cupcakes from "./pages/Main/SubPages/Cupcakes/Cupcakes";
 import Patriot from "./pages/Main/SubPages/Patriot/Patriot";
+import ConfectionerLogin from "./components/ConfectionerLogin/ConfectionerLogin";
 
 // hello
 
@@ -43,6 +44,11 @@ function App() {
         <Route path="about" element={<ConfecionerInfo />} />
       </Route>
       <Route path="/confectioner/cabinet" element={<ConfectionerCabinet />} />
+      <Route path="/confectioner/login" element={<ConfectionerLogin />} />
+      <Route
+        path="/confectioner/registration"
+        element={<ConfectionerLogin />}
+      />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
