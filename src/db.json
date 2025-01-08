@@ -1,14 +1,14 @@
 {
   "typesOfCakes": [
     {
-      "type": "На день народження",
+      "type": "На день народження (торт)",
       "id": "kvnrkvn939865",
       "href": "birthday"
     },
     {
-      "type": "З фруктами",
+      "type": "Капкейки",
       "id": "bjfbvjjv736r4",
-      "href": "fruits"
+      "href": "cupcakes"
     },
     {
       "type": "Патріотичні",
