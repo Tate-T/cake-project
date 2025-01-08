@@ -1,279 +1,525 @@
-.container {
+.listWrap {
     display: flex;
     flex-direction: column;
+    row-gap: 40px;
+}
+
+.confItem {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.confAvatar {
+    width: 280px;
+    height: 479px;
+    padding: 20px;
+    text-align: center;
     align-items: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
-.searchbar {
-    display: flex;
-    justify-content: center;
-}
-
-.main {
-    display: flex;
-    align-items: flex-start;
-    width: 1500px;
-    gap: 40px;
-}
-
-.confectionerList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.userPic {
+.confAvatarImg {
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
     border-radius: 5px;
-    margin-right: 50px;
+    border: 1px solid #ffe1e1;
+    margin: 0 auto 20px;
 }
 
-.city {
-    color: #84a6c2;
+.confAvatarName {
+    color: #43607c;
     font-family: Verdana;
-    font-size: 16px;
-    line-height: 120%;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
 }
 
-.userName {
-    color: #011936;
-    font-family: "Yeseva One";
-    font-size: 35px;
-    line-height: 120%;
+.confAvatarComments {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #a63a50;
+    text-decoration-line: underline;
     margin-bottom: 20px;
 }
 
-.menuBtn {
-    display: flex;
-    padding-left: 20px;
-    align-items: center;
-    border-radius: 50px;
-    width: 280px;
-    height: 40px;
-    border: 1px solid rgb(200, 230, 255);
-    background-color: #FFF;
-    color: #43607C;
-    font-size: 18px;
-}
-
-.menuBtn--confectionerActive {
-    background: rgb(67, 96, 124);
-    border: 0;
-    font-weight: 700;
-    color: #fff;
-}
-
-.contactBtn {
-    display: flex;
-    height: 40px;
-    width: 268px;
-    padding: 10px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    border-radius: 50px;
-    background: #a63a50;
-    color: #fff;
-    font-family: Verdana;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 120%;
-}
-
-.info {
-    display: flex;
-    align-items: center;
-}
-
-.infoText {
+.confAvatarInfo {
     color: #43607c;
     font-family: Verdana;
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
-    margin: 50px 0 80px 0;
-    height: 200px;
+    line-height: 1.6;
+    margin-bottom: 22px;
 }
 
-.reviewsTitle {
-    color: #011936;
-    font-family: "Yeseva One";
-    font-size: 35px;
-    line-height: 120%;
-}
-
-.reviewsList {
-    list-style: none;
-}
-
-.reviewItem {
-    margin-top: 40px;
-}
-
-.reviewer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.reviewerName {
-    color: #43607c;
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 120%;
-}
-
-.reviewDate {
-    color: #84a6c2;
-    font-family: Inter;
-    font-size: 14px;
-    line-height: 120%;
-}
-
-.reviewTitle {
-    color: #a63a50;
-    font-family: Inter;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.reviewContent {
-    margin-top: 20px;
-    color: #43607c;
-    font-family: Inter;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.loadMore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    color: #43607c;
-    font-family: Inter;
-    font-size: 16px;
-    border-radius: 49px;
-    border: 1px solid #84a6c2;
-    background-color: white;
-    padding: 5px;
-    width: 1120px;
-    height: 50px;
-    margin: 40px;
-}
-
-.pagination {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    height: 50px;
-    margin: 0 auto 50px;
-}
-
-.pagination li {
-    color: #5e2d07;
-    font-family: "Roboto";
-    font-size: 18px;
+.recomendationBtn {
+    width: 120px;
+    height: 40px;
     border-radius: 50px;
-    border: 1px solid #ffe2ca;
-    background: #fff;
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    color: #8E4A4E;
+    background-color: #FFF5F7;
+
 }
 
-.pagination li:hover {
-    font-weight: 700;
-    background: #d0d0d0;
-}
-
-.arrow {
-    font-weight: 900;
-    cursor: pointer;
-}
-
-.goods {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 174px;
-}
-
-.good {
+.confAvatarButtonList {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 80px 0 24px;
+    gap: 5px;
 }
 
-.goodActions {
-    display: flex;
-    align-items: center;
-}
-
-.goodTitle {
-    color: #011936;
-    font-family: "Yeseva One";
-    font-size: 35px;
-    line-height: 120%;
-}
-
-.goodBtn {
-    color: #43607c;
+.confAvatarButtonList button {
+    margin: 0 auto;
+    padding: 2px 10px;
+    gap: 30px;
+    border-radius: 30px;
+    background-color: #fff2f2;
+    color: #a63a50;
     font-family: Verdana;
     font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.confInfo {
+    display: flex;
+    width: 1150px;
+    height: 479px;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.confSubInfo {
+    display: flex;
+    width: 1150px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.confSubInfo h2 {
+    color: #011936;
+    font-family: "Yeseva One";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.confBtnList {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.confBtnList div {
+    display: flex;
+}
+
+.confViewBtn {
+    width: 158px;
     height: 35px;
     padding: 5px 20px;
     border-radius: 30px;
     background: #dcebf8;
-    margin-right: 20px;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
-.goodList {
+.confNextBtn {
     display: flex;
-    gap: 18px;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 }
 
-.goodItem {
+.confCakeItem {
     display: flex;
+    width: 280px;
+    height: 424px;
     flex-direction: column;
     align-items: flex-start;
-    width: 280px;
-    gap: 10px;
+    row-gap: 10px;
     border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(67, 96, 124, 0.15);
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
 }
 
-.goodItemImg {
+.confCakeItemImg {
     width: 280px;
     height: 300px;
+    flex-shrink: 0;
     border-radius: 5px;
 }
 
-.goodItemPrice {
-    color: #a63a50;
-    font-family: Verdana;
-    font-size: 18px;
-    margin: 10px 0 5px 15px;
+.confCakeItemWrap {
+    display: flex;
+    padding: 0px 10px 15px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 114px;
 }
 
-.goodItemContent {
+.confCakeItemWrap h2 {
+    color: var(--Black, #011936);
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.confCakeItemWrap h3 {
     color: #011936;
     font-family: Verdana;
     font-size: 16px;
-    margin-left: 15px;
+    font-weight: 400;
+    line-height: 1.25;
 }
 
-.goodItemOptions {
+.confCakeItemWrap p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: #84a6c2;
     font-family: Verdana;
     font-size: 14px;
-    margin: 0 0 15px 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.listWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.confItem {
+    display: flex;
+}
+
+.confAvatar {
+    width: 280px;
+    height: 479px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+}
+
+.confSubInfo {
+    width: 1150px;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confSubInfo h2 {
+    color: #011936;
+    font-family: "Yeseva One";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.confBtnList {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.confBtnList div {
+    display: flex;
+}
+
+.confViewBtn {
+    width: 158px;
+    height: 35px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background: #DCEBF8;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.confNextBtn {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.confCakeItem {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
+}
+
+.confAvatarImg {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #FFE1E1;
+    margin: 0 auto 20px auto;
+}
+
+.confAvatarName {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.confAvatarComments {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #A63A50;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.confAvatarInfo {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.confAvatarButtonList {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.confAvatarButtonList button {
+    margin: 0 auto;
+    padding: 2px 10px;
+    gap: 30px;
+    border-radius: 30px;
+    background: #FFF2F2;
+    color: #A63A50;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.confCakeItemWrap {
+    display: flex;
+    padding: 0 10px 15px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 114px;
+}
+
+.confCakeItemWrap h2 {
+    color: var(--Black, #011936);
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.confCakeItemWrap h3 {
+    color: #011936;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.confCakeItemWrap p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #84A6C2;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.ListWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.ConfItem {
+    display: flex;
+}
+
+.ConfAvatar {
+    width: 280px;
+    height: 479px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+}
+
+.ConfAvatarImg {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #FFE1E1;
+    margin: 0 auto 20px auto;
+}
+
+.ConfAvatarName {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+.ConfAvatarComments {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #A63A50;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-decoration-line: underline;
+    margin-bottom: 20px;
+}
+
+.ConfAvatarInfo {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.ConfAvatarButtonList {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ConfAvatarButtonList button {
+    margin: 0 auto;
+    padding: 2px 10px;
+    gap: 30px;
+    border-radius: 30px;
+    background: #FFF2F2;
+    color: #A63A50;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.ConfSubInfo {
+    width: 1150px;
+    margin-bottom: 20px;
+}
+
+.ConfBtnList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ConfViewBtn {
+    background-color: #FFF;
+    color: #43607C;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.ConfNextBtn {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.ConfNextBtn img {
+    width: 20px;
+    height: 20px;
+}
+
+.ConfCakeList {
+    height: 424px;
+    /* width: 1300px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ConfCakeItem {
+    width: 280px;
+    height: 424px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+}
+
+.ConfCakeItemWrap {
+    margin-top: 15px;
+}
+
+.ConfCakeItemWrap h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--CTA-red, #A63A50);
+}
+
+.ConfCakeItemWrap h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Black, #011936);
+    margin-top: 5px;
+}
+
+.ConfCakeItemWrap p {
+    font-size: 14px;
+    color: #43607C;
+    margin-top: 10px;
 }
