@@ -1,0 +1,76 @@
+.glawBox{
+    margin-bottom: 80px;
+    margin-top: 80px;
+    padding-left: 224px;
+    padding-right: 224px;
+}
+
+.listCards{
+    display: flex;
+  list-style: none;
+  gap: 18px;
+}
+
+
+.BoxesFlex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.BoxesFlexInfo{
+    /* // position: absolute;
+  // right: 205px; */
+  display: flex;
+  margin-left: auto;
+}
+
+.StateArrowBtn{
+    background-color: transparent;
+    border: none;
+
+}
+
+.StateCardBox{
+    display: flex;
+    width: 280px;
+    padding-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    background: var(--White, #fff);
+    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+    
+}
+
+.GlawTxtState{
+    color: var(--Black, #011936);
+  font-family: "Yeseva One";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.StateCardTitle{
+    
+width: 248px;
+  color: var(--CTA-blue, #43607c);
+  font-family: Verdana;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+
+.StateCardSubtitle{
+    width: 248.4px;
+    color: var(--CTA-blue, #43607c);
+    font-family: Verdana;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
