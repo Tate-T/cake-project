@@ -3,22 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 import location from '../../imgs/svg/location_pin.svg'
 import yut from '../../imgs/svg/Youtube_black.svg'
 import inst from '../../imgs/svg/Instagram.svg'
-// const FooterLink = styled(NavLink)`
-// 	font-family: 'Verdana';
-// 	color: rgb(255, 255, 255);
-// 	font-size: 18px;
-// 	font-weight: 400;
-// 	line-height: 120%;
 
-// 	&.active {
-// 		color: #8e4a4e;
-// 	}
-// `
 export default function Footer() {
 	return (
 		<>
 			<footer className={sty.footer}>
-				{/* <Container> */}
 				<ul className={sty.listItem}>
 					<li>
 						<div className={sty.titlePart}>
@@ -68,7 +57,6 @@ export default function Footer() {
 						</div>
 					</li>
 				</ul>
-				{/* </Container> */}
 			</footer>
 		</>
 	)
