@@ -17,7 +17,22 @@
     align-items: center;
     margin-bottom: 20px;
 }
-
+.BtnAllPoregl{
+    display: flex;
+    height: 35px;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: var(--blue-bg-border, #dcebf8);
+    color: var(--CTA-blue, #43607c);
+    font-family: Verdana;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
 .BoxesFlexInfo{
     /* // position: absolute;
   // right: 205px; */

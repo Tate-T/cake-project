@@ -11,40 +11,9 @@ import sty from "./StateConfectioners.module.css";
 
 
 
-const BtnAllPoregl = styled(NavLink)`
-  display: flex;
-  height: 35px;
-  padding: 5px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 30px;
-  background: var(--blue-bg-border, #dcebf8);
-  color: var(--CTA-blue, #43607c);
-  font-family: Verdana;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-`;
 
 
-// const div className={sty.} = styled.div`
-//   display: flex;
-//   width: 280px;
-//   padding-bottom: 15px;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 20px;
-//   border-radius: 5px;
-//   background: var(--White, #fff);
-//   box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
-//   & a div {
-//     padding-top: 20px;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//   }
-// `;
+
 
 
 
@@ -56,7 +25,7 @@ export default function ListState() {
         <div className={sty.BoxesFlex}>
           <h2 className={sty.GlawTxtState}>Статті</h2>
           <div className={sty.BoxesFlexInfo}>
-            <BtnAllPoregl to="/articles">Переглянути всі</BtnAllPoregl>
+            <NavLink className={sty.BtnAllPoregl} to="/articles">Переглянути всі</NavLink>
             <button className={sty.StateArrowBtn}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
