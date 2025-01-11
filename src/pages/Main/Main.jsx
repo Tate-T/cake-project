@@ -7,6 +7,15 @@ import heroAdditionalImg2 from "../../imgs/hero-additional/hero-additional-2.png
 import heroAdditionalImg3 from "../../imgs/hero-additional/hero-additional-3.png";
 import { NavLink, Outlet } from "react-router-dom";
 
+
+
+// footer 
+import Footer from "../../components/Footer/Footer"
+import ListState from "../../components/StateConfectioners/StateeConfectioners"
+import ListTopPip from "../../components/BestConfectioners/BestConfectioners"
+
+
+
 const Main = () => {
   const [typeOfCakes, setTypeOfCakes] = useState([]);
   const [varietyOfProductsIsLoading, setVarietyOfProductsIsLoading] =
@@ -225,6 +234,17 @@ const Main = () => {
           </button>
         </Container>
       </section>
+
+<Container>
+<ListState></ListState>
+</Container>
+<Container>
+<ListTopPip></ListTopPip>
+</Container>
+
+<Footer>
+
+</Footer>
     </>
   );
 };

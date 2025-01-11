@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcake_project=self.webpackChunkcake_project||[]).push([[997],{997:(e,c,a)=>{a.r(c),a.d(c,{default:()=>t});var r=a(579);const t=()=>(0,r.jsx)(r.Fragment,{children:(0,r.jsx)("h2",{children:"Patriot page"})})}}]);
-//# sourceMappingURL=997.a79a6c7e.chunk.js.map
