@@ -2,7 +2,7 @@ import SearchForm from "../../components/SearchForm/SearchForm"
 import css from "./DessertInfo.module.css";
 
 import data from "../confectionerProducts.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import Header from "../../components/Header/Header";
 const DessertInfo = () => {
@@ -108,7 +108,7 @@ const DessertInfo = () => {
                             <img className={css.img__person} src="https://st2.depositphotos.com/1000861/7741/i/450/depositphotos_77412900-stock-photo-happy-woman.jpg" />
                             <div>
                                 <h2 className={css.person__name}>Інна Пономаренко <span className={css.person__locate}>Київ</span></h2>
-                                <button type="button" className={css.person__btn}>Перейти на сторінку</button>
+                                <Link to="/confectioner/cabinet" className={css.person__btn}>Перейти на сторінку</Link>
                             </div>
                         </div>
 
