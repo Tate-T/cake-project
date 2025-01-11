@@ -12,60 +12,20 @@ const Main = () => {
   const [varietyOfProductsIsLoading, setVarietyOfProductsIsLoading] =
     useState(false);
   const [varietyOfProducts, setVarietyOfProducts] = useState([]);
-  // const [cakes, setCakes] = useState([]);
-  // const [cakesIsLoading, setCakesIsLoading] = useState(false);
-  // const [cupcakes, setCupcakes] = useState([]);
-  // const [cupcakesIsLoading, setCupcakesIsLoading] = useState(false);
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/typesOfCakes`)
-      .then((res) => res.json())
-      .then((data) => {
-        setTypeOfCakes(data);
-      });
-  }, []);
 
   useEffect(() => {
     setVarietyOfProductsIsLoading(true);
-    fetch("http://localhost:3000/varietyOfProducts")
+    fetch(`https://6778f8a1482f42b62e90102f.mockapi.io/api/v1/data`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        setVarietyOfProducts(data);
+        setTypeOfCakes(data[0].typesOfCakes);
+        setVarietyOfProducts(data[0].varietyOfProducts);
       })
       .catch((err) => console.log(err))
       .finally(() => {
         setVarietyOfProductsIsLoading(false);
       });
   }, []);
-
-  // useEffect(() => {
-  //   setCakesIsLoading(true);
-  //   fetch("http://localhost:3000/cakes")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       // console.log(data)
-  //       setCakes(data);
-  //     })
-  //     .catch((err) => console.log(err))
-  //     .finally(() => {
-  //       setCakesIsLoading(false);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   setCupcakesIsLoading(true);
-  //   fetch("http://localhost:3000/cupcakes")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       // console.log(data)
-  //       setCupcakes(data);
-  //     })
-  //     .catch((err) => console.log(err))
-  //     .finally(() => {
-  //       setCupcakesIsLoading(false);
-  //     });
-  // }, []);
 
   return (
     <>

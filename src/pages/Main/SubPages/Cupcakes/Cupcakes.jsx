@@ -8,11 +8,11 @@ const Cupcakes = () => {
 
   useEffect(() => {
     setCupcakesIsLoading(true);
-    fetch("http://localhost:3000/cupcakes")
+    fetch("https://6778f8a1482f42b62e90102f.mockapi.io/api/v1/data")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data)
-        setCupcakes(data);
+        setCupcakes(data[0].cupcakes);
       })
       .catch((err) => console.log(err))
       .finally(() => {
