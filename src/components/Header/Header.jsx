@@ -22,7 +22,7 @@ const Header = () => {
               <ul className={styles.headerList}>
                 <li className={styles.headerItem}>
                   <NavLink
-                    to="/"
+                    to="/desserts"
                     className={({ isActive }) =>
                       isActive
                         ? `${styles.headerActive} ${styles.headerLink}`
