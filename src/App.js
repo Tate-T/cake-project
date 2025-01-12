@@ -1,15 +1,20 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
+
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
 
 const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
+
 
 // import Articles from "./pages/Articles/Articles";
 const Articles = lazy(() => import("./pages/Articles/Articles"));
 
 // import Article from "./pages/Article/Article";
 const Article = lazy(() => import("./pages/Article/Article"));
+
+// import Desserts from "./pages/Desserts/Desserts";
+const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
 
 // import Main from "./pages/Main/Main";
 const Main = lazy(() => import("./pages/Main/Main"));
@@ -43,7 +48,10 @@ const Patriot = lazy(() => import("./pages/Main/SubPages/Patriot/Patriot"));
 const ConfectionerLogin = lazy(() =>
   import("./components/ConfectionerLogin/ConfectionerLogin")
 );
+
+
 const Confecioners = lazy(() => import("./pages/Confecioners/Confecioners"));
+
 
 // hello
 
@@ -66,7 +74,11 @@ function App() {
           <Route path="classic" element={<></>} />
         </Route>
         <Route path="/desserts" element={<Desserts />} />
+
+        {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
+
         <Route path="/desserts/:id" element={<DessertInfo />} />
+
 
         <Route path="/confecioners" element={<Confecioners />} />
 
