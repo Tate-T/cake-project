@@ -1,5 +1,5 @@
 import styles from "./Desserts.module.css";
-import HeaderComp from "../../components/general-components/Header/Header.jsx";
+import Header from "../../components/Header/Header.jsx";
 import { Container } from "../../components/general-components/Container/Container.styled.js";
 import { Logo } from "../../components/general-components/Logo/Logo.styled.js";
 import Searchbar from "../../components/general-components/Searchbar/Searchbar.jsx";
@@ -323,7 +323,7 @@ import cupcakeImg5 from "../../imgs/cupcakes/cupcake-5.jpg";
 export const Desserts = () => {
   return (
     <>
-      <HeaderComp />
+      <Header />
       <Container>
         <SectionDesserts>
           <Searchbar placeholder="Шоколадний торт з квітами" />
