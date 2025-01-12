@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import Container from "../Container/Container";
 import { useState } from "react";
@@ -16,25 +16,45 @@ const Header = () => {
               MyCake
             </Link>
             <button type="button" className={styles.headerCountryBtn}>
-              
               <p className={styles.headerCountryText}>Вся Україна</p>
             </button>
             <nav className={styles.headerNav}>
               <ul className={styles.headerList}>
                 <li className={styles.headerItem}>
-                  <Link to="/" className={styles.headerLink}>
+                  <NavLink
+                    to="/desserts"
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.headerActive} ${styles.headerLink}`
+                        : `${styles.headerLink}`
+                    }
+                  >
                     Десерти
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className={styles.headerItem}>
-                  <Link to="/confecioners" className={styles.headerLink}>
+                  <NavLink
+                    to="/confecioners"
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.headerActive} ${styles.headerLink}`
+                        : `${styles.headerLink}`
+                    }
+                  >
                     Кращі кондитери
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className={styles.headerItem}>
-                  <Link to="/articles" className={styles.headerLink}>
+                  <NavLink
+                    to="/articles"
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.headerActive} ${styles.headerLink}`
+                        : `${styles.headerLink}`
+                    }
+                  >
                     Корисні статті
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </nav>

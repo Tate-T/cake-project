@@ -1,6 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
+// import DessertInfo from "./pages/DessertInfo/DessertInfo";
+const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
+
+const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
+
+
 // import Articles from "./pages/Articles/Articles";
 const Articles = lazy(() => import("./pages/Articles/Articles"));
 
@@ -43,6 +49,10 @@ const ConfectionerLogin = lazy(() =>
   import("./components/ConfectionerLogin/ConfectionerLogin")
 );
 
+
+const Confecioners = lazy(() => import("./pages/Confecioners/Confecioners"));
+
+
 // hello
 
 function App() {
@@ -64,9 +74,13 @@ function App() {
           <Route path="classic" element={<></>} />
         </Route>
         <Route path="/desserts" element={<Desserts />} />
+
         {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
 
-        {/* <Route path="/confecioners" element={<Confecioners />} /> */}
+        <Route path="/desserts/:id" element={<DessertInfo />} />
+
+
+        <Route path="/confecioners" element={<Confecioners />} />
 
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:id" element={<Article />} />

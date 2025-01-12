@@ -8,11 +8,11 @@ const Birthday = () => {
 
   useEffect(() => {
     setCakesIsLoading(true);
-    fetch("http://localhost:3000/cakes")
+    fetch("https://6778f8a1482f42b62e90102f.mockapi.io/api/v1/data")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data)
-        setCakes(data);
+        setCakes(data[0].cakes);
       })
       .catch((err) => console.log(err))
       .finally(() => {
@@ -82,7 +82,7 @@ const Birthday = () => {
           {cakesIsLoading === true
             ? null
             : cakes.map((cake) => (
-                <li>
+                <li key={cake.id}>
                   <img src={cake.src} alt={cake.name} />
                   <div className={styles.cakesCardBox}>
                     <h3 className={styles.cakesCardTitle}>{cake.price} грн</h3>
