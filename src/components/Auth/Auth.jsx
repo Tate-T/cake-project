@@ -10,7 +10,7 @@ const Auth = ({ setIsOpen }) => {
       <div className={css.modal}>
         <button
           className={css["auth__close-btn"]}
-          onClick={() => setIsOpen(false)}
+          onClick={setIsOpen}
         >
           <img src={CloseIcon} alt="Кнопка закриття" />
         </button>

@@ -4,6 +4,7 @@ import google from "../../imgs/svg/google.svg";
 import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Overlay = styled.div`
   position: fixed;
@@ -137,19 +138,8 @@ const SocialsLogin = styled.div`
   }
 `;
 
-const arr = [
-  {
-    login: "lalala34",
-    password: "Lala",
-  },
-  {
-    login: "hahaha12",
-    password: "hahaha",
-  },
-];
-
 export default function ConfectionerLogin() {
-  const [users, setUsers] = useState(arr);
+  const users = useSelector((state) => state.loginedUsers);
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);

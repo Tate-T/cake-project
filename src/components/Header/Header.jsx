@@ -3,9 +3,19 @@ import styles from "./Header.module.css";
 import Container from "../Container/Container";
 import { useState } from "react";
 import Auth from "../Auth/Auth";
+import { useSelector, useDispatch } from "react-redux";
+import authAction from "../../redux/auth/authActions";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state) => state.isOpenHeaderModal);
+  // console.log(isOpen);
+
+  const setIsOpen = () => {
+    dispatch(authAction);
+  };
+
   return (
     <>
       {isOpen && <Auth setIsOpen={setIsOpen} />}
@@ -102,7 +112,7 @@ const Header = () => {
                 </svg>
                 <p
                   className={styles.headerLoginText}
-                  onClick={(e) => setIsOpen(!isOpen)}
+                  onClick={setIsOpen}
                 >
                   Увійти
                 </p>

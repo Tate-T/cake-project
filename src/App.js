@@ -4,7 +4,7 @@ import { lazy, Suspense } from "react";
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
 
-const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
+// const Desserts = lazy(() => import("./pages/Desserts/Desserts")); 
 
 
 // import Articles from "./pages/Articles/Articles";
@@ -14,7 +14,6 @@ const Articles = lazy(() => import("./pages/Articles/Articles"));
 const Article = lazy(() => import("./pages/Article/Article"));
 
 // import Desserts from "./pages/Desserts/Desserts";
-const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
 
 // import Main from "./pages/Main/Main";
 const Main = lazy(() => import("./pages/Main/Main"));
@@ -73,11 +72,11 @@ function App() {
           <Route path="flowers" element={<></>} />
           <Route path="classic" element={<></>} />
         </Route>
-        <Route path="/desserts" element={<Desserts />} />
+        {/* <Route path="/desserts" element={<Desserts />} /> */}
 
         {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
 
-        <Route path="/desserts/:id" element={<DessertInfo />} />
+        {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
 
 
         <Route path="/confecioners" element={<Confecioners />} />
