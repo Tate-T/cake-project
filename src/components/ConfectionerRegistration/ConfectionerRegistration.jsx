@@ -7,6 +7,7 @@ import google from "../../imgs/svg/google.svg";
 import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Overlay = styled.div`
   position: fixed;
@@ -154,7 +155,8 @@ const arr = [
 //?
 
 const ConfectionerRegistration = () => {
-  const [users, setUsers] = useState(arr);
+  // const [users, setUsers] = useState(arr);
+  const users = useSelector((state) => state.loginedUsers);
   const navigate = useNavigate();
 
   const cb = useCallback((e) => {
