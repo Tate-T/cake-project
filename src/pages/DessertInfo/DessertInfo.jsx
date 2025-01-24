@@ -5,7 +5,18 @@ import data from "../confectionerProducts.json";
 import { Link, useParams } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import Header from "../../components/Header/Header";
+import { useSelector, useDispatch } from "react-redux";
+
 const DessertInfo = () => {
+
+    const dessertText = useSelector((state) => {
+        return state.counter;
+    });
+
+    function clickButtonSmollImg() {
+        alert(`Наданий момент: ${dessertText}`);
+    };
+
     const { id } = useParams();
     return (
         <>
@@ -15,7 +26,7 @@ const DessertInfo = () => {
                 <SearchForm placeholder="Шоколадний торт з квітами" />
                 <div className={css.boxinfo__cake__full}>
                     <ul className={css.imgInfo__list}>
-                        <button className={css.cake__img__button} type='button'>
+                        <button className={css.cake__img__button} type='button' onClick={clickButtonSmollImg}>
                             <svg width="12.000000" height="7.410156" viewBox="0 0 12 7.41016" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                 <desc>
                                     Created with Pixso.
@@ -37,7 +48,7 @@ const DessertInfo = () => {
                         <li>
                             <img className={css.info__imgS} src={data[id].photo} alt='4'></img>
                         </li>
-                        <button type='button'>
+                        <button type='button'  onClick={clickButtonSmollImg}>
                             <svg width="12.000000" height="7.410156" viewBox="0 0 12 7.41016" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                 <desc>
                                     Created with Pixso.
