@@ -139,7 +139,7 @@ const SocialsLogin = styled.div`
 `;
 
 export default function ConfectionerLogin() {
-  const users = useSelector((state) => state.loginedUsers);
+  const users = useSelector((state) => state.auth.loginedUsers);
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
