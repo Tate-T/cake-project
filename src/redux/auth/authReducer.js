@@ -1,11 +1,13 @@
-import authAction from "./authActions";
+import { OPEN_HEADER_MODAL } from "./authActions";
+const defaultState = {
+  loginedUsers: [],
+  isOpenHeaderModal: false,
+};
 
-const authReducer = (state, action) => {
+const authReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case authAction.type:
-      return {
-        isOpenHeaderModal: action.payload,
-      };
+    case OPEN_HEADER_MODAL:
+      return { ...state, isOpenHeaderModal: !state.isOpenHeaderModal };
       break;
 
     default:

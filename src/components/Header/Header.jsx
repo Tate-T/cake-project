@@ -4,16 +4,16 @@ import Container from "../Container/Container";
 import { useState } from "react";
 import Auth from "../Auth/Auth";
 import { useSelector, useDispatch } from "react-redux";
-import authAction from "../../redux/auth/authActions";
+import { authAction } from "../../redux/auth/authActions";
 
 const Header = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const isOpen = useSelector((state) => state.isOpenHeaderModal);
+  const isOpen = useSelector((state) => state.auth.isOpenHeaderModal);
   // console.log(isOpen);
 
   const setIsOpen = () => {
-    dispatch(authAction);
+    dispatch(authAction());
   };
 
   return (
@@ -110,10 +110,7 @@ const Header = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p
-                  className={styles.headerLoginText}
-                  onClick={setIsOpen}
-                >
+                <p className={styles.headerLoginText} onClick={setIsOpen}>
                   Увійти
                 </p>
               </button>
