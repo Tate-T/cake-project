@@ -1,9 +1,13 @@
-export const OPEN_HEADER_MODAL = "setIsOpenHeaderModal";
+import { createAction } from "@reduxjs/toolkit";
 
-export const authAction = () => ({
-  type: OPEN_HEADER_MODAL,
-  payload: true,
-});
+export const OPEN_HEADER_MODAL = "auth/setAuth";
+
+// export const authAction = () => ({
+//   type: OPEN_HEADER_MODAL,
+//   payload: true,
+// });
+
+export const authAction = createAction("auth/setAuth");
 
 // export default authAction;
 

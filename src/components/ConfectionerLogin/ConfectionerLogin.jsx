@@ -4,7 +4,8 @@ import google from "../../imgs/svg/google.svg";
 import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { authAction } from "../../redux/auth/authActions";
 
 const Overlay = styled.div`
   position: fixed;
@@ -140,6 +141,8 @@ const SocialsLogin = styled.div`
 
 export default function ConfectionerLogin() {
   const users = useSelector((state) => state.auth.loginedUsers);
+  const { isOpenHeaderModal } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
@@ -155,6 +158,7 @@ export default function ConfectionerLogin() {
     );
     console.log(loggedUser);
     if (loggedUser) {
+      dispatch(authAction());
       navigate("/confectioner/cabinet", { replace: true });
     } else {
       console.log("Incorrect data");

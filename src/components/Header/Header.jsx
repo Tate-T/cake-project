@@ -13,7 +13,7 @@ const Header = () => {
   // console.log(isOpen);
 
   const setIsOpen = () => {
-    dispatch(authAction());
+    dispatch(authAction(!isOpen));
   };
 
   return (
