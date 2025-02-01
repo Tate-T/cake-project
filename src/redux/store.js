@@ -1,22 +1,26 @@
-import { createStore } from "redux";
-import { composeWithDevTools } from "@redux-devtools/extension";
-import rootReducer from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./auth/authReducer";
+import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
 
-const state = {
-  loginedUsers: [
-    {
-      login: "lalala34",
-      password: "Lala",
-    },
-    {
-      login: "hahaha12",
-      password: "hahaha",
-    },
-  ],
-  isOpenHeaderModal: false,
-};
+// const initialState = {
+//   loginedUsers: [
+//     {
+//       login: "lalala34",
+//       password: "Lala",
+//     },
+//     {
+//       login: "hahaha12",
+//       password: "hahaha",
+//     },
+//   ],
+//   isOpenHeaderModal: false,
+// };
 
-
-const store = createStore(rootReducer, state, composeWithDevTools());
+const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    desserts: dessertInfoReducer,
+  },
+});
 
 export default store;
