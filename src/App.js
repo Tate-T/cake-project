@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import ConfectionerRegistration from "./components/ConfectionerRegistration/ConfectionerRegistration";
 
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
@@ -48,7 +49,6 @@ const ConfectionerLogin = lazy(() =>
   import("./components/ConfectionerLogin/ConfectionerLogin")
 );
 
-
 const Confecioners = lazy(() => import("./pages/Confecioners/Confecioners"));
 
 
@@ -92,7 +92,7 @@ function App() {
         <Route path="/confectioner/login" element={<ConfectionerLogin />} />
         <Route
           path="/confectioner/registration"
-          element={<ConfectionerLogin />}
+          element={<ConfectionerRegistration />}
         />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

@@ -7,7 +7,8 @@ import google from "../../imgs/svg/google.svg";
 import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { createUser, toggleModal } from "../../redux/auth/authSlice";
 
 const Overlay = styled.div`
   position: fixed;
@@ -155,9 +156,10 @@ const arr = [
 //?
 
 const ConfectionerRegistration = () => {
-  // const [users, setUsers] = useState(arr);
-  const users = useSelector((state) => state.loginedUsers);
+  const [color, setColor] = useState(["#84a6c2","#84a6c2"]);
+  const users = useSelector((state) => state.auth.loginedUsers);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const cb = useCallback((e) => {
     e.preventDefault();
@@ -166,18 +168,26 @@ const ConfectionerRegistration = () => {
       password: e.target.elements.password.value.trim(),
     };
     console.log(values);
-    const loggedUser = users.includes(values.login);
+    const [loggedUser] = users.filter(
+      (user) => user.login === values.login
+    );
     console.log(loggedUser);
     if (loggedUser) {
-      navigate("/confectioner/cabinet");
+      setColor(["#ff0000", "#84a6c2"]);
     } else {
-      console.log("Incorrect data");
+      if (values.password.length < 6 || values.password.length > 20) {
+        setColor(["#84a6c2", "#ff0000"]);
+      } else {
+        dispatch(toggleModal());
+        dispatch(createUser(values));
+        navigate("/confectioner/cabinet", { replace: true });
+      }
     }
   }, []);
   return (
     <Overlay>
       <Modal>
-        <ModalTitle>Вхід</ModalTitle>
+        <ModalTitle>Реєстрація</ModalTitle>
         <Form onSubmit={cb}>
           <div>
             <label htmlFor="login">Логін</label>
@@ -187,6 +197,7 @@ const ConfectionerRegistration = () => {
               required
               id="login"
               name="login"
+              style={{ borderColor: `${color[0]}` }}
             />
           </div>
           <div>
@@ -197,12 +208,13 @@ const ConfectionerRegistration = () => {
               required
               id="password"
               name="password"
+              style={{ borderColor: `${color[1]}` }}
             />
           </div>
           <button type="submit">Надіслати</button>
         </Form>
         <SocialsLogin>
-          <h5>Увійти за допомогою</h5>
+          <h5>Зареєструватися за допомогою</h5>
           <ul>
             <li>
               <img src={facebook} alt="facebook" />
@@ -214,7 +226,7 @@ const ConfectionerRegistration = () => {
             </li>
           </ul>
         </SocialsLogin>
-        <SignupTip />
+        <SignupTip text={"Я вже маю акаунт, хочу просто увійти"} link={"/confectioner/login"} />
       </Modal>
     </Overlay>
   );

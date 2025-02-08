@@ -5,7 +5,7 @@ import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { authAction } from "../../redux/auth/authActions";
+import { toggleModal } from "../../redux/auth/authSlice";
 
 const Overlay = styled.div`
   position: fixed;
@@ -140,8 +140,8 @@ const SocialsLogin = styled.div`
 `;
 
 export default function ConfectionerLogin() {
+  const [color, setColor] = useState(["#84a6c2","#84a6c2"]);
   const users = useSelector((state) => state.auth.loginedUsers);
-  const { isOpenHeaderModal } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -158,10 +158,17 @@ export default function ConfectionerLogin() {
     );
     console.log(loggedUser);
     if (loggedUser) {
-      dispatch(authAction());
+      dispatch(toggleModal());
       navigate("/confectioner/cabinet", { replace: true });
     } else {
-      console.log("Incorrect data");
+      const [beUser] = users.filter(
+        (user) => user.login === values.login
+      );
+      if (beUser) {
+        setColor(["#84a6c2","#ff0000"]);
+      } else {
+        setColor(["#ff0000","#84a6c2"]);
+      }
     }
   }, []);
   return (
@@ -175,6 +182,7 @@ export default function ConfectionerLogin() {
               type="text"
               placeholder="Логін"
               required
+              style={{ borderColor: `${color[0]}` }}
               id="login"
               name="login"
             />
@@ -187,6 +195,7 @@ export default function ConfectionerLogin() {
               required
               id="password"
               name="password"
+              style={{ borderColor: `${color[1]}` }}
             />
           </div>
           <button type="submit">Надіслати</button>
@@ -204,7 +213,7 @@ export default function ConfectionerLogin() {
             </li>
           </ul>
         </SocialsLogin>
-        <SignupTip />
+        <SignupTip text={"У мене немає акаунту, треба зареєструватися"} link={"/confectioner/registration"} />
       </Modal>
     </Overlay>
   );
