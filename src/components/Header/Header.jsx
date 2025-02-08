@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 import { useState } from "react";
 import Auth from "../Auth/Auth";
 import { useSelector, useDispatch } from "react-redux";
-import { authAction } from "../../redux/auth/authActions";
+import { toggleModal } from "../../redux/auth/authSlice";
 
 const Header = () => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
   // console.log(isOpen);
 
   const setIsOpen = () => {
-    dispatch(authAction(!isOpen));
+    dispatch(toggleModal());
   };
 
   return (
