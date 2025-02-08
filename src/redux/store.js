@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./auth/authSlice";
 import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
-
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -16,11 +17,22 @@ import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
 //   isOpenHeaderModal: false,
 // };
 
-const store = configureStore({
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+const persistDessertInfoReducer = persistReducer(persistConfig, dessertInfoReducer);
+
+
+export const store = configureStore({
   reducer: {
-    auth: authReducer,
-    desserts: dessertInfoReducer,
+    auth: persisterAuthReduser,
+    desserts: persistDessertInfoReducer,
   },
 });
 
-export default store;
+export const persisterStore = persistStore(store);
+
+
