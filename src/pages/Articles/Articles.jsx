@@ -1,12 +1,13 @@
 import css from "./Articles.module.css";
 import Container from "../../components/Container/Container.jsx";
 import backup from "../../imgs/svg/backup.svg";
-import data from "../../articles.json";
 import SearchForm from "../../components/SearchForm/SearchForm.jsx";
 import { nanoid } from "nanoid";
-import { useState } from "react";
+import { useState, useEffect, use } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header.jsx";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchArticles } from "../../redux/articlesAPI.js";
 // const Filter = styled.div``;
 
 // const Card = styled.li`
@@ -37,20 +38,30 @@ import Header from "../../components/Header/Header.jsx";
 // `;
 
 export default function Articles() {
-  const [list, setList] = useState(
-    data.map((card) => {
-      return (
-        <li className={css.articles__item} key={nanoid()}>
-          <img src={card.url} alt="bakery" />
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
-          <Link to={`/articles/${nanoid()}`}>
-            <button>Читати далі</button>
-          </Link>
-        </li>
-      );
-    })
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchArticles());
+  }, [dispatch]);
+  const [topics, setTopics] = useState({
+    reception: false,
+    selections: false,
+    advicesForKitchen: false,
+    interestingStories: false,
+    workWithClients: false,
+  });
+  const [selectedArr, setSelectedArr] = useState([]);
+  useEffect(() => {
+    const arr = [];
+    const keys = Object.keys(topics);
+    keys.forEach((key) => {
+      if (topics[key]) arr.push(key);
+    });
+    setSelectedArr(arr);
+  }, [topics]);
+  // const data = useSelector((state) => state.articles.articlesList).filter(article => {
+  //   return article.topic.includes(setSelectedArr);
+  // });
+  const data = useSelector((state) => state.articles.articlesList);
   return (
     <>
       <section>
@@ -70,48 +81,38 @@ export default function Articles() {
               <ul>
                 Тематика
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} type="checkbox" />
+                  <input className={css.articles__checkbox} checked={topics.reception} onChange={(e) => setTopics({ ...topics, reception: e.target.checked})} type="checkbox" />
                   Рецепти
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} type="checkbox" />
+                  <input className={css.articles__checkbox} checked={topics.advicesForKitchen} onChange={(e) => setTopics({ ...topics, advicesForKitchen: e.target.checked})} type="checkbox" />
                   Корисні поради на кухні
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} type="checkbox" />
+                  <input className={css.articles__checkbox} checked={topics.selections} onChange={(e) => setTopics({ ...topics, selections: e.target.checked})} type="checkbox" />
                   Підбірки
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} type="checkbox" />
+                  <input className={css.articles__checkbox} checked={topics.workWithClients} onChange={(e) => setTopics({ ...topics, workWithClients: e.target.checked})} type="checkbox" />
                   Робота з клієнтами
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} type="checkbox" />
+                  <input className={css.articles__checkbox} checked={topics.interestingStories} onChange={(e) => setTopics({ ...topics, interestingStories: e.target.checked})} type="checkbox" />
                   Цікаві історії
                 </li>
               </ul>
             </div>
-            <ul className={css.articles__list}>{list}</ul>
-            <button
-              className={css.articles__loadmore}
-              onClick={() => {
-                setList([
-                  ...list,
-                  ...data.map((card) => {
-                    return (
-                      <li className={css.articles__item} key={nanoid()}>
-                        <img src={card.url} alt="bakery" />
-                        <h3>{card.title}</h3>
-                        <p>{card.description}</p>
-                        <Link to={`/articles/${nanoid()}`}>
-                          <button>Читати далі</button>
-                        </Link>
-                      </li>
-                    );
-                  }),
-                ]);
-              }}
-            >
+            <ul className={css.articles__list}>{
+              data.map(card => <li className={css.articles__item} key={nanoid()}>
+                <img src={card.url} alt="bakery" />
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <Link to={`/articles/${nanoid()}`}>
+                  <button>Читати далі</button>
+                </Link>
+              </li>)
+            }</ul>
+            <button className={css.articles__loadmore}>
               <img src={backup} alt="LoadMore" />
               Більше статей
             </button>
