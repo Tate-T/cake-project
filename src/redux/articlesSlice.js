@@ -10,7 +10,6 @@ const articlesSlice = createSlice({
     initialState,
     extraReducers: (builder) => {
         builder.addCase(fetchArticles.fulfilled, (state, { payload }) => {
-            console.log(payload)
             state.articlesList = payload;
         })
     }
