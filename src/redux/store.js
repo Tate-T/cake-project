@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./auth/authSlice";
 import { articlesReducer } from "./articlesSlice";
+import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
