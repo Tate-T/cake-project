@@ -8,7 +8,8 @@ import SignupTip from "../SignupTip/SignupTip";
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createUser, toggleModal } from "../../redux/auth/authSlice";
+import { toggleModal } from "../../redux/auth/authSlice";
+import { createUser } from "../../redux/auth/authOperations";
 
 const Overlay = styled.div`
   position: fixed;
@@ -156,7 +157,7 @@ const arr = [
 //?
 
 const ConfectionerRegistration = () => {
-  const [color, setColor] = useState(["#84a6c2","#84a6c2"]);
+  const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
   const users = useSelector((state) => state.auth.loginedUsers);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -168,9 +169,7 @@ const ConfectionerRegistration = () => {
       password: e.target.elements.password.value.trim(),
     };
     console.log(values);
-    const [loggedUser] = users.filter(
-      (user) => user.login === values.login
-    );
+    const [loggedUser] = users.filter((user) => user.login === values.login);
     console.log(loggedUser);
     if (loggedUser) {
       setColor(["#ff0000", "#84a6c2"]);
@@ -184,6 +183,7 @@ const ConfectionerRegistration = () => {
       }
     }
   }, []);
+
   return (
     <Overlay>
       <Modal>
@@ -226,7 +226,10 @@ const ConfectionerRegistration = () => {
             </li>
           </ul>
         </SocialsLogin>
-        <SignupTip text={"Я вже маю акаунт, хочу просто увійти"} link={"/confectioner/login"} />
+        <SignupTip
+          text={"Я вже маю акаунт, хочу просто увійти"}
+          link={"/confectioner/login"}
+        />
       </Modal>
     </Overlay>
   );

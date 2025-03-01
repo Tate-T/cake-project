@@ -18,21 +18,24 @@ import storage from 'redux-persist/lib/storage'
 //   isOpenHeaderModal: false,
 // };
 
-const persistConfig = {
-  key: 'root',
-  storage,
-}
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+// }
 
-const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+// const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+// const persistDessertInfoReducer = persistReducer(persistConfig, dessertInfoReducer);
+
+    
 
 export const store = configureStore({
   reducer: {
-    auth: persisterAuthReduser,
+    auth: authReducer,
     desserts: dessertInfoReducer,
     articles: articlesReducer
   },
 });
 
-export const persisterStore = persistStore(store);
+// export const persisterStore = persistStore(store);
 
 

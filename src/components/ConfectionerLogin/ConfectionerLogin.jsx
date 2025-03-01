@@ -2,10 +2,11 @@ import styled from "styled-components";
 import facebook from "../../imgs/svg/facebook.svg";
 import google from "../../imgs/svg/google.svg";
 import SignupTip from "../SignupTip/SignupTip";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../redux/auth/authSlice";
+import { getLoginnedUsers } from "../../redux/auth/authOperations";
 
 const Overlay = styled.div`
   position: fixed;
@@ -140,12 +141,16 @@ const SocialsLogin = styled.div`
 `;
 
 export default function ConfectionerLogin() {
-  const [color, setColor] = useState(["#84a6c2","#84a6c2"]);
+  const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
   const users = useSelector((state) => state.auth.loginedUsers);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
+  useEffect(() => {
+    dispatch(getLoginnedUsers());
+  }, [dispatch]);
+  console.log(users);
   const cb = useCallback((e) => {
     e.preventDefault();
     const values = {
@@ -161,16 +166,14 @@ export default function ConfectionerLogin() {
       dispatch(toggleModal());
       navigate("/confectioner/cabinet", { replace: true });
     } else {
-      const [beUser] = users.filter(
-        (user) => user.login === values.login
-      );
+      const [beUser] = users.filter((user) => user.login === values.login);
       if (beUser) {
-        setColor(["#84a6c2","#ff0000"]);
+        setColor(["#84a6c2", "#ff0000"]);
       } else {
-        setColor(["#ff0000","#84a6c2"]);
+        setColor(["#ff0000", "#84a6c2"]);
       }
     }
-  }, []);
+  }, [users, dispatch, navigate]);
   return (
     <Overlay>
       <Modal>
@@ -213,7 +216,10 @@ export default function ConfectionerLogin() {
             </li>
           </ul>
         </SocialsLogin>
-        <SignupTip text={"У мене немає акаунту, треба зареєструватися"} link={"/confectioner/registration"} />
+        <SignupTip
+          text={"У мене немає акаунту, треба зареєструватися"}
+          link={"/confectioner/registration"}
+        />
       </Modal>
     </Overlay>
   );
