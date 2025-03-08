@@ -8,10 +8,7 @@ const Auth = ({ setIsOpen }) => {
   return (
     <div className={css.overlay}>
       <div className={css.modal}>
-        <button
-          className={css["auth__close-btn"]}
-          onClick={setIsOpen}
-        >
+        <button className={css["auth__close-btn"]} onClick={setIsOpen}>
           <img src={CloseIcon} alt="Кнопка закриття" />
         </button>
         <h2 className={css.auth__title}>Реєстрація</h2>

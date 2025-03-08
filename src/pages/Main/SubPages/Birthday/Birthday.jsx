@@ -22,7 +22,7 @@ const Birthday = () => {
 
   return (
     <section className={styles.cakes}>
-      <Container>
+      {/* <Container> */}
         <div className={styles.cakesBox}>
           <h2 className={styles.cakesTitle}>Торти</h2>
           <div className={styles.cakesBtnsBox}>
@@ -94,7 +94,7 @@ const Birthday = () => {
                 </li>
               ))}
         </ul>
-      </Container>
+      {/* </Container> */}
     </section>
   );
 };

@@ -1,195 +1,137 @@
 .listItem {
-    display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.titlePart{
-    margin-right: 150px;
+.titlePart {
+  margin-right: 150px;
 }
 
-.title{
-    color: var(--White, #fff);
-	font-family: 'Yeseva One';
-	font-size: 35px;
-	font-weight: 400;
-	line-height: 120%;
+.title {
+  color: var(--White, #fff);
+  font-family: "Yeseva One";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 120%;
 }
 
-.locationBox{
-    gap: 10px;
-	margin-top: 10px;
+.locationBox {
+  gap: 10px;
+  margin-top: 10px;
 
-	display: flex;
-	height: 40px;
-	padding: 5px 20px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 36px;
-	background: var(--White, #fff);
+  display: flex;
+  height: 40px;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  background: var(--White, #fff);
 }
 
-.imgLoacation{
-    width: 24px;
-	height: 24px;
+.imgLoacation {
+  width: 24px;
+  height: 24px;
 }
-.textLocations{
-    color: var(--CTA-red-text, #8e4a4e);
-	font-family: Verdana;
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 120%;
+.textLocations {
+  color: var(--CTA-red-text, #8e4a4e);
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
 }
-.linkBox{
-    background: var(--Black, #011936);
-	display: flex;
-	gap: 30px;
+.linkBox {
+  background: var(--Black, #011936);
+  display: flex;
+  gap: 30px;
 }
-.linkTxt{
-    color: var(--White, #fff);
-	font-family: Verdana;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 120%; /* 21.6px */
-	text-decoration-line: underline;
+.linkTxt {
+  color: var(--White, #fff);
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+  text-decoration-line: underline;
 }
-
-
-
 
 .boxBtn {
-    margin-left: 100px;
+  margin-left: 100px;
 }
 
-.btnPrav{
-    display: flex;
-	padding: 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 50px;
-	border: 1px solid var(--White, #fff);
-	color: var(--White, #fff);
-	font-family: Verdana;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 120%;
-	background: var(--Black, #011936);
-	width: 300px;
+.btnPrav {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  border: 1px solid var(--White, #fff);
+  color: var(--White, #fff);
+  font-family: Verdana;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  background: var(--Black, #011936);
+  width: 300px;
 }
 
-.btnInfo{
-    display: flex;
-	padding: 10px 20px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 50px;
-	font-family: Verdana;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 120%;
-	background: #ffff;
-	width: 300px;
-	margin-top: 10px;
+.btnInfo {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  font-family: Verdana;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  background: #ffff;
+  width: 300px;
+  margin-top: 10px;
 }
 
-.boxInfoLinks{
-    display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
-	gap: 15px;
-	margin-left: 80px;
+.boxInfoLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+  margin-left: 80px;
 }
-.textInfo{
-    color: var(--White, #fff);
-	font-family: Verdana;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 120%; 
-}
-
-
-
-.boxLinksInfo{
-    background: var(--Black, #011936);
-	display: flex;
-	gap: 15px;
+.textInfo {
+  color: var(--White, #fff);
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
-
+.boxLinksInfo {
+  background: var(--Black, #011936);
+  display: flex;
+  gap: 15px;
+}
 
 .footer {
-    background: var(--Black, #011936);
-	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-	 width: 1920px;
-	 width: auto;
-	display: flex;
-	align-items: center;
-	padding: 40px 0px 40px 224px;
+  background: var(--Black, #011936);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 1920px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding: 40px 0px 40px 0px;
 }
-.linksTo{
-     	font-family: 'Verdana';
- 	color: rgb(255, 255, 255);
- 	font-size: 18px;
- 	font-weight: 400;
- 	line-height: 120%;
+.linksTo {
+  font-family: "Verdana";
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
 
- 	&.active {
- 		color: #8e4a4e;
- 	}
+  &.active {
+    color: #8e4a4e;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

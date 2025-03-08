@@ -62,6 +62,7 @@
   /* align-items: center; */
   justify-content: center;
   align-items: flex-start;
+  /* flex-wrap: wrap; */
   gap: 70px;
 }
 
@@ -218,7 +219,7 @@
 .cakesList {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: space-between;
   gap: 18px;
   margin-top: 20px;
   flex-wrap: wrap;

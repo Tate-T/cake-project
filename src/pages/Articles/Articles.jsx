@@ -7,7 +7,13 @@ import { useState, useEffect, use } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchArticles } from "../../redux/articlesAPI.js";
+import { fetchArticles } from "../../redux/articles/articlesAPI.js";
+import { setValue } from "../../redux/articles/articlesSlice.js";
+import {
+  selectArticles,
+  selectValue,
+  selectFoundArticles,
+} from "../../redux/articles/selectors.js";
 // const Filter = styled.div``;
 
 // const Card = styled.li`
@@ -59,14 +65,30 @@ export default function Articles() {
     });
     setSelectedArr(arr);
   }, [topics]);
-  const articlesBase = useSelector((state) => state.articles.articlesList);
-  const data = articlesBase.filter(article => selectedArr.length === 0 ? true : article.topic.toSorted().join().includes(selectedArr.toSorted()) || selectedArr.toSorted().join().includes(article.topic.toSorted()));
+  const articlesBase = useSelector(selectArticles);
+  const value = useSelector(selectValue);
+  const foundArticles = useSelector(selectFoundArticles);
+  console.log("found", foundArticles);
+  console.log("value", value);
+  const data = articlesBase.filter((article) =>
+    selectedArr.length === 0
+      ? true
+      : article.topic.toSorted().join().includes(selectedArr.toSorted()) ||
+        selectedArr.toSorted().join().includes(article.topic.toSorted())
+  );
+  const handleChange = (e) => {
+    dispatch(setValue(e.target.value));
+  };
   return (
     <>
       <section>
         <Header />
         <Container>
-          <SearchForm placeholder={"Як приготувати чізкейк"} />
+          <SearchForm
+            placeholder={"Як приготувати чізкейк"}
+            cb={handleChange}
+            value={value}
+          />
           <div
             style={{
               display: "flex",
@@ -80,44 +102,127 @@ export default function Articles() {
               <ul>
                 Тематика
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} checked={topics.reception} onChange={(e) => setTopics({ ...topics, reception: e.target.checked})} type="checkbox" />
+                  <input
+                    className={css.articles__checkbox}
+                    checked={topics.reception}
+                    onChange={(e) =>
+                      setTopics({ ...topics, reception: e.target.checked })
+                    }
+                    type="checkbox"
+                  />
                   Рецепти
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} checked={topics.advicesForKitchen} onChange={(e) => setTopics({ ...topics, advicesForKitchen: e.target.checked})} type="checkbox" />
+                  <input
+                    className={css.articles__checkbox}
+                    checked={topics.advicesForKitchen}
+                    onChange={(e) =>
+                      setTopics({
+                        ...topics,
+                        advicesForKitchen: e.target.checked,
+                      })
+                    }
+                    type="checkbox"
+                  />
                   Корисні поради на кухні
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} checked={topics.selections} onChange={(e) => setTopics({ ...topics, selections: e.target.checked})} type="checkbox" />
+                  <input
+                    className={css.articles__checkbox}
+                    checked={topics.selections}
+                    onChange={(e) =>
+                      setTopics({ ...topics, selections: e.target.checked })
+                    }
+                    type="checkbox"
+                  />
                   Підбірки
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} checked={topics.workWithClients} onChange={(e) => setTopics({ ...topics, workWithClients: e.target.checked})} type="checkbox" />
+                  <input
+                    className={css.articles__checkbox}
+                    checked={topics.workWithClients}
+                    onChange={(e) =>
+                      setTopics({
+                        ...topics,
+                        workWithClients: e.target.checked,
+                      })
+                    }
+                    type="checkbox"
+                  />
                   Робота з клієнтами
                 </li>
                 <li key={nanoid()}>
-                  <input className={css.articles__checkbox} checked={topics.interestingStories} onChange={(e) => setTopics({ ...topics, interestingStories: e.target.checked})} type="checkbox" />
+                  <input
+                    className={css.articles__checkbox}
+                    checked={topics.interestingStories}
+                    onChange={(e) =>
+                      setTopics({
+                        ...topics,
+                        interestingStories: e.target.checked,
+                      })
+                    }
+                    type="checkbox"
+                  />
                   Цікаві історії
                 </li>
               </ul>
             </div>
-            <ul className={css.articles__list}>{
-              data.slice(page[0]*6,page[1]*6).map(card => <li className={css.articles__item} key={nanoid()}>
-                <img src={card.url} alt="bakery" />
-                <h3>{card.title}</h3>
-                <p>{card.description}</p>
-                <Link to={`/articles/${nanoid()}`}>
-                  <button>Читати далі</button>
-                </Link>
-              </li>)
-            }</ul>
-            <button onClick={() => setPage([page[0],page[1]+1])} className={css.articles__loadmore}>
+            <ul className={css.articles__list}>
+              {value
+                ? foundArticles.slice(page[0] * 6, page[1] * 6).map((card) => (
+                    <li className={css.articles__item} key={nanoid()}>
+                      <img src={card.url} alt="bakery" />
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <Link to={`/articles/${nanoid()}`}>
+                        <button>Читати далі</button>
+                      </Link>
+                    </li>
+                  ))
+                : data.slice(page[0] * 6, page[1] * 6).map((card) => (
+                    <li className={css.articles__item} key={nanoid()}>
+                      <img src={card.url} alt="bakery" />
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+                      <Link to={`/articles/${nanoid()}`}>
+                        <button>Читати далі</button>
+                      </Link>
+                    </li>
+                  ))}
+            </ul>
+            <button
+              onClick={() => setPage([page[0], page[1] + 1])}
+              className={css.articles__loadmore}
+            >
               <img src={backup} alt="LoadMore" />
               Більше статей
             </button>
             <div className={css.articles__pagination}>
               <span className={css["articles__arrow--left"]}>&#x3c;</span>
-              {data.map((article, idx) => (idx+1) % 6 === 0 ? page[0]+1 === (idx+1)/6 ? <li style={{ fontWeight: "700", background: "#FDAD6D" }} key={nanoid()} onClick={() => setPage([((idx+1)/6)-1,(idx+1)/6])}>{(idx+1)/6}</li> : <li key={nanoid()} onClick={() => setPage([((idx+1)/6)-1,(idx+1)/6])}>{(idx+1)/6}</li> : null)}
+              {data.map((article, idx) =>
+                (idx + 1) % 6 === 0 ? (
+                  page[0] + 1 === (idx + 1) / 6 ? (
+                    <li
+                      style={{ fontWeight: "700", background: "#FDAD6D" }}
+                      key={nanoid()}
+                      onClick={() =>
+                        setPage([(idx + 1) / 6 - 1, (idx + 1) / 6])
+                      }
+                    >
+                      {(idx + 1) / 6}
+                    </li>
+                  ) : (
+                    <li
+                      key={nanoid()}
+                      onClick={() =>
+                        setPage([(idx + 1) / 6 - 1, (idx + 1) / 6])
+                      }
+                    >
+                      {(idx + 1) / 6}
+                    </li>
+                  )
+                ) : null
+              )}
               <span className={css["articles__arrow--right"]}>&#x3e;</span>
             </div>
           </div>

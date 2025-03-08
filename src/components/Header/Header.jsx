@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       {isOpen && <Auth setIsOpen={setIsOpen} />}
-      <header className="header">
+      <header className={styles.header}>
         <Container>
           <div className={styles.headerBox}>
             <Link to="/" className={styles.headerLogo}>
