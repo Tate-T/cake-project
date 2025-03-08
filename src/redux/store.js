@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./auth/authSlice";
 import { articlesReducer } from "./articlesSlice";
+import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
 import { cakesReducer } from "./cakes/cakesSlice";
 import { persistStore, persistReducer } from "redux-persist";
@@ -19,20 +20,25 @@ import storage from "redux-persist/lib/storage";
 //   isOpenHeaderModal: false,
 // };
 
-const persistConfig = {
-  key: "root",
-  storage,
-};
 
-const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+// }
+
+// const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+// const persistDessertInfoReducer = persistReducer(persistConfig, dessertInfoReducer);
+
+    
 
 export const store = configureStore({
   reducer: {
-    auth: persisterAuthReduser,
+    auth: authReducer,
     desserts: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
   },
 });
 
-export const persisterStore = persistStore(store);
+
+// export const persisterStore = persistStore(store);

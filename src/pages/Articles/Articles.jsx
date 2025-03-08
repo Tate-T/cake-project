@@ -49,6 +49,7 @@ export default function Articles() {
     interestingStories: false,
     workWithClients: false,
   });
+  const [page, setPage] = useState([0, 1]);
   const [selectedArr, setSelectedArr] = useState([]);
   useEffect(() => {
     const arr = [];
@@ -58,10 +59,8 @@ export default function Articles() {
     });
     setSelectedArr(arr);
   }, [topics]);
-  // const data = useSelector((state) => state.articles.articlesList).filter(article => {
-  //   return article.topic.includes(setSelectedArr);
-  // });
-  const data = useSelector((state) => state.articles.articlesList);
+  const articlesBase = useSelector((state) => state.articles.articlesList);
+  const data = articlesBase.filter(article => selectedArr.length === 0 ? true : article.topic.toSorted().join().includes(selectedArr.toSorted()) || selectedArr.toSorted().join().includes(article.topic.toSorted()));
   return (
     <>
       <section>
@@ -103,7 +102,7 @@ export default function Articles() {
               </ul>
             </div>
             <ul className={css.articles__list}>{
-              data.map(card => <li className={css.articles__item} key={nanoid()}>
+              data.slice(page[0]*6,page[1]*6).map(card => <li className={css.articles__item} key={nanoid()}>
                 <img src={card.url} alt="bakery" />
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
@@ -112,22 +111,13 @@ export default function Articles() {
                 </Link>
               </li>)
             }</ul>
-            <button className={css.articles__loadmore}>
+            <button onClick={() => setPage([page[0],page[1]+1])} className={css.articles__loadmore}>
               <img src={backup} alt="LoadMore" />
               Більше статей
             </button>
             <div className={css.articles__pagination}>
               <span className={css["articles__arrow--left"]}>&#x3c;</span>
-              <li key={nanoid()}>1</li>
-              <li key={nanoid()}>2</li>
-              <li
-                key={nanoid()}
-                style={{ fontWeight: "700", background: "#FDAD6D" }}
-              >
-                3
-              </li>
-              <li key={nanoid()}>4</li>
-              <li key={nanoid()}>5</li>
+              {data.map((article, idx) => (idx+1) % 6 === 0 ? page[0]+1 === (idx+1)/6 ? <li style={{ fontWeight: "700", background: "#FDAD6D" }} key={nanoid()} onClick={() => setPage([((idx+1)/6)-1,(idx+1)/6])}>{(idx+1)/6}</li> : <li key={nanoid()} onClick={() => setPage([((idx+1)/6)-1,(idx+1)/6])}>{(idx+1)/6}</li> : null)}
               <span className={css["articles__arrow--right"]}>&#x3e;</span>
             </div>
           </div>
