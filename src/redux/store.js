@@ -3,8 +3,9 @@ import { authReducer } from "./auth/authSlice";
 import { articlesReducer } from "./articlesSlice";
 import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import { cakesReducer } from "./cakes/cakesSlice";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -18,6 +19,7 @@ import storage from 'redux-persist/lib/storage'
 //   ],
 //   isOpenHeaderModal: false,
 // };
+
 
 // const persistConfig = {
 //   key: 'root',
@@ -33,10 +35,10 @@ export const store = configureStore({
   reducer: {
     auth: authReducer,
     desserts: dessertInfoReducer,
-    articles: articlesReducer
+    articles: articlesReducer,
+    cakes: cakesReducer,
   },
 });
 
+
 // export const persisterStore = persistStore(store);
-
-
