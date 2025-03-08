@@ -7,6 +7,12 @@ const cakesSlice = createSlice({
     cakes: [],
     isLoading: false,
     error: null,
+    value: ""
+  },
+  reducers: {
+    setValue(state, payload) {
+      state.value = payload;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -26,3 +32,4 @@ const cakesSlice = createSlice({
 });
 
 export const cakesReducer = cakesSlice.reducer;
+export const { setValue } = cakesSlice.actions;

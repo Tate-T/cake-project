@@ -8,6 +8,7 @@ import Container from "../../components/Container/Container.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { setValue } from "../../redux/cakes/cakesSlice.js";
 import { fetchCakes } from "../../redux/cakes/operations.js";
 // import Footerr from "../../components/general-components/Footer/Footer.jsx";
 // import ListState from "../../components/general-components/upFooterListState/ListState.jsx";
@@ -88,7 +89,7 @@ const Desserts = () => {
             </div>
           </section>
 
-          <button type="button">
+          {/* <button type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -178,7 +179,7 @@ const Desserts = () => {
                 </defs>
               </svg>
             </ul>
-          </div>
+          </div> */}
         </section>
       </Container>
       {/* <Container> */}
