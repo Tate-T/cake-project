@@ -14,6 +14,7 @@ import {
   selectValue,
   selectFoundArticles,
 } from "../../redux/articles/selectors.js";
+import Footer from "../../components/Footer/Footer.jsx";
 // const Filter = styled.div``;
 
 // const Card = styled.li`
@@ -220,6 +221,7 @@ export default function Articles() {
               <span className={css["articles__arrow--right"]}>&#x3e;</span>
             </div>
         </Container>
+        <Footer></Footer>
       </section>
     </>
   );
