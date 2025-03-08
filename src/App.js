@@ -5,7 +5,7 @@ import ConfectionerRegistration from "./components/ConfectionerRegistration/Conf
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
 
-// const Desserts = lazy(() => import("./pages/Desserts/Desserts")); 
+const Desserts = lazy(() => import("./pages/Desserts/Desserts")); 
 
 
 // import Articles from "./pages/Articles/Articles";
@@ -72,12 +72,9 @@ function App() {
           <Route path="flowers" element={<></>} />
           <Route path="classic" element={<></>} />
         </Route>
-        {/* <Route path="/desserts" element={<Desserts />} /> */}
+        <Route path="/desserts" element={<Desserts />} />
 
-        {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
-
-        {/* <Route path="/desserts/:id" element={<DessertInfo />} /> */}
-
+        <Route path="/desserts/:id" element={<DessertInfo />} />
 
         <Route path="/confecioners" element={<Confecioners />} />
 

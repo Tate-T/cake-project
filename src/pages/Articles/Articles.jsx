@@ -89,14 +89,7 @@ export default function Articles() {
             cb={handleChange}
             value={value}
           />
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              paddingLeft: "20px",
-              boxSizing: "border-box",
-            }}
-          >
+          <div className={css.articles__box}>
             <div className={css.articles__filter}>
               <h2>Цікаві та корисні статті</h2>
               <ul>
@@ -175,7 +168,7 @@ export default function Articles() {
                       <h3>{card.title}</h3>
                       <p>{card.description}</p>
                       <Link to={`/articles/${nanoid()}`}>
-                        <button>Читати далі</button>
+                        Читати далі
                       </Link>
                     </li>
                   ))
@@ -185,11 +178,12 @@ export default function Articles() {
                       <h3>{card.title}</h3>
                       <p>{card.description}</p>
                       <Link to={`/articles/${nanoid()}`}>
-                        <button>Читати далі</button>
+                        Читати далі
                       </Link>
                     </li>
                   ))}
             </ul>
+          </div>
             <button
               onClick={() => setPage([page[0], page[1] + 1])}
               className={css.articles__loadmore}
@@ -225,7 +219,6 @@ export default function Articles() {
               )}
               <span className={css["articles__arrow--right"]}>&#x3e;</span>
             </div>
-          </div>
         </Container>
       </section>
     </>
