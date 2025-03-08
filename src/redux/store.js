@@ -2,8 +2,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./auth/authSlice";
 import { articlesReducer } from "./articlesSlice";
 import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import { cakesReducer } from "./cakes/cakesSlice";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -19,9 +20,9 @@ import storage from 'redux-persist/lib/storage'
 // };
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-}
+};
 
 const persisterAuthReduser = persistReducer(persistConfig, authReducer);
 
@@ -29,10 +30,9 @@ export const store = configureStore({
   reducer: {
     auth: persisterAuthReduser,
     desserts: dessertInfoReducer,
-    articles: articlesReducer
+    articles: articlesReducer,
+    cakes: cakesReducer,
   },
 });
 
 export const persisterStore = persistStore(store);
-
-
