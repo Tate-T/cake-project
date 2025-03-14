@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./auth/authSlice";
 import { articlesReducer } from "./articles/articlesSlice";
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
-import dessertInfoReducer from "./dessertInfo/dessertInforeducer";
+import {dessertInfoReducer} from "./dessertInfo/dessertInfoSlice";
 import { cakesReducer } from "./cakes/cakesSlice";
 import { persistStore, persistReducer } from "redux-persist";
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
@@ -33,7 +33,7 @@ import storage from "redux-persist/lib/storage";
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    desserts: dessertInfoReducer,
+    dessertsInfo: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
     listCond: listCondReduser,
