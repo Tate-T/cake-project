@@ -1,525 +1,525 @@
 .listWrap {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 
 .confItem {
-    display: flex;
-    margin-bottom: 40px;
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .confAvatar {
-    width: 280px;
-    height: 479px;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+  width: 280px;
+  /* height: 479px; */
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
 .confAvatarImg {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 1px solid #ffe1e1;
-    margin: 0 auto 20px;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #ffe1e1;
+  margin: 0 auto 20px;
 }
 
 .confAvatarName {
-    color: #43607c;
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2.1;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.1;
 }
 
 .confAvatarComments {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #a63a50;
-    text-decoration-line: underline;
-    margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #a63a50;
+  text-decoration-line: underline;
+  margin-bottom: 20px;
 }
 
 .confAvatarInfo {
-    color: #43607c;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 22px;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
 .recomendationBtn {
-    width: 120px;
-    height: 40px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #8E4A4E;
-    background-color: #FFF5F7;
-
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8e4a4e;
+  background-color: #fff5f7;
 }
 
 .confAvatarButtonList {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .confAvatarButtonList button {
-    margin: 0 auto;
-    padding: 2px 10px;
-    gap: 30px;
-    border-radius: 30px;
-    background-color: #fff2f2;
-    color: #a63a50;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
+  margin: 0 auto;
+  padding: 2px 10px;
+  gap: 30px;
+  border-radius: 30px;
+  background-color: #fff2f2;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
-.confInfo {
-    display: flex;
-    width: 1150px;
-    height: 479px;
-    flex-direction: column;
-    row-gap: 20px;
+.ConfInfo {
+  margin-left: 20px;
 }
 
 .confSubInfo {
-    display: flex;
-    width: 1150px;
-    height: 35px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  width: 1150px;
+  height: 35px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .confSubInfo h2 {
-    color: #011936;
-    font-family: "Yeseva One";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
+  color: #011936;
+  font-family: "Yeseva One";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .confBtnList {
-    display: flex;
-    column-gap: 20px;
-    align-items: center;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .confBtnList div {
-    display: flex;
+  display: flex;
 }
 
 .confViewBtn {
-    width: 158px;
-    height: 35px;
-    padding: 5px 20px;
-    border-radius: 30px;
-    background: #dcebf8;
-    color: var(--textColor);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
+  width: 158px;
+  height: 35px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: #dcebf8;
+  color: var(--textColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .confNextBtn {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .confCakeItem {
-    display: flex;
-    width: 280px;
-    height: 424px;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
+  display: flex;
+  width: 280px;
+  height: 424px;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
 }
 
 .confCakeItemImg {
-    width: 280px;
-    height: 300px;
-    flex-shrink: 0;
-    border-radius: 5px;
+  width: 280px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 5px;
 }
 
 .confCakeItemWrap {
-    display: flex;
-    padding: 0px 10px 15px 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 114px;
+  display: flex;
+  padding: 0px 10px 15px 10px;
+  /* padding: 15px; */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 114px;
 }
 
 .confCakeItemWrap h2 {
-    color: var(--Black, #011936);
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2.1;
+  color: var(--Black, #011936);
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.1;
 }
 
 .confCakeItemWrap h3 {
-    color: #011936;
-    font-family: Verdana;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25;
+  color: #011936;
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
 }
 
 .confCakeItemWrap p {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #84a6c2;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #84a6c2;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .listWrap {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 
 .confItem {
-    display: flex;
+  display: flex;
 }
 
 .confAvatar {
-    width: 280px;
-    height: 479px;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #FFF;
-    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+  width: 280px;
+  /* height: 479px; */
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
 .confSubInfo {
-    width: 1150px;
-    display: flex;
-    height: 35px;
-    justify-content: space-between;
-    align-items: center;
+  width: 1150px;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .confSubInfo h2 {
-    color: #011936;
-    font-family: "Yeseva One";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
+  color: #011936;
+  font-family: "Yeseva One";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .confBtnList {
-    display: flex;
-    column-gap: 10px;
-    align-items: center;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
 }
 
 .confBtnList div {
-    display: flex;
+  display: flex;
 }
 
 .confViewBtn {
-    width: 158px;
-    height: 35px;
-    padding: 5px 20px;
-    border-radius: 30px;
-    background: #DCEBF8;
-    color: var(--textColor);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
+  width: 158px;
+  height: 35px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: #dcebf8;
+  color: var(--textColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .confNextBtn {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .confCakeItem {
-    display: flex;
-    width: 280px;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 10px;
-    border-radius: 5px;
-    background: #FFF;
-    box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
+  display: flex;
+  width: 280px;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
 }
 
 .confAvatarImg {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 1px solid #FFE1E1;
-    margin: 0 auto 20px auto;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #ffe1e1;
+  margin: 0 auto 20px auto;
 }
 
 .confAvatarName {
-    color: #43607C;
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2.1;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.1;
 }
 
 .confAvatarComments {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #A63A50;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    text-decoration: underline;
-    margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
 .confAvatarInfo {
-    color: #43607C;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 22px;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
 .confAvatarButtonList {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .confAvatarButtonList button {
-    margin: 0 auto;
-    padding: 2px 10px;
-    gap: 30px;
-    border-radius: 30px;
-    background: #FFF2F2;
-    color: #A63A50;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
+  margin: 0 auto;
+  padding: 2px 10px;
+  gap: 30px;
+  border-radius: 30px;
+  background: #fff2f2;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .confCakeItemWrap {
-    display: flex;
-    padding: 0 10px 15px 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 114px;
+  display: flex;
+  padding: 0 10px 15px 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* height: 114px; */
 }
 
 .confCakeItemWrap h2 {
-    color: var(--Black, #011936);
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2.1;
+  color: var(--Black, #011936);
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.1;
 }
 
 .confCakeItemWrap h3 {
-    color: #011936;
-    font-family: Verdana;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25;
+  color: #011936;
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
 }
 
 .confCakeItemWrap p {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #84A6C2;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #84a6c2;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .ListWrap {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 .ConfItem {
-    display: flex;
+  display: flex;
 }
 
 .ConfAvatar {
-    width: 280px;
-    height: 479px;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #FFF;
-    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+  width: 280px;
+  height: 479px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
 .ConfAvatarImg {
-    width: 200px;
-    height: 200px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 1px solid #FFE1E1;
-    margin: 0 auto 20px auto;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #ffe1e1;
+  margin: 0 auto 20px auto;
 }
 
 .ConfAvatarName {
-    color: #43607C;
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2.1;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.1;
 }
 
 .ConfAvatarComments {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #A63A50;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    text-decoration-line: underline;
-    margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration-line: underline;
+  margin-bottom: 20px;
 }
 
 .ConfAvatarInfo {
-    color: #43607C;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-bottom: 22px;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
 .ConfAvatarButtonList {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .ConfAvatarButtonList button {
-    margin: 0 auto;
-    padding: 2px 10px;
-    gap: 30px;
-    border-radius: 30px;
-    background: #FFF2F2;
-    color: #A63A50;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
+  margin: 0 auto;
+  padding: 2px 10px;
+  gap: 30px;
+  border-radius: 30px;
+  background: #fff2f2;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .ConfSubInfo {
-    width: 1150px;
-    margin-bottom: 20px;
+  width: 1150px;
+  margin-bottom: 20px;
 }
 
 .ConfBtnList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ConfViewBtn {
-    background-color: #FFF;
-    color: #43607C;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+  background-color: #fff;
+  color: #43607c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .ConfNextBtn {
-    background: transparent;
-    border: none;
-    padding: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .ConfNextBtn img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .ConfCakeList {
-    height: 424px;
-    /* width: 1300px; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  height: 424px;
+  /* width: 1300px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .ConfCakeItem {
-    width: 280px;
-    height: 424px;
-    background-color: #FFF;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+  width: 280px;
+  height: 424px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
 .ConfCakeItemWrap {
-    margin-top: 15px;
+  /* margin-top: 15px; */
+  padding: 15px;
+  font-family: "Verdana";
 }
 
 .ConfCakeItemWrap h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--CTA-red, #A63A50);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--CTA-red, #a63a50);
 }
 
 .ConfCakeItemWrap h3 {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--Black, #011936);
-    margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--Black, #011936);
+  margin-top: 5px;
 }
 
 .ConfCakeItemWrap p {
-    font-size: 14px;
-    color: #43607C;
-    margin-top: 10px;
+  font-size: 14px;
+  color: #43607c;
+  margin-top: 10px;
 }

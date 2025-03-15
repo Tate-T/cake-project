@@ -1,132 +1,138 @@
 .glawBox {
-  padding-bottom: 80px;
-  padding-top: 80px;
+	padding-bottom: 80px;
+	padding-top: 80px;
 }
 
 .ul {
-  display: flex;
-  list-style: none;
-  gap: 18px;
+	display: flex;
+	list-style: none;
+	gap: 18px;
+	flex-wrap: wrap;
+	width: 1472px;
 }
-
+.item {
+	width: 475px;
+}
 .boxesFlex {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .boxesFlexInfo {
-  margin-left: auto;
-  display: flex;
+	margin-left: auto;
+	display: flex;
 }
 
 .glawTxtState {
-  color: var(--Black, #011936);
-  font-family: "Yeseva One";
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
+	color: var(--Black, #011936);
+	font-family: 'Yeseva One';
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
 }
-
+.btnAllPoreglIn {
+	color: var(--CTA-blue, #43607c);
+}
 .btnAllPoregl {
-  display: flex;
-  height: 35px;
-  padding: 5px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 30px;
-  background: var(--blue-bg-border, #dcebf8);
-  color: var(--CTA-blue, #43607c);
-  font-family: Verdana;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+	display: flex;
+	height: 35px;
+	padding: 5px 20px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 30px;
+	background: var(--blue-bg-border, #dcebf8);
+	color: var(--CTA-blue, #43607c);
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
 }
 
 .stateArrowBtn {
-  background-color: transparent;
-  border: none;
+	background-color: transparent;
+	border: none;
 }
 
 .infoCardBox {
-  display: flex;
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  border-radius: 5px;
-  background: var(--White, #fff);
-  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+	display: flex;
+	padding: 15px;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	border-radius: 5px;
+	background: var(--White, #fff);
+	box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
 }
 
 .infoBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .titleInfo {
-  color: var(--CTA-blue, #43607c);
-  font-family: Verdana;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 5px;
+	color: var(--CTA-blue, #43607c);
+	font-family: Verdana;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 5px;
 }
 
 .vidgugInfo {
-  color: var(--CTA-red, #a63a50);
-  font-family: Verdana;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  text-decoration-line: underline;
+	color: var(--CTA-red, #a63a50);
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	text-decoration-line: underline;
 }
 
 .img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
 }
 
 .koditerInfo {
-  color: var(--CTA-blue, #43607c);
-  font-family: Verdana;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  margin-top: 20px;
+	color: var(--CTA-blue, #43607c);
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	margin-top: 20px;
 }
 
 .cookingIfo {
-  display: flex;
-  padding: 2px 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  border-radius: 30px;
-  background: var(--Pink-BG, #fff2f2);
+	display: flex;
+	padding: 2px 10px;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	border-radius: 30px;
+	background: var(--Pink-BG, #fff2f2);
 }
 
 .boxesFlexCoocing {
-  margin-top: 22px;
-  gap: 15px;
-  display: flex;
-  align-items: center;
+	margin-top: 22px;
+	gap: 15px;
+	display: flex;
+	align-items: center;
 }
 
 .coocTetx {
-  color: var(--CTA-red, #a63a50);
-  font-family: Verdana;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+	color: var(--CTA-red, #a63a50);
+	font-family: Verdana;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
 }
