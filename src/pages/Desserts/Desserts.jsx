@@ -79,17 +79,17 @@ const Desserts = () => {
                 {cakes.slice(page[0] * 8, page[1] * 8).map((item, index) => (
                   <li key={`dessert-${index}`} className={styles.dessertsItem}>
                     <img
-                      src={item.image}
+                      src={item.src}
                       alt="dessert"
                       className={styles.dessertsImg}
                     />
                     <h2 className={styles.dessertsTextCurrency}>
-                      {item.price}
+                      {item.price} грн
                     </h2>
                     <p className={styles.dessertsTextDescription}>
-                      {item.title}
+                      {item.name}
                     </p>
-                    <p className={styles.dessertsTextNumber}>{item.options}</p>
+                    <p className={styles.dessertsTextNumber}>{item.quantityOfFillings} варіанти начинок</p>
                   </li>
                 ))}
               </ul>

@@ -6,9 +6,9 @@ export const fetchCakes = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const resp = await axios.get(
-        "https://67c2d1a51851890165ad564f.mockapi.io/cakes"
+        "https://6778f8a1482f42b62e90102f.mockapi.io/api/v1/data"
       );
-      return resp.data;
+      return resp.data[0].cakes;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }
