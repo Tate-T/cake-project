@@ -19,7 +19,8 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "sass": "^1.83.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "swiper": "^11.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
