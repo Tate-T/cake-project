@@ -11,7 +11,7 @@ import topImg3 from '../../imgs/confectioners/homeBakery.png'
 import { getListCondist } from '../../redux/bestConditersMain/topCondistWere'
 import { retry } from '@reduxjs/toolkit/query'
 import { nanoid } from 'nanoid'
-import { listCondSelector } from './selectors'
+import { listCondSelector } from '../../redux/bestConditersMain/selectors'
 const animals = [topImg1, topImg2, topImg3]
 export default function ListTopPip() {
 	const dispatch = useDispatch()
