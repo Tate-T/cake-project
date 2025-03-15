@@ -1,23 +1,45 @@
 import SearchForm from "../../components/SearchForm/SearchForm"
 import css from "./DessertInfo.module.css";
 
+import Footer from "../../components/Footer/Footer";
 import data from "../confectionerProducts.json";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import Header from "../../components/Header/Header";
 import { useSelector, useDispatch } from "react-redux";
-
+import { fetchComments } from "../../redux/dessertInfo/dessertInfoAPI";
+import {
+    selectorComments,
+    selectorCommentsCount
+} from "../../redux/dessertInfo/dessertInfoSelectors"
 const DessertInfo = () => {
 
+
+    const dispatch = useDispatch();
+
     const dessertText = useSelector((state) => {
-        return state.counter;
+        return state.textDessertInfo;
     });
+
+    const dessertComments = useSelector(state => selectorComments(state));
+    console.log(dessertComments);
+
+
+
+    useEffect(() => {
+    dispatch(fetchComments());
+    }, [dispatch]);
+
+    const { count } = useSelector(selectorCommentsCount);
+
 
     function clickButtonSmollImg() {
         alert(`Наданий момент: ${dessertText}`);
     };
 
     const { id } = useParams();
+    console.log(dessertComments);
     return (
         <>
             <Header></Header>
@@ -48,7 +70,7 @@ const DessertInfo = () => {
                         <li>
                             <img className={css.info__imgS} src={data[id].photo} alt='4'></img>
                         </li>
-                        <button type='button'  onClick={clickButtonSmollImg}>
+                        <button type='button' onClick={clickButtonSmollImg}>
                             <svg width="12.000000" height="7.410156" viewBox="0 0 12 7.41016" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                 <desc>
                                     Created with Pixso.
@@ -148,6 +170,7 @@ const DessertInfo = () => {
                     <div>
                         <div className={css.box__reviews}>
                             <h2 className={css.box__reviewsText}>Відгуки</h2>
+                            <p className={css.text__cake}>{count}</p>
                             <button type="button" className={css.box__reviewsBtn}>
                                 <svg className={css.box__reviewsSvg} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                     <desc>
@@ -194,31 +217,27 @@ const DessertInfo = () => {
                             </button>
                         </div>
                         <ul>
-                            <li className={css.comments__item}>
-                                <h2 className={css.person__name}>Анна Щедріна<span className={css.person__locate}>15.11.2020</span></h2>
-                                <p className={css.text__cake}>Замовляли на мій День народження мусовий торт із маракуєю та залишилися дуже задоволені. Тортик вийшов дуже смачний,
-                                    з приємною кислинкою за рахунок маракуї та неймовірно ніжною та легкою текстурою. Начинка,
-                                    на мій смак, просто шикарна: желе маракуйї, бісквіт, хрусткий шар та мус із манго та маракуйї.</p>
+                            {dessertComments.map(item => {
 
-                            </li>
-                            <li className={css.comments__item}>
-                                <h2 className={css.person__name}>Олександр Ольцев<span className={css.person__locate}>15.11.2020</span></h2>
-                                <p className={css.text__cake}>Супер десерти для дому та хореки. Чарівні круасани. Торти, кейки та мусові десерти - це кохання</p>
+                                return (
+                                    <>
+                                        <li className={css.comments__item}>
+                                            <h2 className={css.person__name}>{item.name}<span className={css.person__locate}>{item.date}</span></h2>
+                                            <p className={css.text__cake}>{item.comments}</p>
 
-                            </li>
-                            <li className={css.comments__item}>
-                                <h2 className={css.person__name}>Тарас Коломієць<span className={css.person__locate}>15.11.2020</span></h2>
-                                <p className={css.text__cake}>Найсмачніші торти та тістечка, казкові еклери. У захваті від десертів. Кондитера - чарівниці, доставка завжди на найвищому рівні!!!!!
-                                    Всій сім'єю обожнюємо Вашу кондитерську , дякую за вашу працю і смакоти!! 3</p>
+                                        </li>
+                                    </>
+                                );
+                            })}
 
-                            </li>
+
                         </ul>
                     </div>
                 </div>
             </Container>
 
 
-            {/* <Footerr></Footerr> */}
+            <Footer />
         </>
     )
 }
