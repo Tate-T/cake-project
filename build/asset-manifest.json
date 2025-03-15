@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/cake-project/static/css/main.7255402f.css",
-    "main.js": "/cake-project/static/js/main.2c9adc7a.js",
+    "main.js": "/cake-project/static/js/main.4bcd4eec.js",
     "static/css/659.c83e4544.chunk.css": "/cake-project/static/css/659.c83e4544.chunk.css",
     "static/js/659.71f22530.chunk.js": "/cake-project/static/js/659.71f22530.chunk.js",
-    "static/css/660.23cf0693.chunk.css": "/cake-project/static/css/660.23cf0693.chunk.css",
+    "static/css/660.9ea383f6.chunk.css": "/cake-project/static/css/660.9ea383f6.chunk.css",
     "static/js/660.ead25168.chunk.js": "/cake-project/static/js/660.ead25168.chunk.js",
     "static/css/703.a7096a42.chunk.css": "/cake-project/static/css/703.a7096a42.chunk.css",
     "static/js/703.b80e6845.chunk.js": "/cake-project/static/js/703.b80e6845.chunk.js",
@@ -65,10 +65,10 @@
     "static/media/leftArrow.svg": "/cake-project/static/media/leftArrow.9624c649ec6dbcd6d7d8460ceb3c82ee.svg",
     "static/media/rihtAroow.svg": "/cake-project/static/media/rihtAroow.e078200c1b311f450e9c75fcfb7a23dc.svg",
     "main.7255402f.css.map": "/cake-project/static/css/main.7255402f.css.map",
-    "main.2c9adc7a.js.map": "/cake-project/static/js/main.2c9adc7a.js.map",
+    "main.4bcd4eec.js.map": "/cake-project/static/js/main.4bcd4eec.js.map",
     "659.c83e4544.chunk.css.map": "/cake-project/static/css/659.c83e4544.chunk.css.map",
     "659.71f22530.chunk.js.map": "/cake-project/static/js/659.71f22530.chunk.js.map",
-    "660.23cf0693.chunk.css.map": "/cake-project/static/css/660.23cf0693.chunk.css.map",
+    "660.9ea383f6.chunk.css.map": "/cake-project/static/css/660.9ea383f6.chunk.css.map",
     "660.ead25168.chunk.js.map": "/cake-project/static/js/660.ead25168.chunk.js.map",
     "703.a7096a42.chunk.css.map": "/cake-project/static/css/703.a7096a42.chunk.css.map",
     "703.b80e6845.chunk.js.map": "/cake-project/static/js/703.b80e6845.chunk.js.map",
@@ -96,6 +96,6 @@
   },
   "entrypoints": [
     "static/css/main.7255402f.css",
-    "static/js/main.2c9adc7a.js"
+    "static/js/main.4bcd4eec.js"
   ]
 }
