@@ -22,14 +22,14 @@ const DessertInfo = () => {
         return state.textDessertInfo;
     });
 
-    const dessertComments = useSelector(selectorComments);
+    const dessertComments = useSelector(state => selectorComments(state));
     console.log(dessertComments);
 
 
 
-    // useEffect(() => {
+    useEffect(() => {
     dispatch(fetchComments());
-    // }, [dispatch]);
+    }, [dispatch]);
 
     const { count } = useSelector(selectorCommentsCount);
 
@@ -39,6 +39,7 @@ const DessertInfo = () => {
     };
 
     const { id } = useParams();
+    console.log(dessertComments);
     return (
         <>
             <Header></Header>
@@ -217,6 +218,7 @@ const DessertInfo = () => {
                         </div>
                         <ul>
                             {dessertComments.map(item => {
+
                                 return (
                                     <>
                                         <li className={css.comments__item}>

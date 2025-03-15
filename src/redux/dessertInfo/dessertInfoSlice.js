@@ -26,15 +26,15 @@ import { createSlice } from '@reduxjs/toolkit';
 // })
 
 // export const listCondReduser = listCondBest.reducer
-
+export const stateDessertInfo = {
+  textDessertInfo: "Non function",
+  comments: [],
+  count: 0,
+};
 
 const dessertInfoSlice = createSlice({
-  name: "dessertInfo",
-  initialState: {
-    textDessertInfo: "Non function",
-    comments: [],
-    count: 0,
-  },
+  name: "dessertinfo",
+  initialState: stateDessertInfo,
   extraReducers: (builder) => {
     builder
       .addCase(setInfo, (state, action) => {
@@ -42,6 +42,7 @@ const dessertInfoSlice = createSlice({
 
           textDessertInfo: action.payload,
           comments: state.comments,
+          count: state.count,
         }
       })
       .addCase(fetchComments.fulfilled, (state, action) => {
@@ -49,6 +50,7 @@ const dessertInfoSlice = createSlice({
         return {
           textDessertInfo: state.textDessertInfo,
           comments: action.payload,
+          count: state.count,
         }
       })
   }
