@@ -217,8 +217,9 @@
 
 .dessertsList {
   margin-top: 30px;
-  height: 640px;
+  min-height: 640px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -313,7 +314,7 @@
   margin-left: auto;
   margin-right: auto;
   height: 50px;
-  margin-left: 700px;
+  margin: 0 auto 50px;
   margin-bottom: 50px;
 
   li {
