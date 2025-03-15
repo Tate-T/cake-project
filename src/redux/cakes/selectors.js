@@ -5,6 +5,6 @@ export const selectCakes = (state) => state.cakes.cakes;
 export const selectFoundCakes = createSelector(
   [selectCakes, selectValue],
   (cakes, value) => {
-    return cakes.filter((cake) => cake.title.toLowerCase().includes(value.toLowerCase()));
+    return cakes.filter((cake) => cake.name.toLowerCase().includes(value.toLowerCase()));
   }
 );
