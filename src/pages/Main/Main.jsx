@@ -6,6 +6,7 @@ import heroAdditionalImg1 from "../../imgs/hero-additional/hero-additional-1.png
 import heroAdditionalImg2 from "../../imgs/hero-additional/hero-additional-2.png";
 import heroAdditionalImg3 from "../../imgs/hero-additional/hero-additional-3.png";
 import { NavLink, Outlet } from "react-router-dom";
+import Slider from "../../components/Slider/Slider";
 
 // footer
 import Footer from "../../components/Footer/Footer";
@@ -151,7 +152,7 @@ const Main = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div className={styles.heroImgsBox}>
               <div>
                 <img
@@ -193,9 +194,9 @@ const Main = () => {
         </Container>
       </section>
 
-      <Container>
-        <ListState></ListState>
-      </Container>
+      {/* <Container> */}
+      <ListState />
+      {/* </Container> */}
       <Container>
         <ListTopPip></ListTopPip>
       </Container>

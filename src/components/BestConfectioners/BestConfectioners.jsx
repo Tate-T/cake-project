@@ -11,11 +11,7 @@ import topImg3 from "../../imgs/confectioners/homeBakery.png";
 import { getListCondist } from "../../redux/BestConditersMain/topCondistWere";
 import { retry } from "@reduxjs/toolkit/query";
 import { nanoid } from "nanoid";
-const animals = [
-  "https://s3-alpha-sig.figma.com/img/bd3b/62a3/a607857a668b3e8860b2eb09434b69a0?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iUPp7htZtWW0p~~fLoAVsxFifaukRTgRq2n1MlIPiCqwWhtabWspldXW7OfmUIvhjiO7iFKAOzM4lBYgyduBiu0dM0cDJ0OqRD7ojS4Jg1l5D~aTzwMwT339nMaB0u8eVcBcg~OQoI-EcXddJKNMjnGGsdMqTkHiD-lEvraitUV7lUtRBSfVOAEh0jXpUOcKRcQIKjWiw5w8Miiv5fxunzqSFp91kNwX9-~93vWh8bcYVoWka7jerCszzYITJRZPdVYuZfXk8J1MM6hbmDkR3zqmxVCw5VnPXOcVx1LoKa44uVJ9plI2qDXm32DyZnrZSr58R2~5gRU2Azqpfi~9SA__",
-  "https://s3-alpha-sig.figma.com/img/bd64/539b/df4e425f07e78464cf31f47ca4ae2063?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WS-~dL~~oluScSv0m5OlTHgc6eY5SGSsazcJvTnubRVmu2SdGhSGj06gxbE2d3ZFlvpepAwMWkXRYc1zRjNgUaqcRnMNbXS~imYCqXHJzkzwqY2kiIoZ8Hb-szkeFkNBwvt4v4TapL8SrESLWSvnj1g-mJqupnjaSk0mmuAXjQD4YUWL9D67i2-lBtqyfA3PI6kpIh62LHbmVfpoj~dkjBh~ByhOax6xqAeS4gm9xmKS1Kxo1neWQqMYzAHb6~FmodkJ~Kv4TNJa0J7REhsvexEvqeijWKwrAFB11lkoyHEgNw9oBy1~1PdwVc3-6bibH2PIq65abZcaHcmmdKZBzw__",
-  "https://s3-alpha-sig.figma.com/img/93d5/2f12/b50c000528ebc46cd9e446ecf1162816?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hpEzG0xYy6-UegPMDh~sVcIZnFDuBCD~JdLWpbrdOU45UStPx8ZGNskJpUCTTXJYXShaNljYMQ09oIvF3MGXLUHVFbanaN~S57~QxMuHJrrYvLB36uYSpWmNEMCbnZTVR4myks3llMttEa2LQlKUoXr~MqP3t~83Wl~eMQsZCNgTUbCjAUb-unmF7HFiRsE-fphEA~TzVPzHZHpD-F1HsFK35IhVGCzIrDfsGTEryORg~84~7E7V16nyHXkmP6EjgM8OtubBBDbOPjaVc99jxvsLhJMVne-W2ndYE~t4CC3W69cO2kdVPRoekveVIuVX90p4HZkgPaTOYhw6vzCjnA__",
-];
+const animals = [topImg1, topImg2, topImg3];
 export default function ListTopPip() {
   const dispatch = useDispatch();
   const listCond = useSelector((state) => {
