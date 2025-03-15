@@ -9,20 +9,29 @@ import Container from "../../components/Container/Container";
 import Header from "../../components/Header/Header";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchComments } from "../../redux/dessertInfo/dessertInfoAPI";
-import { selectorComments } from "../../redux/dessertInfo/dessertInfoSelectors"
+import {
+    selectorComments,
+    selectorCommentsCount
+} from "../../redux/dessertInfo/dessertInfoSelectors"
 const DessertInfo = () => {
+
+
     const dispatch = useDispatch();
+
     const dessertText = useSelector((state) => {
         return state.textDessertInfo;
     });
+
     const dessertComments = useSelector(selectorComments);
     console.log(dessertComments);
 
+
+
     // useEffect(() => {
-        dispatch(fetchComments());
+    dispatch(fetchComments());
     // }, [dispatch]);
 
-
+    const { count } = useSelector(selectorCommentsCount);
 
 
     function clickButtonSmollImg() {
@@ -160,6 +169,7 @@ const DessertInfo = () => {
                     <div>
                         <div className={css.box__reviews}>
                             <h2 className={css.box__reviewsText}>Відгуки</h2>
+                            <p className={css.text__cake}>{count}</p>
                             <button type="button" className={css.box__reviewsBtn}>
                                 <svg className={css.box__reviewsSvg} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                     <desc>
@@ -225,7 +235,7 @@ const DessertInfo = () => {
             </Container>
 
 
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

@@ -33,7 +33,7 @@ import storage from "redux-persist/lib/storage";
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    dessertsInfo: dessertInfoReducer,
+    desserts: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
     listCond: listCondReduser,
