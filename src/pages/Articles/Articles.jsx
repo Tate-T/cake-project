@@ -10,39 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "../../redux/articles/articlesAPI.js";
 import { setValue } from "../../redux/articles/articlesSlice.js";
 import {
-  selectArticles,
   selectValue,
   selectFoundArticles,
 } from "../../redux/articles/selectors.js";
 import Footer from "../../components/Footer/Footer.jsx";
-// const Filter = styled.div``;
-
-// const Card = styled.li`
-
-// `;
-
-// const List = styled.ul`
-
-// `;
-
-// const LoadMore = styled.button`
-
-// `;
-
-// const Pagination = styled.ul`
-
-// `;
-
-// const LeftArrow = styled.div`
-
-// `;
-// const RightArrow = styled.div`
-
-// `;
-
-// const Checkbox = styled.input`
-
-// `;
 
 export default function Articles() {
   const dispatch = useDispatch();
@@ -59,6 +30,7 @@ export default function Articles() {
   const [page, setPage] = useState([0, 1]);
   const [selectedArr, setSelectedArr] = useState([]);
   useEffect(() => {
+    setPage([0, 1]);
     const arr = [];
     const keys = Object.keys(topics);
     keys.forEach((key) => {
@@ -66,25 +38,21 @@ export default function Articles() {
     });
     setSelectedArr(arr);
   }, [topics]);
-  const articlesBase = useSelector(selectArticles);
   const value = useSelector(selectValue);
   const foundArticles = useSelector(selectFoundArticles);
-  console.log("found", foundArticles);
-  console.log("value", value);
-  const data = articlesBase.filter((article) =>
-    selectedArr.length === 0
-      ? true
-      : article.topic.toSorted().join().includes(selectedArr.toSorted()) ||
-        selectedArr.toSorted().join().includes(article.topic.toSorted())
-  );
+  const data = foundArticles.filter((article) =>
+    selectedArr.length === 0 ||
+    article.topic.some(topic => selectedArr.includes(topic))
+ );
   const handleChange = (e) => {
+    setPage([0, 1]);
     dispatch(setValue(e.target.value));
   };
   return (
     <>
-      <section>
-        <Header />
+      <section className={css.article}>
         <Container>
+          <Header />
           <SearchForm
             placeholder={"Як приготувати чізкейк"}
             cb={handleChange}
@@ -162,18 +130,7 @@ export default function Articles() {
               </ul>
             </div>
             <ul className={css.articles__list}>
-              {value
-                ? foundArticles.slice(page[0] * 6, page[1] * 6).map((card) => (
-                    <li className={css.articles__item} key={nanoid()}>
-                      <img src={card.url} alt="bakery" />
-                      <h3>{card.title}</h3>
-                      <p>{card.description}</p>
-                      <Link to={`/articles/${nanoid()}`}>
-                        Читати далі
-                      </Link>
-                    </li>
-                  ))
-                : data.slice(page[0] * 6, page[1] * 6).map((card) => (
+              {data.slice(page[0] * 6, page[1] * 6).map((card) => (
                     <li className={css.articles__item} key={nanoid()}>
                       <img src={card.url} alt="bakery" />
                       <h3>{card.title}</h3>
