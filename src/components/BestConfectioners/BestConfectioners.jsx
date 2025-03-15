@@ -3,12 +3,12 @@ import { Link, NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
 //slyle
-import styles from './BestConfectioners.module.css'
+import styles from './bestConfectioners.module.css'
 //other
 import topImg1 from '../../imgs/confectioners/Inna.png'
 import topImg2 from '../../imgs/confectioners/Ivanna.png'
 import topImg3 from '../../imgs/confectioners/homeBakery.png'
-import { getListCondist } from '../../redux/BestConditersMain/topCondistWere'
+import { getListCondist } from '../../redux/bestConditersMain/topCondistWere'
 import { retry } from '@reduxjs/toolkit/query'
 import { nanoid } from 'nanoid'
 import { listCondSelector } from './selectors'
@@ -16,8 +16,8 @@ const animals = [topImg1, topImg2, topImg3]
 export default function ListTopPip() {
 	const dispatch = useDispatch()
 	const listCond = useSelector(listCondSelector)
-  const [showAll, setShowAll] = useState(false)
-	  console.log(listCond);
+	const [showAll, setShowAll] = useState(false)
+	console.log(listCond)
 	useEffect(() => {
 		dispatch(getListCondist())
 	}, [dispatch])
@@ -26,21 +26,24 @@ export default function ListTopPip() {
 		const randomIndex = Math.floor(Math.random() * arr.length)
 		return arr[randomIndex]
 	}
-  function changeShoeAll(e) {
-    setShowAll(true)
-  }
+	function changeShoeAll(e) {
+		setShowAll(true)
+	}
 	return (
 		<>
 			<div className={styles.glawBox}>
 				<div className={styles.boxesFlex}>
 					<h2 className={styles.glawTxtState}>Кращі кондитери</h2>
 					<div className={styles.boxesFlexInfo}>
-            {/* to="/confecionres" */}
-            <button onClick={() => changeShoeAll()} className={styles.btnAllPoregl}>
-              <NavLink className={styles.btnAllPoreglIn} >
-							Переглянути всі
-						</NavLink>
-            </button>
+						{/* to="/confecionres" */}
+						<button
+							onClick={() => changeShoeAll()}
+							className={styles.btnAllPoregl}
+						>
+							<NavLink className={styles.btnAllPoreglIn}>
+								Переглянути всі
+							</NavLink>
+						</button>
 						<button className={styles.stateArrowBtn}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
