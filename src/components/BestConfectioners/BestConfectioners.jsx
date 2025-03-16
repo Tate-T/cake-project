@@ -3,15 +3,15 @@ import { Link, NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
 //slyle
-import styles from './bestConfectioners.module.css'
+import styles from './BestConfectioners.module.css'
 //other
 import topImg1 from '../../imgs/confectioners/Inna.png'
 import topImg2 from '../../imgs/confectioners/Ivanna.png'
 import topImg3 from '../../imgs/confectioners/homeBakery.png'
-import { getListCondist } from '../../redux/bestConditersMain/topCondistWere'
+import { getListCondist } from '../../redux/BestConditersMain/topCondistWere'
 import { retry } from '@reduxjs/toolkit/query'
 import { nanoid } from 'nanoid'
-import { listCondSelector } from '../../redux/bestConditersMain/selectors'
+import { listCondSelector } from '../../redux/BestConditersMain/selectors'
 const animals = [topImg1, topImg2, topImg3]
 
 export default function ListTopPip() {

@@ -9,7 +9,7 @@ import { persistStore, persistReducer } from "redux-persist";
 
 
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
-import { listCondReduser } from './bestConditersMain/bestCondistSlise'
+import { listCondReduser } from './BestConditersMain/bestCondistSlise'
 import storage from 'redux-persist/lib/storage'
 // const initialState = {
 //   loginedUsers: [
