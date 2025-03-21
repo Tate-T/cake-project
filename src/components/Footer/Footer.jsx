@@ -4,8 +4,19 @@ import location from "../../imgs/svg/location_pin.svg";
 import yut from "../../imgs/svg/Youtube_black.svg";
 import inst from "../../imgs/svg/Instagram.svg";
 import Container from "../Container/Container";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectFeedback,
+  setFeedback,
+} from "../../redux/feedback/feedbackSlice";
+import FeedbackModal from "../FeedbackModal/FeedbackModal";
 
 export default function Footer() {
+  const isOpen = useSelector(selectFeedback);
+  const dispatch = useDispatch();
+  const openFeedback = () => {
+    dispatch(setFeedback(true));
+  };
   return (
     <>
       <footer className={sty.footer}>
@@ -41,7 +52,7 @@ export default function Footer() {
             <li>
               <div className={sty.boxBtn}>
                 <button className={sty.btnPrav}>Правила користування</button>
-                <button className={sty.btnInfo}>
+                <button className={sty.btnInfo} onClick={openFeedback}>
                   Форма зворотнього зв’язку
                 </button>
               </div>
@@ -63,6 +74,7 @@ export default function Footer() {
           </ul>
         </Container>
       </footer>
+      {isOpen && <FeedbackModal />}
     </>
   );
 }
