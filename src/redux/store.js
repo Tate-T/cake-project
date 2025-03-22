@@ -3,10 +3,9 @@ import { authReducer } from './auth/authSlice'
 import { articlesReducer } from './articles/articlesSlice'
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 
-import {dessertInfoReducer} from "./dessertInfo/dessertInfoSlice";
-import { cakesReducer } from "./cakes/cakesSlice";
-import { persistStore, persistReducer } from "redux-persist";
-
+import { dessertInfoReducer } from './dessertInfo/dessertInfoSlice'
+import { cakesReducer } from './cakes/cakesSlice'
+import { persistStore, persistReducer } from 'redux-persist'
 
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import { listCondReduser } from './BestConditersMain/bestCondistSlise'
