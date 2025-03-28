@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { nanoid } from '@reduxjs/toolkit'
-import { getListCondist } from './topCondistWere'
+// import { getListCondist } from './topCondistWere'
 
 const appState = {
 	listCond: [],
