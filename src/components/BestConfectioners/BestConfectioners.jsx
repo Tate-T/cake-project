@@ -7,7 +7,7 @@ import styles from './BestConfectioners.module.css'
 import topImg1 from '../../imgs/confectioners/Inna.png'
 import topImg2 from '../../imgs/confectioners/Ivanna.png'
 import topImg3 from '../../imgs/confectioners/homeBakery.png'
-import { getListCondist } from '../../redux/BestConditersMain/topCondistWere'
+// import { getListCondist } from '../../redux/BestConditersMain/topCondistWere'
 import { retry } from '@reduxjs/toolkit/query'
 import { nanoid } from 'nanoid'
 import { listCondSelector } from '../../redux/BestConditersMain/selectors'
@@ -19,7 +19,7 @@ export default function ListTopPip() {
   const [showAll, setShowAll] = useState(false);
 //   console.log(listCond);
   useEffect(() => {
-    dispatch(getListCondist());
+    // dispatch(getListCondist());
   }, [dispatch]);
 
   const getRandomElement = (arr) => {
