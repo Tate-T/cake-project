@@ -14,7 +14,7 @@ const Auth = ({ setIsOpen }) => {
         <h2 className={css.auth__title}>Реєстрація</h2>
         <ul className={css.auth__list}>
           <li className={css.auth__item}>
-            <Link>
+            <Link to="/client/login">
               <img
                 className={css.auth__img}
                 src={CookieIcon}

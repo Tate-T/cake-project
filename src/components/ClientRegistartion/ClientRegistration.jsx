@@ -156,7 +156,7 @@ const arr = [
 
 //?
 
-const ConfectionerRegistration = () => {
+const ClientRegistartion = () => {
   const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
   const users = useSelector((state) => state.auth.loginedUsers);
   const navigate = useNavigate();
@@ -179,7 +179,7 @@ const ConfectionerRegistration = () => {
       } else {
         dispatch(toggleModal());
         dispatch(createUser(values));
-        navigate("/", { replace: true });
+        navigate("/confectioner/cabinet", { replace: true });
       }
     }
   }, []);
@@ -228,11 +228,11 @@ const ConfectionerRegistration = () => {
         </SocialsLogin>
         <SignupTip
           text={"Я вже маю акаунт, хочу просто увійти"}
-          link={"/confectioner/login"}
+          link={"/client/login"}
         />
       </Modal>
     </Overlay>
   );
 };
 
-export default ConfectionerRegistration;
+export default ClientRegistartion;
