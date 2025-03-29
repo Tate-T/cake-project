@@ -43,7 +43,8 @@ export const store = configureStore({
     listCond: listCondReduser,
     listAllTowar:listAllTowardReduser,
 	  feedback: feedbackReducer,
-	  templates: templatesReducer,
+    templates: templatesReducer,
+    templateEditing: templatesEditingReducer
   },
 });
 
