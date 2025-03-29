@@ -217,7 +217,9 @@
 
 .dessertsList {
   margin-top: 30px;
+  min-height: 860;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -226,15 +228,15 @@
   margin-left: 20px;
   margin-bottom: 20px;
   width: 280px;
+  height: 420px;
   flex-direction: column;
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
 }
 
 .dessertsImg {
-  width: 100%;
-  /* width: 280px; */
-  /* height: 300px; */
+  width: 280px;
+  height: 300px;
 }
 
 .dessertsTextCurrency {
@@ -299,4 +301,59 @@
 .img {
   width: 400px;
   height: 400px;
+}
+
+.cakes__pagination {
+  position: relative;
+  display: flex;
+  width: 290px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin: 0 auto 50px;
+  margin-bottom: 50px;
+
+  li {
+    color: #5e2d07;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 1px solid #ffe2ca;
+    background: #fff;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    transition: 350ms;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 700;
+      background: #d0d0d0;
+    }
+  }
+}
+
+.cakes__arrow--left {
+  position: absolute;
+  top: 13px;
+  right: -35px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cakes__arrow--right {
+  position: absolute;
+  top: 13px;
+  left: -35px;
+  font-weight: 900;
+  cursor: pointer;
 }

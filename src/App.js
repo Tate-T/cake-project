@@ -1,12 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ConfectionerRegistration from "./components/ConfectionerRegistration/ConfectionerRegistration";
+import ClientLogin from "./components/ClientLogin/ClientLogin";
+import ClientRegistartion from "./components/ClientRegistartion/ClientRegistration";
 
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
 
-const Desserts = lazy(() => import("./pages/Desserts/Desserts")); 
-
+const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
 
 // import Articles from "./pages/Articles/Articles";
 const Articles = lazy(() => import("./pages/Articles/Articles"));
@@ -51,7 +52,6 @@ const ConfectionerLogin = lazy(() =>
 
 const Confecioners = lazy(() => import("./pages/Confecioners/Confecioners"));
 
-
 // hello
 
 function App() {
@@ -91,6 +91,8 @@ function App() {
           path="/confectioner/registration"
           element={<ConfectionerRegistration />}
         />
+        <Route path="/client/login" element={<ClientLogin />} />
+        <Route path="/client/registartion" element={<ClientRegistartion/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>

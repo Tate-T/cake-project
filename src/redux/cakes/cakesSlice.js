@@ -10,7 +10,7 @@ const cakesSlice = createSlice({
     value: ""
   },
   reducers: {
-    setValue(state, payload) {
+    setValue(state, { payload }) {
       state.value = payload;
     }
   },

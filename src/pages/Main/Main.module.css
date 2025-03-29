@@ -1,6 +1,6 @@
 .hero {
   padding-top: 89px;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 }
 
 .heroTitle {
@@ -134,9 +134,11 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    max-height: 120px;
 
     img {
-      max-width: 153px;
+      width: 153px;
+      height: 85px;
     }
 
     h2 {
