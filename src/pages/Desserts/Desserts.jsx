@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { setValue } from '../../redux/cakes/cakesSlice.js'
 import ListState from '../../components/StateConfectioners/StateeConfectioners'
-import ListTopPip from '../../components/BestConfectioners/bestConfectioners.jsx'
+import ListTopPip from '../../components/BestConfectioners/BestConfectioners.jsx'
 import { fetchCakes } from '../../redux/cakes/operations.js'
 import { selectValue, selectFoundCakes } from '../../redux/cakes/selectors.js'
 

@@ -2,12 +2,12 @@ import css from "./Request.module.css";
 import CloseIcon from "../../imgs/svg/close.svg";
 import CheckIcon from "../../imgs/svg/check.svg";
 
-const Request = ({ data }) => {
+const Request = ({ data, closeFn }) => {
   return (
     <div className={css.requestOverlay}>
       <div className={css.request}>
         <h2 className={css.requestTitle}>{data.title}</h2>
-        <button className={css.requestCloseBtn}>
+        <button className={css.requestCloseBtn} onClick={() => closeFn(false)}>
           <img src={CloseIcon} alt="close modal" />
         </button>
         <time className={css.requestDate} dateTime={data.date.toISOString()}>
