@@ -1,0 +1,468 @@
+.container {
+    max-width: 1502px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.navCont {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* .navigation{} */
+
+.confectionerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.confectionerList__button {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 50px;
+    width: 280px;
+    height: 40px;
+    border: 1px solid rgb(200, 230, 255);
+    background-color: #FFF;
+    color: #43607C;
+    font-size: 18px;
+}
+
+.confectionerList__button--active {
+    background: rgb(67, 96, 124);
+    border: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navTitle {
+    font-size: 20px;
+    color: #011936;
+    font-weight: 700;
+    font-family: Verdana;
+    margin-bottom: 15px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.categories__button {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 50px;
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color: #FFF2F2;
+    color: #8E4A4E;
+    font-size: 18px;
+}
+
+.categories__button--add {
+    font-size: 16px;
+    background: #FFF;
+    border: 1px solid #A63A50;
+    color: #8E4A4E;
+}
+
+.addIcon {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainComps {
+    width: 100%;
+}
+
+.titleSec {
+    font-size: 24px;
+    color: #011936;
+    font-weight: 400;
+    font-family: "Yeseva One";
+    display: flex;
+}
+
+.label {
+    color: #011936;
+    font-family: Verdana;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.editIcon {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: #FFF2F2;
+    width: 40px;
+    height: 30px;
+}
+
+.dataArea {
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 50px;
+    background: #F9F9F9;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.dataArea--last {
+    margin-bottom: 60px;
+}
+
+.dataArea--moreInfo {
+    border-radius: 10px;
+    margin-bottom: 60px;
+    padding: 10px 20px;
+    height: auto;
+}
+
+.dataArea ul {
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+.description {
+    color: #84A6C2;
+    font-family: Verdana;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.photoCont {
+    margin: 20px 0 60px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.photoCont__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.butsCont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photoBut {
+    width: 191px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #DCEBF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: #43607C;
+    font-family: Verdana;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.photoBut:hover {
+    border-color: #A63A50;
+    color: #A63A50;
+}
+
+.photoBut:hover svg g path {
+    fill: #A63A50;
+}
+
+.profFillCont {
+    padding: 50px 40px;
+    margin-top: 60px;
+    border-radius: 20px;
+    background: #DCEBF8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profFillCont__title {
+    color: #011936;
+    font-family: Verdana;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.barCont {
+    position: relative;
+    margin-top: 40px;
+    width: 697px;
+    height: 10px;
+}
+
+.fillBar,
+.fieldBar {
+    position: absolute;
+}
+
+.descrFill {
+    margin-top: 40px;
+    color: #43607C;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 14px;
+    line-height: 20px;
+    width: 437px;
+}
+
+.fillBut {
+    margin-top: 20px;
+    display: flex;
+    height: 40px;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #43607C;
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tophatList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+gap: 284px;
+}
+.titleTophat{
+    color: var(--Black, #011936);
+font-family: "Yeseva One";
+font-size: 35px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 42px */
+}
+
+.btnTophat{
+    display: flex;
+height: 40px;
+padding: 10px 25px;
+justify-content: center;
+align-items: center;
+gap: 15px;
+border-radius: 50px;
+background: var(--CTA-red, #A63A50);
+color: var(--White, #FFF);
+font-family: Verdana;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 19.2px */
+}
+.btnsearhTophat{
+    display: flex;
+width: 64px;
+height: 40px;
+padding: 5px 20px;
+justify-content: center;
+align-items: center;
+gap: 30px;
+
+border-radius: 50px;
+border: 1px solid var(--CTA-yellow, #FDAD6D);
+background: var(--CTA-yellow, #FDAD6D);
+}
+
+.textTophat{
+    color: var(--CTA-yellow-text, #5E2D07);
+font-family: Verdana;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.boxTophat{
+    display: flex;
+width: 300px;
+height: 40px;
+padding: 5px 20px;
+justify-content: space-between;
+align-items: center;
+
+border-radius: 50px;
+background: var(--Yellow-bg, #FFEEE1);
+}
+
+.dupBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+  .articles__loadmore {
+    margin-right: 20px;
+    width: 1180px;
+    display: flex;
+    height: 50px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+    border-radius: 49px;
+    border: 1px solid #84a6c2;
+    background: #fff;
+    color: var(--CTA-blue, #43607c);
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 350ms;
+    &:hover {
+      background: #e5e5e5;
+    }
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+ 
+.itempagin{
+    display: flex;
+width: 50px;
+height: 50px;
+padding: 5px 10px;
+justify-content: center;
+align-items: center;
+gap: 30px;
+
+border-radius: 50px;
+border: 1px solid var(--CTA-yellow-border, #FFE2CA);
+background: var(--White, #FFF);
+}
+.listpaginathon{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemEdit{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+    width: 40px;
+height: 40px;
+padding: 0px 20px;
+
+gap: 20px;
+border-radius: 50px;
+border: 2px solid var(--blue-bg-border, #DCEBF8);
+}
+.imgItem{
+    display: flex
+}
+
+.txtbox{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+.itemListrend{
+    gap: 800px;
+    display: flex;
+    align-items: center;
+width: 1152px;
+padding: 15px 30px 15px 20px;
+
+border-radius: 5px;
+background: var(--White, #FFF);
+box-shadow: 0px 0px 10px 0px rgba(67, 96, 124, 0.10), 0px 2px 5px 0px rgba(67, 96, 124, 0.15);
+}
+
+.imgItem {
+    width: 100px;
+height: 100px;
+
+border-radius: 5px;
+}
+
+.TitleItem{
+    width: 400px;
+height: 20px;
+
+overflow: hidden;
+color: var(--Black, #011936);
+text-overflow: ellipsis;
+white-space: nowrap;
+font-family: Verdana;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+}
+
+.txtItem{
+    color: var(--CTA-red, #A63A50);
+font-family: Verdana;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 21.6px */
+}
+
+
+.btnView{
+    display: flex;
+width: 184px;
+height: 40px;
+padding: 0px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--CTA-red, #A63A50);
+font-family: Verdana;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 19.2px */
+border-radius: 50px;
+background: var(--Pink-BG, #FFF2F2);
+}
+
+.boxEdit{
+    gap: 10px;
+    display: flex;
+    
+}
