@@ -37,7 +37,7 @@ import { templatesEditingReducer } from './editingTeplate/editingTemplateSlice';
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    desserts: dessertInfoReducer,
+    dessertsInfo: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
     listCond: listCondReduser,
