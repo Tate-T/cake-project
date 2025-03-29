@@ -39,10 +39,10 @@ textarea {
 }
 
 .swiper-slide {
-  width: 280px !important;
+  /* width: 280px !important;
   height: 343px !important;
-  width: 280px;
-  max-height: 343px;
+  width: 280px; */
+  /* max-height: 343px; */
   display: flex;
   flex-direction: column;
   /* gap: 20px; */

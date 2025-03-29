@@ -1,3 +1,4 @@
+
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import ConfectionerRegistration from './components/ConfectionerRegistration/ConfectionerRegistration'
@@ -101,3 +102,4 @@ function App() {
 }
 
 export default App
+
