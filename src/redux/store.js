@@ -9,6 +9,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import { feedbackReducer } from "./feedback/feedbackSlice";
 import storage from "redux-persist/lib/storage";
+import { templatesReducer } from './templates/templatesSlice'
 import { listAllTowardReduser } from './ConfectionerAllTowar/alltowarSlise';
 // const initialState = {
 //   loginedUsers: [
@@ -40,7 +41,8 @@ export const store = configureStore({
     cakes: cakesReducer,
     listCond: listCondReduser,
     listAllTowar:listAllTowardReduser,
-    feedback: feedbackReducer,
+	feedback: feedbackReducer,
+	templates: templatesReducer,
   },
 });
 

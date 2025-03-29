@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./application.module.css";
 import img1 from "../../imgs/myApplication/application1.png";
 import img2 from "../../imgs/myApplication/application2.png";
+import { Link } from "react-router-dom";
 import Request from "../../components/Request/Request";
 
 const Application = () => {
@@ -44,10 +45,10 @@ const Application = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.layout}>
-          <aside className={styles.sidebar}>
-            <button className={`${styles.sidebarButton}`}>Мої заявки</button>
-            <button className={styles.sidebarButton}>Збережені шаблони</button>
-          </aside>
+          {/* <aside className={styles.sidebar}>
+            <Link className={`${styles.sidebarButton}`} to="/client/requests">Мої заявки</Link>
+            <Link className={styles.sidebarButton} to="/client/temps">Збережені шаблони</Link>
+          </aside> */}
 
           <main className={styles.container}>
             <div className={styles.header}>
