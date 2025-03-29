@@ -22,7 +22,7 @@ const DessertInfo = () => {
         return state.textDessertInfo;
     });
 
-    const dessertComments = useSelector(state => selectorComments(state));
+    const dessertComments = useSelector(selectorComments);
     console.log(dessertComments);
 
 

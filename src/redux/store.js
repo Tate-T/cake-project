@@ -10,6 +10,7 @@ import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import { feedbackReducer } from "./feedback/feedbackSlice";
 import storage from "redux-persist/lib/storage";
 import { listAllTowardReduser } from './ConfectionerAllTowar/alltowarSlise';
+import { templatesEditingReducer } from './editingTeplate/editingTemplateSlice';
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -41,6 +42,7 @@ export const store = configureStore({
     listCond: listCondReduser,
     listAllTowar:listAllTowardReduser,
     feedback: feedbackReducer,
+    templateEditing: templatesEditingReducer
   },
 });
 
