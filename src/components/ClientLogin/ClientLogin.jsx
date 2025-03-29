@@ -165,7 +165,7 @@ export default function ClientLogin() {
     console.log(loggedUser);
     if (loggedUser) {
       dispatch(toggleModal());
-      navigate("/", { replace: true });
+      navigate("/client/requests", { replace: true });
     } else {
       const [beUser] = users.filter((user) => user.login === values.login);
       if (beUser) {
