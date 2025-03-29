@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cake-project/static/css/main.03f1ed39.css",
-    "main.js": "/cake-project/static/js/main.cc9e817e.js",
+    "main.js": "/cake-project/static/js/main.db9508ff.js",
     "static/css/555.5a2be661.chunk.css": "/cake-project/static/css/555.5a2be661.chunk.css",
     "static/js/555.69d8feb7.chunk.js": "/cake-project/static/js/555.69d8feb7.chunk.js",
     "static/css/970.260fbdb4.chunk.css": "/cake-project/static/css/970.260fbdb4.chunk.css",
@@ -18,8 +18,8 @@
     "static/js/836.007959ec.chunk.js": "/cake-project/static/js/836.007959ec.chunk.js",
     "static/css/926.6bab8f0f.chunk.css": "/cake-project/static/css/926.6bab8f0f.chunk.css",
     "static/js/926.e3506269.chunk.js": "/cake-project/static/js/926.e3506269.chunk.js",
-    "static/css/219.c0a8b5ee.chunk.css": "/cake-project/static/css/219.c0a8b5ee.chunk.css",
-    "static/js/219.380f61ee.chunk.js": "/cake-project/static/js/219.380f61ee.chunk.js",
+    "static/css/219.cc0075e5.chunk.css": "/cake-project/static/css/219.cc0075e5.chunk.css",
+    "static/js/219.cdbf1d62.chunk.js": "/cake-project/static/js/219.cdbf1d62.chunk.js",
     "static/css/565.c9860802.chunk.css": "/cake-project/static/css/565.c9860802.chunk.css",
     "static/js/565.cc617319.chunk.js": "/cake-project/static/js/565.cc617319.chunk.js",
     "static/js/997.ceef6d03.chunk.js": "/cake-project/static/js/997.ceef6d03.chunk.js",
@@ -67,7 +67,7 @@
     "static/media/leftArrow.svg": "/cake-project/static/media/leftArrow.99d5922679cdc49c6bed07ea35492fc9.svg",
     "static/media/rihtAroow.svg": "/cake-project/static/media/rihtAroow.8a7f18980b8d8d5dafe37ac4e71f2bf5.svg",
     "main.03f1ed39.css.map": "/cake-project/static/css/main.03f1ed39.css.map",
-    "main.cc9e817e.js.map": "/cake-project/static/js/main.cc9e817e.js.map",
+    "main.db9508ff.js.map": "/cake-project/static/js/main.db9508ff.js.map",
     "555.5a2be661.chunk.css.map": "/cake-project/static/css/555.5a2be661.chunk.css.map",
     "555.69d8feb7.chunk.js.map": "/cake-project/static/js/555.69d8feb7.chunk.js.map",
     "970.260fbdb4.chunk.css.map": "/cake-project/static/css/970.260fbdb4.chunk.css.map",
@@ -84,8 +84,8 @@
     "836.007959ec.chunk.js.map": "/cake-project/static/js/836.007959ec.chunk.js.map",
     "926.6bab8f0f.chunk.css.map": "/cake-project/static/css/926.6bab8f0f.chunk.css.map",
     "926.e3506269.chunk.js.map": "/cake-project/static/js/926.e3506269.chunk.js.map",
-    "219.c0a8b5ee.chunk.css.map": "/cake-project/static/css/219.c0a8b5ee.chunk.css.map",
-    "219.380f61ee.chunk.js.map": "/cake-project/static/js/219.380f61ee.chunk.js.map",
+    "219.cc0075e5.chunk.css.map": "/cake-project/static/css/219.cc0075e5.chunk.css.map",
+    "219.cdbf1d62.chunk.js.map": "/cake-project/static/js/219.cdbf1d62.chunk.js.map",
     "565.c9860802.chunk.css.map": "/cake-project/static/css/565.c9860802.chunk.css.map",
     "565.cc617319.chunk.js.map": "/cake-project/static/js/565.cc617319.chunk.js.map",
     "997.ceef6d03.chunk.js.map": "/cake-project/static/js/997.ceef6d03.chunk.js.map",
@@ -100,6 +100,6 @@
   },
   "entrypoints": [
     "static/css/main.03f1ed39.css",
-    "static/js/main.cc9e817e.js"
+    "static/js/main.db9508ff.js"
   ]
 }
