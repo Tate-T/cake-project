@@ -143,6 +143,7 @@ const SocialsLogin = styled.div`
 export default function ClientLogin() {
   const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
   const users = useSelector((state) => state.auth.loginedUsers);
+  console.log(users)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
