@@ -33,7 +33,7 @@ export default ({}) => {
                         <h2 className={css.navTitle}>Категорії</h2>
                         <ul className={css.categories}>
                             <li>
-                                <button className={css.categories__button}>Всі товари</button>
+                               <NavLink to="/ConfecionerAllTower"> <button className={css.categories__button}>Всі товари</button></NavLink>
                             </li>
                             <li>
                                 <button className={css.categories__button}>Торти</button>
