@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 //slyle
-import styles from "./BestConfectioners.module.css";
+import styles from './BestConfectioners.module.css'
 import topImg1 from '../../imgs/confectioners/Inna.png'
 import topImg2 from '../../imgs/confectioners/Ivanna.png'
 import topImg3 from '../../imgs/confectioners/homeBakery.png'
