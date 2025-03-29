@@ -11,6 +11,7 @@ import { feedbackReducer } from "./feedback/feedbackSlice";
 import storage from "redux-persist/lib/storage";
 import { templatesReducer } from './templates/templatesSlice'
 import { listAllTowardReduser } from './ConfectionerAllTowar/alltowarSlise';
+import { templatesEditingReducer } from './editingTeplate/editingTemplateSlice';
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -41,8 +42,8 @@ export const store = configureStore({
     cakes: cakesReducer,
     listCond: listCondReduser,
     listAllTowar:listAllTowardReduser,
-	feedback: feedbackReducer,
-	templates: templatesReducer,
+	  feedback: feedbackReducer,
+	  templates: templatesReducer,
   },
 });
 
