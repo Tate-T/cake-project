@@ -1,0 +1,125 @@
+.requestOverlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.request {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  padding: 40px;
+  font-family: "Verdana";
+  border-radius: 20px;
+}
+.requestTitle {
+  font-family: "Yeseva One";
+  color: #011936;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.requestDate {
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.requestForm {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.requestBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  & .requestLabel:first-child {
+    margin-bottom: 20px;
+  }
+}
+.requestLabel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  position: relative;
+  & div[data-weight-subbox] {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.requestInput {
+  border-radius: 50px;
+  background: #f9f9f9;
+  padding: 10px 20px;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.requestCloseBtn {
+  background-color: transparent;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.requestList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.requestItem {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #f9f9f9;
+  color: #43607c;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.requestSubBox {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border-radius: 40px;
+  border: 1px solid #ffe1e1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #a63a50;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  & > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+.requestBtn {
+  border-radius: 50px;
+  border: 1px solid #84a6c2;
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px 30px;
+}

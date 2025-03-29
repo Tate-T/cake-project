@@ -1,5 +1,4 @@
 import styles from "../../Main.module.css";
-import Container from "../../../../components/Container/Container";
 import { useState, useEffect } from "react";
 import { SwiperSlide } from "swiper/react";
 import Slider from "../../../../components/Slider/Slider";
