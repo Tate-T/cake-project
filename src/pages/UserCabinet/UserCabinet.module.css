@@ -12,11 +12,12 @@
     margin: 50px auto 54px;
     flex-grow: 1;
 }
-.tabs{
+.tabs {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 40px;
+
     li>a {
         display: flex;
         padding-left: 20px;
@@ -29,6 +30,7 @@
         color: #43607C;
         font-size: 18px;
     }
+
     li>a[active="true"] {
         background: rgb(67, 96, 124);
         border: none;

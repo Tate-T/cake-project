@@ -7,7 +7,7 @@ import ClientRegistartion from "./components/ClientRegistartion/ClientRegistrati
 import Application from "./pages/myApplication/myApplication";
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
-
+const UserCabinet = lazy(() => import("./pages/UserCabinet/UserCabinet"));
 const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
 const ConfecionerAllTower = lazy(() =>
   import("./pages/ConfectionerAllTowar/ConfectionerAllTowar")
@@ -100,7 +100,8 @@ function App() {
 
         <Route path="/client/login" element={<ClientLogin />} />
         <Route path="/client/registartion" element={<ClientRegistartion />} />
-        <Route path="/client/requests" element={<Application />} />
+        <Route path="/client/requests" element={<UserCabinet isOrders={true}/>} />
+        <Route path="/client/temps" element={<UserCabinet isOrders={false}/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
