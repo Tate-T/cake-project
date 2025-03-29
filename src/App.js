@@ -2,11 +2,16 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ConfectionerRegistration from "./components/ConfectionerRegistration/ConfectionerRegistration";
 
+import ClientLogin from "./components/ClientLogin/ClientLogin";
+import ClientRegistartion from "./components/ClientRegistartion/ClientRegistration";
+import Application from "./pages/myApplication/myApplication";
 // import DessertInfo from "./pages/DessertInfo/DessertInfo";
 const DessertInfo = lazy(() => import("./pages/DessertInfo/DessertInfo"));
-
-const Desserts = lazy(() => import("./pages/Desserts/Desserts")); 
-
+const UserCabinet = lazy(() => import("./pages/UserCabinet/UserCabinet"));
+const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
+const ConfecionerAllTower = lazy(() =>
+  import("./pages/ConfectionerAllTowar/ConfectionerAllTowar")
+);
 
 // import Articles from "./pages/Articles/Articles";
 const Articles = lazy(() => import("./pages/Articles/Articles"));
@@ -51,7 +56,6 @@ const ConfectionerLogin = lazy(() =>
 
 const Confecioners = lazy(() => import("./pages/Confecioners/Confecioners"));
 
-
 // hello
 
 function App() {
@@ -80,6 +84,8 @@ function App() {
 
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:id" element={<Article />} />
+
+        <Route path="/ConfecionerAllTower" element={<ConfecionerAllTower />} />
         {/* <Route path="/info-confecoiners" element={<InfoConfecoiners />} /> */}
         <Route path="/confectioner">
           <Route path="desserts" element={<ConfectionerDeserts />} />
@@ -91,6 +97,11 @@ function App() {
           path="/confectioner/registration"
           element={<ConfectionerRegistration />}
         />
+
+        <Route path="/client/login" element={<ClientLogin />} />
+        <Route path="/client/registartion" element={<ClientRegistartion />} />
+        <Route path="/client/requests" element={<UserCabinet isOrders={true}/>} />
+        <Route path="/client/temps" element={<UserCabinet isOrders={false}/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Suspense>

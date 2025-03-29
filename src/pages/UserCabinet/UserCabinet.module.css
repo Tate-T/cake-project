@@ -1,0 +1,40 @@
+.userCabinet{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.userCabinet > div{
+    display: flex;
+    font-family: Verdana;
+    gap: 80px;
+    margin: 50px auto 54px;
+    flex-grow: 1;
+}
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    li>a {
+        display: flex;
+        padding-left: 20px;
+        align-items: center;
+        border-radius: 50px;
+        width: 280px;
+        height: 40px;
+        border: 1px solid rgb(200, 230, 255);
+        background-color: #FFF;
+        color: #43607C;
+        font-size: 18px;
+    }
+
+    li>a[active="true"] {
+        background: rgb(67, 96, 124);
+        border: none;
+        font-weight: 700;
+        color: #fff;
+    }
+}

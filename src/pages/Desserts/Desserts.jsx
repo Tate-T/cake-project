@@ -1,121 +1,127 @@
-import styles from "./Desserts.module.css";
-import Header from "../../components/Header/Header";
-import SearchForm from "../../components/SearchForm/SearchForm.jsx";
-import Container from "../../components/Container/Container.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
-import { nanoid } from "nanoid";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import { setValue } from "../../redux/cakes/cakesSlice.js";
-import ListState from "../../components/StateConfectioners/StateeConfectioners";
-import ListTopPip from "../../components/BestConfectioners/BestConfectioners";
-import { fetchCakes } from "../../redux/cakes/operations.js";
-import { selectValue, selectFoundCakes } from "../../redux/cakes/selectors.js";
+import styles from './Desserts.module.css'
+import Header from '../../components/Header/Header'
+import SearchForm from '../../components/SearchForm/SearchForm.jsx'
+import Container from '../../components/Container/Container.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import { nanoid } from 'nanoid'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { setValue } from '../../redux/cakes/cakesSlice.js'
+import ListState from '../../components/StateConfectioners/StateeConfectioners'
+import ListTopPip from '../../components/BestConfectioners/BestConfectioners.jsx'
+import { fetchCakes } from '../../redux/cakes/operations.js'
+import { selectValue, selectFoundCakes } from '../../redux/cakes/selectors.js'
 
 const Desserts = () => {
-  const dispatch = useDispatch();
-  const [page, setPage] = useState([0, 1]);
-  const cakes = useSelector(selectFoundCakes);
-  const value = useSelector(selectValue);
-  useEffect(() => {
-    dispatch(fetchCakes());
-  }, []);
-  const handleChange = (e) => {
-    setPage([0, 1]);
-    dispatch(setValue(e.target.value));
-  };
-  return (
-    <>
-      <Header />
-      <Container>
-        <section>
-          <SearchForm
-            placeholder="Шоколадний торт з квітами"
-            cb={handleChange}
-            value={value}
-          />
-          <section className={styles.sectionDesserts}>
-            <div className={styles.dessertsListBox}>
-              <h2 className={styles.dessertsTitle}>Шукаєш щось особливе?</h2>
-              <ul className={styles.dessertsRecipList}>
-                <h2 className={styles.dessertsListTitle}>Тематика</h2>
-                {[
-                  "Для дівчат",
-                  "Для чоловіків",
-                  "Патріотичні",
-                  "Весільні",
-                  "До дня народження",
-                  "Корпоративні",
-                ].map((text, index) => (
-                  <li
-                    key={`theme-${index}`}
-                    className={styles.dessertsListItem}
-                  >
-                    <input type="checkbox" className={styles.dessertsInput} />
-                    <p className={styles.dessertsText}>{text}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={styles.dessertsBox}>
-              <ul className={styles.dessertsListBtn}>
-                {[
-                  "Капкейки",
-                  "Торти",
-                  "Кейк-попси",
-                  "Макаруни",
-                  "Печиво",
-                  "Цукерки",
-                ].map((btnText, index) => (
-                  <li
-                    key={`btn-${index}`}
-                    className={styles.dessertsListItemBtn}
-                  >
-                    <button className={styles.dessertsBtn}>{btnText}</button>
-                  </li>
-                ))}
-              </ul>
-              <ul className={styles.dessertsList}>
-                {cakes.slice(page[0] * 8, page[1] * 8).map((item, index) => (
-                  <li key={`dessert-${index}`} className={styles.dessertsItem}>
-                    <img
-                      src={item.src}
-                      alt="dessert"
-                      className={styles.dessertsImg}
-                    />
-                    <h2 className={styles.dessertsTextCurrency}>
-                      {item.price} грн
-                    </h2>
-                    <p className={styles.dessertsTextDescription}>
-                      {item.name}
-                    </p>
-                    <p className={styles.dessertsTextNumber}>{item.quantityOfFillings} варіанти начинок</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-          <div className={styles.cakes__pagination}>
-            <span className={styles["cakes__arrow--left"]}>&#x3c;</span>
-            {cakes.map((_, idx) =>
-                (idx + 1) % 8 === 0 || idx + 1 === cakes.length ? (
-                  <li
-                    key={nanoid()}
-                    style={
-                      page[0] + 1 === Math.ceil((idx + 1) / 8)
-                        ? { fontWeight: "700", background: "#FDAD6D" }
-                        : {}
-                    }
-                    onClick={() =>
-                      setPage([Math.ceil((idx + 1) / 8) - 1, Math.ceil((idx + 1) / 8)])
-                    }
-                  >
-                    {Math.ceil((idx + 1) / 8)}
-                  </li>
-              ) : null)}
-              <span className={styles["cakes__arrow--right"]}>&#x3e;</span>
-            </div>
-          {/* <button type="button">
+	const dispatch = useDispatch()
+	const [page, setPage] = useState([0, 1])
+	const cakes = useSelector(selectFoundCakes)
+	const value = useSelector(selectValue)
+	useEffect(() => {
+		dispatch(fetchCakes())
+	}, [])
+	const handleChange = (e) => {
+		setPage([0, 1])
+		dispatch(setValue(e.target.value))
+	}
+	return (
+		<>
+			<Header />
+			<Container>
+				<section>
+					<SearchForm
+						placeholder="Шоколадний торт з квітами"
+						cb={handleChange}
+						value={value}
+					/>
+					<section className={styles.sectionDesserts}>
+						<div className={styles.dessertsListBox}>
+							<h2 className={styles.dessertsTitle}>Шукаєш щось особливе?</h2>
+							<ul className={styles.dessertsRecipList}>
+								<h2 className={styles.dessertsListTitle}>Тематика</h2>
+								{[
+									'Для дівчат',
+									'Для чоловіків',
+									'Патріотичні',
+									'Весільні',
+									'До дня народження',
+									'Корпоративні',
+								].map((text, index) => (
+									<li
+										key={`theme-${index}`}
+										className={styles.dessertsListItem}
+									>
+										<input type="checkbox" className={styles.dessertsInput} />
+										<p className={styles.dessertsText}>{text}</p>
+									</li>
+								))}
+							</ul>
+						</div>
+						<div className={styles.dessertsBox}>
+							<ul className={styles.dessertsListBtn}>
+								{[
+									'Капкейки',
+									'Торти',
+									'Кейк-попси',
+									'Макаруни',
+									'Печиво',
+									'Цукерки',
+								].map((btnText, index) => (
+									<li
+										key={`btn-${index}`}
+										className={styles.dessertsListItemBtn}
+									>
+										<button className={styles.dessertsBtn}>{btnText}</button>
+									</li>
+								))}
+							</ul>
+							<ul className={styles.dessertsList}>
+								{cakes.slice(page[0] * 8, page[1] * 8).map((item, index) => (
+									<li key={`dessert-${index}`} className={styles.dessertsItem}>
+										<img
+											src={item.src}
+											alt="dessert"
+											className={styles.dessertsImg}
+										/>
+										<h2 className={styles.dessertsTextCurrency}>
+											{item.price} грн
+										</h2>
+										<p className={styles.dessertsTextDescription}>
+											{item.name}
+										</p>
+										<p className={styles.dessertsTextNumber}>
+											{item.quantityOfFillings} варіанти начинок
+										</p>
+									</li>
+								))}
+							</ul>
+						</div>
+					</section>
+					<div className={styles.cakes__pagination}>
+						<span className={styles['cakes__arrow--left']}>&#x3c;</span>
+						{cakes.map((_, idx) =>
+							(idx + 1) % 8 === 0 || idx + 1 === cakes.length ? (
+								<li
+									key={nanoid()}
+									style={
+										page[0] + 1 === Math.ceil((idx + 1) / 8)
+											? { fontWeight: '700', background: '#FDAD6D' }
+											: {}
+									}
+									onClick={() =>
+										setPage([
+											Math.ceil((idx + 1) / 8) - 1,
+											Math.ceil((idx + 1) / 8),
+										])
+									}
+								>
+									{Math.ceil((idx + 1) / 8)}
+								</li>
+							) : null
+						)}
+						<span className={styles['cakes__arrow--right']}>&#x3e;</span>
+					</div>
+					{/* <button type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -206,20 +212,20 @@ const Desserts = () => {
               </svg>
             </ul>
           </div> */}
-        </section>
-      </Container>
-      <Container>
-        <ListState></ListState>
-      </Container>
-      <Container>
-        <ListTopPip></ListTopPip>
-      </Container>
+				</section>
+			</Container>
+			<Container>
+				<ListState></ListState>
+			</Container>
+			<Container>
+				<ListTopPip></ListTopPip>
+			</Container>
 
-      <Footer></Footer>
-    </>
-  );
-};
-export default Desserts;
+			<Footer></Footer>
+		</>
+	)
+}
+export default Desserts
 // import data from "../confectionerProducts.json";
 // import { Link } from "react-router-dom";
 // import css from "./Desserts.module.css";

@@ -3,26 +3,22 @@ import { Link, NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
 //slyle
-import styles from './bestConfectioners.module.css'
-//other
+import styles from './BestConfectioners.module.css'
 import topImg1 from '../../imgs/confectioners/Inna.png'
 import topImg2 from '../../imgs/confectioners/Ivanna.png'
 import topImg3 from '../../imgs/confectioners/homeBakery.png'
-import { getListCondist } from '../../redux/bestConditersMain/topCondistWere'
-import { retry } from '@reduxjs/toolkit/query'
+import { getListCondist } from '../../redux/BestConditersMain/topCondistWere'
 import { nanoid } from 'nanoid'
-import { listCondSelector } from '../../redux/bestConditersMain/selectors'
+import { listCondSelector } from '../../redux/BestConditersMain/selectors'
 const animals = [topImg1, topImg2, topImg3]
 
 export default function ListTopPip() {
 	const dispatch = useDispatch()
-	const listCond = useSelector(listCondSelector)
 	const [showAll, setShowAll] = useState(false)
-	console.log(listCond)
-	useEffect(() => {
-		dispatch(getListCondist())
-	}, [dispatch])
-
+  useEffect(() => {
+    dispatch(getListCondist())
+  }, [dispatch])
+  const listCond = useSelector(listCondSelector)
 	const getRandomElement = (arr) => {
 		const randomIndex = Math.floor(Math.random() * arr.length)
 		return arr[randomIndex]
