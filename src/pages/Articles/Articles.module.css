@@ -1,3 +1,14 @@
+.article{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.article > .container{
+  flex-grow: 1;
+}
+
 .articles__box{
   display: flex;
   justify-content: space-between;

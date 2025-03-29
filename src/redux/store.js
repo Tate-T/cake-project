@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit'
 import { authReducer } from './auth/authSlice'
 import { articlesReducer } from './articles/articlesSlice'
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
-import dessertInfoReducer from './dessertInfo/dessertInforeducer'
+
+import { dessertInfoReducer } from './dessertInfo/dessertInfoSlice'
 import { cakesReducer } from './cakes/cakesSlice'
 import { persistStore, persistReducer } from 'redux-persist'
-// import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 // import { listCondReduser } from './bestConditersMain/bestCondistSlise'
 import storage from 'redux-persist/lib/storage'
 // const initialState = {

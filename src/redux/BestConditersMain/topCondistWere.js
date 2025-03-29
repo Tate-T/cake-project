@@ -1,7 +1,7 @@
-import { createAsyncThunk, nanoid, ReducerType } from '@reduxjs/toolkit'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://6778f8a1482f42b62e90102f.mockapi.io/api/v1'
+axios.defaults.baseURL = 'https://67d48982d2c7857431edf500.mockapi.io/dessertinfo'
 
 const getListCondist = createAsyncThunk(
 	'loginedUsers/fechAll',
