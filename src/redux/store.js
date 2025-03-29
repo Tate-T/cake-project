@@ -6,10 +6,10 @@ import { dessertInfoReducer } from './dessertInfo/dessertInfoSlice';
 import { cakesReducer } from "./cakes/cakesSlice";
 import { persistStore, persistReducer } from "redux-persist";
 // import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
-// import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
+import { listCondReduser } from "./BestConditersMain/bestCondistSlise";
 import { feedbackReducer } from "./feedback/feedbackSlice";
 import storage from "redux-persist/lib/storage";
-
+import { listAllTowardReduser } from './ConfectionerAllTowar/alltowarSlise';
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -38,7 +38,8 @@ export const store = configureStore({
     desserts: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
-    // listCond: listCondReduser,
+    listCond: listCondReduser,
+    listAllTowar:listAllTowardReduser,
     feedback: feedbackReducer,
   },
 });

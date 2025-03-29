@@ -5,7 +5,18 @@ import React from 'react'
 import css from './ConfectionerAllTowar.module.css'
 import backup from '../../imgs/svg/backup.svg'
 import imgDef from '../../imgs/aboutConfectionerImg.jpg'
+
+
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { getListProduct } from '../../redux/ConfectionerAllTowar/allTowarWere'
 export default function AllProduct() {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getListProduct())
+      }, [dispatch])
+     const listTowar = useSelector( (state) => state.listAllTowar.listAllTowar)
+     console.log(listTowar)
 	return (
 		<>
 			<Header />
@@ -176,13 +187,15 @@ export default function AllProduct() {
 								</div>
 							</div>
 							<ul>
-								<li className={css.itemListrend}>
+                                {listTowar.map((data) => {
+                                    return (
+                                        <li className={css.itemListrend}>
 									
 									<div className={css.imgItem}>
                                         <img className={css.imgItem} src={imgDef}></img>
                                         <div className={css.txtbox}>
-                                            <h3 className={css.TitleItem}>Бісквіт торт з ягодами</h3>
-										<p className={css.txtItem}>520 грн</p>
+                                            <h3 className={css.TitleItem}>{data.name}</h3>
+										<p className={css.txtItem}>{data.price} грн</p>
                                         </div>
 										
 									</div>
@@ -211,6 +224,9 @@ export default function AllProduct() {
 										</button>
 									</div>
 								</li>
+                                    )
+                                })}
+								
 							</ul>
 							<div>
 								<button className={css.articles__loadmore}>
