@@ -23,13 +23,13 @@ const DessertInfo = () => {
     });
 
     const dessertComments = useSelector(selectorComments);
-    console.log(dessertComments);
+    // console.log(dessertComments);
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
     dispatch(fetchComments());
-    }, [dispatch]);
+    // }, [dispatch]);
 
     const { count } = useSelector(selectorCommentsCount);
 
@@ -39,7 +39,7 @@ const DessertInfo = () => {
     };
 
     const { id } = useParams();
-    console.log(dessertComments);
+
     return (
         <>
             <Header></Header>
@@ -70,7 +70,7 @@ const DessertInfo = () => {
                         <li>
                             <img className={css.info__imgS} src={data[id].photo} alt='4'></img>
                         </li>
-                        <button type='button' onClick={clickButtonSmollImg}>
+                        <button className={css.cake__img__button} type='button' onClick={clickButtonSmollImg}>
                             <svg width="12.000000" height="7.410156" viewBox="0 0 12 7.41016" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                                 <desc>
                                     Created with Pixso.

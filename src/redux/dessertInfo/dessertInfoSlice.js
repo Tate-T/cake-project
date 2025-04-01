@@ -46,7 +46,7 @@ const dessertInfoSlice = createSlice({
         }
       })
       .addCase(fetchComments.fulfilled, (state, action) => {
-        console.log(action.payload)
+        // console.log(action.payload)
         return {
           textDessertInfo: state.textDessertInfo,
           comments: action.payload,

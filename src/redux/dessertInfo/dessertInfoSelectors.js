@@ -4,8 +4,8 @@ import { createSelector } from "@reduxjs/toolkit";
 
 
 
-export const selectorComments = state => state.comments;
-export const selectorCount = (state) => state.count;
+export const selectorComments = state => state.dessertsInfo.comments;
+export const selectorCount = (state) => state.dessertsInfo.count;
 
 export const selectorCommentsCount = createSelector(
     [selectorComments, selectorCount],
