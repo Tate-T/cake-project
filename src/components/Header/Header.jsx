@@ -1,17 +1,19 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 import Container from "../Container/Container";
 import { useState } from "react";
 import Auth from "../Auth/Auth";
+import { logout } from "../../redux/auth/authOperations";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleModal } from "../../redux/auth/authSlice";
 
 const Header = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const token = useSelector((state) => state.auth.token);
   const isOpen = useSelector((state) => state.auth.isOpenHeaderModal);
   // console.log(isOpen);
-
   const setIsOpen = () => {
     dispatch(toggleModal());
   };
@@ -110,9 +112,18 @@ const Header = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <p className={styles.headerLoginText} onClick={setIsOpen}>
-                  Увійти
-                </p>
+                {token ? (
+                  <p
+                    className={styles.headerLoginText}
+                    onClick={() => (dispatch(logout()),navigate('/'))}
+                  >
+                    Вийти
+                  </p>
+                ) : (
+                  <p className={styles.headerLoginText} onClick={setIsOpen}>
+                    Увійти
+                  </p>
+                )}
               </button>
             </div>
           </div>

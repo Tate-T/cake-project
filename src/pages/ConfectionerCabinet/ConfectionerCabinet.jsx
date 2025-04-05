@@ -1,10 +1,19 @@
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import React from "react";
+import React, { useEffect } from "react";
 import css from "./ConfectionerCabinet.module.css";
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { getContacts, delContact, createContact } from "../../redux/contacts/contactsOperations";
 
-export default ({}) => {
+export default ({ }) => {
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+  // useEffect(dispatch(getContacts({
+  //   token: token
+  // })), []);
+  // const contacts = useSelector((state) => state.contacts.list);
+  const contacts = [];
   return (
     <>
       <Header />
@@ -212,8 +221,17 @@ export default ({}) => {
               </h2>
               <p className={css.label}>Адреса</p>
               <p className={css.dataArea}>Київ, Правди 15</p>
-              <p className={css.label}>Номер телефону</p>
-              <p className={css.dataArea}>+56 085 345 76 34</p>
+              <p className={css.label}>Номери телефону</p>
+              <p className={css.dataArea}>
+                +56 085 345 76 34
+                <button className={css.butDel}>Видалити</button>
+              </p>
+              {contacts.map((contact) => (
+                <p className={css.dataArea}>
+                  {contact.name}: {contact.number}
+                  <button className={css.butDel} onClick={() => dispatch(delContact({token: token, id: contact.id}))}>Видалити</button>
+                </p>
+              ))}
               <p className={css.label}>Пошта</p>
               <p className={`${css.dataArea} ${css["dataArea--last"]}`}>
                 Mail@example.com

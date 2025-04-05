@@ -5,7 +5,7 @@ import EditingTemplate from "../EditingTemplate/EditingTemplate";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setOpen,
-} from "../redux/editingTeplate/editingTemplateActions"
+} from "../../redux/editingTeplate/editingTemplateActions";
 
 
 
