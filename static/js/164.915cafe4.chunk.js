@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcake_project=self.webpackChunkcake_project||[]).push([[164],{8164:(e,c,o)=>{o.r(c),o.d(c,{default:()=>r});var t=o(3003),s=o(4292),n=o(579);const r=()=>{const e=(0,t.d4)((e=>e.auth.token));return console.log(e),e?(0,n.jsx)(s.sv,{}):(0,n.jsx)(s.C5,{to:"/confectioner/login"})}}}]);
+//# sourceMappingURL=164.915cafe4.chunk.js.map
