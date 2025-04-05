@@ -108,7 +108,7 @@ const EditingTemplate = () => {
         <div className={css.infoComment}>
           <input type='checkbox' className={css.commentInput} />
           <div >
-            <p className={css.commentText}>Не тклкфонуйте мені</p>
+            <p className={css.commentText}>Не тeлeфонуйте мені</p>
             <p className={css.makeItemAddText}>Хочу спілкуватися тіки в чаті Mycake</p>
           </div>
         </div>
