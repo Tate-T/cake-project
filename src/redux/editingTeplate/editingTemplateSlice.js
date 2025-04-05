@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {setOpen, setClose} from "./editingTemplateActions"
+import {setOpen, } from "./editingTemplateActions"
 
 const state = {
     open: false,
@@ -14,11 +14,7 @@ const templatesOpenSlice = createSlice({
                 open: action.payload,
             }
         });
-        builder.addCase(setClose, (state, action) => {
-            return {
-                open: action.payload,
-            }
-        });
+
     }
 });
 

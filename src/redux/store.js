@@ -12,6 +12,7 @@ import storage from "redux-persist/lib/storage";
 import { templatesReducer } from './templates/templatesSlice'
 import { listAllTowardReduser } from './ConfectionerAllTowar/alltowarSlise';
 import { templatesEditingReducer } from './editingTeplate/editingTemplateSlice';
+import { contactsReducer } from './contacts/contactsSlice';
 // const initialState = {
 //   loginedUsers: [
 //     {
@@ -26,26 +27,28 @@ import { templatesEditingReducer } from './editingTeplate/editingTemplateSlice';
 //   isOpenHeaderModal: false,
 // };
 
-// const persistConfig = {
-//   key: 'root',
-//   storage,
-// }
+const persistConfig = {
+  key: 'token',
+  storage,
+  whitelist: ['token']
+}
 
-// const persisterAuthReduser = persistReducer(persistConfig, authReducer);
+const persisterAuthReduser = persistReducer(persistConfig, authReducer);
 // const persistDessertInfoReducer = persistReducer(persistConfig, dessertInfoReducer);
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
-    desserts: dessertInfoReducer,
+    auth: persisterAuthReduser,
+    dessertsInfo: dessertInfoReducer,
     articles: articlesReducer,
     cakes: cakesReducer,
     listCond: listCondReduser,
     listAllTowar:listAllTowardReduser,
 	  feedback: feedbackReducer,
     templates: templatesReducer,
-    templateEditing: templatesEditingReducer
+    templateEditing: templatesEditingReducer,
+    contacts: contactsReducer,
   },
 });
 
-// export const persisterStore = persistStore(store);
+export const persisterStore = persistStore(store);

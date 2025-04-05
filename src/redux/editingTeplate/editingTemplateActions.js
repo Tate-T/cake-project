@@ -1,14 +1,10 @@
 import { createAction } from "@reduxjs/toolkit";
 
 
-export const setOpen = createAction("Open/EditingTem", () => {
+export const setOpen = createAction("Open/EditingTem", (prop) => {
     return {
-        payload: true,
+        payload: prop,
     };
 });
 
-export const setClose = createAction("Close/EditingTem", () => {
-    return {
-        payload: false,
-    };
-});
+

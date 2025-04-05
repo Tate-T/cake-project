@@ -158,7 +158,8 @@ const arr = [
 
 const ConfectionerRegistration = () => {
   const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
-  const users = useSelector((state) => state.auth.loginedUsers);
+  // const users = useSelector((state) => state.auth.loginedUsers);
+  const auth = useSelector((state) => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -169,17 +170,20 @@ const ConfectionerRegistration = () => {
       password: e.target.elements.password.value.trim(),
     };
     console.log(values);
-    const [loggedUser] = users.filter((user) => user.login === values.login);
-    console.log(loggedUser);
-    if (loggedUser) {
+    // dispatch()
+    // const [loggedUser] = users.filter((user) => user.login === values.login);
+    // console.log(loggedUser);
+    if (auth.token) {
       setColor(["#ff0000", "#84a6c2"]);
     } else {
       if (values.password.length < 6 || values.password.length > 20) {
         setColor(["#84a6c2", "#ff0000"]);
       } else {
         dispatch(toggleModal());
+        values.email = values.login + "@gmail.com";
+        values.name = values.login;
         dispatch(createUser(values));
-        navigate("/", { replace: true });
+        navigate("/confectioner/cabinet", { replace: true });
       }
     }
   }, []);

@@ -6,7 +6,8 @@ import { useCallback, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../redux/auth/authSlice";
-import { getLoginnedUsers } from "../../redux/auth/authOperations";
+// import { getLoginnedUsers } from "../../redux/auth/authOperations";
+import { login } from "../../redux/auth/authOperations";
 
 const Overlay = styled.div`
   position: fixed;
@@ -142,39 +143,43 @@ const SocialsLogin = styled.div`
 
 export default function ClientLogin() {
   const [color, setColor] = useState(["#84a6c2", "#84a6c2"]);
-  const users = useSelector((state) => state.auth.loginedUsers);
-  console.log(users)
+  // const users = useSelector((state) => state.auth.loginedUsers);
+  // console.log(users)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
-  useEffect(() => {
-    dispatch(getLoginnedUsers());
-  }, [dispatch]);
-  console.log(users);
-  const cb = useCallback((e) => {
-    e.preventDefault();
-    const values = {
-      login: e.target.elements.login.value.trim(),
-      password: e.target.elements.password.value.trim(),
-    };
-    console.log(values);
-    const [loggedUser] = users.filter(
-      (user) => user.login === values.login && values.password === user.password
-    );
-    console.log(loggedUser);
-    if (loggedUser) {
-      dispatch(toggleModal());
-      navigate("/client/requests", { replace: true });
-    } else {
-      const [beUser] = users.filter((user) => user.login === values.login);
-      if (beUser) {
-        setColor(["#84a6c2", "#ff0000"]);
+  // useEffect(() => {
+  // dispatch(getLoginnedUsers());
+  // }, [dispatch]);
+  // console.log(users);
+  const cb = useCallback(
+    (e) => {
+      e.preventDefault();
+      const values = {
+        email: e.target.elements.login.value.trim() + "@gmail.com",
+        password: e.target.elements.password.value.trim(),
+      };
+      console.log(values);
+      dispatch(login(values));
+      // const [loggedUser] = users.filter(
+      // (user) => user.login === values.login && values.password === user.password
+      // );
+      // console.log(loggedUser);
+      if (true) {
+        dispatch(toggleModal());
+        navigate("/client/requests", { replace: true });
       } else {
-        setColor(["#ff0000", "#84a6c2"]);
+        // const [beUser] = users.filter((user) => user.login === values.login);
+        // if (beUser) {
+        //   setColor(["#84a6c2", "#ff0000"]);
+        // } else {
+        //   setColor(["#ff0000", "#84a6c2"]);
+        // }
       }
-    }
-  }, [users, dispatch, navigate]);
+    },
+    [dispatch, navigate]
+  );
   return (
     <Overlay>
       <Modal>

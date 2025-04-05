@@ -10,7 +10,18 @@
     gap: 40px;
     padding: 40px 0;
 }
-
+.butDel{
+    margin-left: auto;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    background-color: #f2bdc0;
+    color: #8E4A4E;
+    font-size: 18px;
+}
 /* .navigation{} */
 
 .confectionerList {
