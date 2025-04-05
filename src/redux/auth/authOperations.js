@@ -1,14 +1,15 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// axios.defaults.baseURL = "https://6778f8a1482f42b62e90102f.mockapi.io/api/v1";
+// axios.defaults.baseURL = "https://connections-api.goit.global/";
 
-const getLoginnedUsers = createAsyncThunk(
-  "auth/getUsers",
-  async (_, thunkApi) => {
+const login = createAsyncThunk(
+  "auth/login",
+  async (userCredentials, thunkApi) => {
     try {
-      const response = await axios.get(
-        "https://6778f8a1482f42b62e90102f.mockapi.io/api/v1/loginedUsers"
+      const response = await axios.post(
+        "https://connections-api.goit.global/users/login",
+        userCredentials
       );
       return response.data;
     } catch (err) {
@@ -17,11 +18,26 @@ const getLoginnedUsers = createAsyncThunk(
   }
 );
 
+// const registration = createAsyncThunk(
+//   "auth/registration",
+//   async (userCredentials, thunkApi) => {
+//     try {
+//       const resp = await axios.post("users/signup", userCredentials);
+//       return resp.data;
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   }
+// );
+
 const createUser = createAsyncThunk(
   "auth/createUser",
   async (values, thunkApi) => {
     try {
-      const response = await axios.post("/loginedUsers", values);
+      const response = await axios.post(
+        "https://connections-api.goit.global/users/signup",
+        values
+      );
       return response.data;
     } catch (err) {
       console.log(err);
@@ -29,4 +45,4 @@ const createUser = createAsyncThunk(
   }
 );
 
-export { getLoginnedUsers, createUser };
+export { login, createUser };
