@@ -183,7 +183,7 @@ const ConfectionerRegistration = () => {
         values.email = values.login + "@gmail.com";
         values.name = values.login;
         dispatch(createUser(values));
-        navigate("/", { replace: true });
+        navigate("/confectioner/cabinet", { replace: true });
       }
     }
   }, []);

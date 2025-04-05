@@ -45,4 +45,24 @@ const createUser = createAsyncThunk(
   }
 );
 
-export { login, createUser };
+const logout = createAsyncThunk(
+  "auth/logout",
+  async (token, thunkApi) => {
+    try {
+      const response = await axios.post(
+        "https://connections-api.goit.global/users/logout",
+        {},
+        {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
+        }
+      )
+      return token;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+)
+
+export { login, createUser, logout };

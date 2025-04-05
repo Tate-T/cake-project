@@ -12,6 +12,7 @@ const Desserts = lazy(() => import("./pages/Desserts/Desserts"));
 const ConfecionerAllTower = lazy(() =>
   import("./pages/ConfectionerAllTowar/ConfectionerAllTowar")
 );
+const PrivateRoute = lazy(() => import('./components/PrivateRoute/PrivateRoute'))
 
 // import Articles from "./pages/Articles/Articles";
 const Articles = lazy(() => import("./pages/Articles/Articles"));
@@ -91,7 +92,9 @@ function App() {
           <Route path="desserts" element={<ConfectionerDeserts />} />
           <Route path="about" element={<ConfecionerInfo />} />
         </Route>
-        <Route path="/confectioner/cabinet" element={<ConfectionerCabinet />} />
+        <Route path="" element={<PrivateRoute />}>
+          <Route path="/confectioner/cabinet" element={<ConfectionerCabinet />} />
+        </Route>
         <Route path="/confectioner/login" element={<ConfectionerLogin />} />
         <Route
           path="/confectioner/registration"
